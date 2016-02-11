@@ -1,0 +1,62 @@
+mixin dev_head(page_title)
+    head
+        title=page_title
+        | <!-- saved from url=(0014)about:internet -->
+        meta(charset='utf-8')
+        meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="format-detection", content="telephone=no")
+        meta(name='viewport', content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='styles/main_global.css', media='all')
+        //-script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
+        script(src='js/jquery1.10.js')
+        script(src='js/script.js')
+
+
+mixin loop_while(counter)
+    -i=0;
+    while i < counter
+        -i++;
+        block
+
+mixin header(active_menu)
+    div.header
+        .section_inner.clearfix
+            .top_menu_holder
+                ul.top_menu
+                    li.top_m_item: a.gl_link(href='#'): span Все бизнесрешения
+                    li.top_m_item: a.gl_link(href='#'): span 
+                    li.top_m_item: a.gl_link(href='#'): span 
+                    li.top_m_item: a.gl_link(href='#'): span 
+                    li.top_m_item: a.gl_link(href='#'): span 
+
+                    
+                    
+                    
+     
+            ul.main_menu
+                li.menu_item
+                    a.menu_link.bg_color_white_mod(href='#')
+                        span.link_text О нас
+                li.menu_item
+                    a.menu_link.bg_color_blue_mod(href='#')
+                        span.link_text ОТЗЫВЫ
+                li.menu_item
+                    a.menu_link.bg_color_orange_mod(href='#')
+                        span.link_text ЛУЧШИЕ ПРЕДЛОЖЕНИЯ
+                li.menu_item
+                    a.menu_link.bg_color_green_mod(href='#')
+                        span.link_text Заказать тур
+                li.menu_item
+                    a.menu_link.bg_color_red_mod(href='#')
+                        span.link_text РЕЙТИНГИ
+                li.menu_item
+                    a.menu_link.bg_color_orange_mod(href='#')
+                        span.link_text ПОЛЕЗНОЕ
+                li.menu_item
+                    a.menu_link.bg_color_green_mod(href='#')
+                        span.link_text КОНТАКТЫ
+
+
+mixin footer()
+    .footer

@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'fna_icons';
+    src:
+        url('fonts/fna_icons.ttf?o6sygv') format('truetype'),
+        url('fonts/fna_icons.woff?o6sygv') format('woff'),
+        url('fonts/fna_icons.svg?o6sygv#fna_icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'fna_icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-nest:before {
+    content: "\e900";
+}
+.icon-gift:before {
+    content: "\e901";
+}
+.icon-calendar:before {
+    content: "\e902";
+}
+.icon-pie:before {
+    content: "\e903";
+}
+.icon-graph:before {
+    content: "\e904";
+}
+.icon-coffee:before {
+    content: "\e905";
+}
+.icon-why-02:before {
+    content: "\e906";
+}
+.icon-bag:before {
+    content: "\e907";
+}
+.icon-owner:before {
+    content: "\e908";
+}
+.icon-director:before {
+    content: "\e909";
+}
+.icon-gen_direcor:before {
+    content: "\e90a";
+}
+.icon-puzzle:before {
+    content: "\e90b";
+}
+.icon-facebook:before {
+    content: "\e90c";
+}
+.icon-home:before {
+    content: "\e90d";
+}
+.icon-map_pin:before {
+    content: "\e90e";
+}
+.icon-phone:before {
+    content: "\e90f";
+}
+.icon-wiseadvice-logo:before {
+    content: "\e910";
+}
+.icon-city:before {
+    content: "\e911";
+}
+.icon-rub:before {
+    content: "\e912";
+}
+.icon-briefcase:before {
+    content: "\e913";
+}
+.icon-puzzle_2:before {
+    content: "\e914";
+}
+

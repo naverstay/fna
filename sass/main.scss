@@ -1,0 +1,208 @@
+$gl_green : #2dcda1;
+$gl_blue : #00b1ff;
+$gl_blue_v1 : #24a6df;
+
+html, body {
+	height : 100%;
+}
+
+html {
+	overflow-y : scroll;
+}
+
+body {
+	font  : 14px/1 $cross_font_Verdana;
+	color : $default_t_color;
+}
+
+.hide {
+	display : none !important;
+}
+
+.clearfix:before, .clearfix:after { content : " "; display : table; }
+
+.clearfix:after { clear : both; }
+
+.wrapper {
+	position   : relative;
+	min-height : 100%;
+	min-width  : 960px;
+	padding    : 100px 0 0;
+}
+
+.base {
+	padding-bottom : 150px;
+}
+
+.section_inner {
+	width     : 100%;
+	max-width : 960px;
+	margin    : 0 auto;
+}
+
+//*************************** header
+
+.header {
+	position : absolute;
+	top      : 0;
+	right    : 0;
+	left     : 0;
+	
+	.section_inner {
+		@extend %global_flex_block_row_nowrap_space_between_center;
+	}
+	
+}
+
+.logo {
+	position : relative;
+	width    : 98px;
+	height   : 100px;
+	
+	&:before {
+		content    : '';
+		position   : absolute;
+		top        : 18px;
+		left       : 0;
+		width      : 98px;
+		height     : 52px;
+		background : url(../i/sprite.png) no-repeat 0 0;
+	}
+	
+}
+
+.main_slider {
+	text-align : center;
+}
+
+.slide {
+	position       : relative;
+	display        : inline-block;
+	vertical-align : top;
+}
+
+.slide_content {
+	position : absolute;
+	top      : 0;
+	bottom   : 0;
+	left     : 0;
+	right    : 0;
+	color    : #fff;
+}
+
+// *********  menu
+
+.main_menu {
+}
+
+.menu_item {
+	float  : left;
+	margin : 0 17px;
+}
+
+.menu_link {
+	cursor          : pointer;
+	position        : relative;
+	display         : block;
+	padding-left    : 32px;
+	color           : $def_text_color;
+	text-decoration : none;
+	
+	&:before {
+		content    : '';
+		position   : absolute;
+		top        : 0;
+		left       : 0;
+		width      : 30px;
+		height     : 30px;
+		background : url(../i/sprite.png) no-repeat;
+	}
+	
+	&.menu_l_repair_icon:before {
+		background-position : -99px 0;
+	}
+	
+	&.menu_l_review_icon:before {
+		background-position : -130px 0;
+	}
+	
+	&.menu_l_about_icon:before {
+		background-position : -161px 0;
+	}
+	
+	&:hover {
+		color : $gl_blue_v1;
+	}
+	
+}
+
+//************  buttons
+
+.btn_v1 {
+	height : 36px;
+	
+	&.city_btn {
+		cursor        : pointer;
+		border-radius : 4px;
+		padding       : 11px 20px;
+	}
+	
+}
+
+.green_btn {
+	color      : #fff;
+	background : $gl_green;
+}
+
+// **********  text
+
+.text_center {
+	text-align : center;
+}
+
+.text_right {
+	text-align : right;
+}
+
+.text_left {
+	text-align : left;
+}
+
+.text_upper {
+	text-transform : uppercase;
+}
+
+$rectWidth : 950px;
+
+.rect_1024 {
+	position       : absolute;
+	top            : 0;
+	left           : 50%;
+	margin-left    : -$rectWidth/2;
+	width          : $rectWidth;
+	height         : 480px;
+	border         : 1px solid red;
+	z-index        : 10;
+	pointer-events : none;
+}
+
+.rect_1024:after {
+	content    : '';
+	position   : absolute;
+	top        : 0;
+	bottom     : 0;
+	left       : $rectWidth/2;
+	width      : 1px;
+	background : red;
+}
+
+.footer {
+	position   : absolute;
+	bottom     : 0;
+	right      : 0;
+	left       : 0;
+	height     : 150px;
+	background : red;
+}
+
+
