@@ -337,6 +337,10 @@ textarea:focus::-moz-placeholder {
   content: "\e914";
 }
 
+.icon-checkmark:before {
+  content: "\e916";
+}
+
 /*!
  * fullPage 2.7.5
  * https://github.com/alvarotrigo/fullPage.js
