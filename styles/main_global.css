@@ -14,22 +14,6 @@
   -webkit-box-align: center;
 }
 
-.slide_content {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: stretch;
-  align-items: stretch;
-  -webkit-box-pack: center;
-  -webkit-box-align: stretch;
-}
-
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -193,12 +177,12 @@ textarea {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #cccccc;
+  color: #ccc;
 }
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  color: #cccccc;
+  color: #ccc;
 }
 
 input:focus::-webkit-input-placeholder,
@@ -213,10 +197,31 @@ textarea:focus::-moz-placeholder {
 
 /*-----------------------------form elements###*/
 @font-face {
-  font-family: 'PTRoubleSans';
-  src: url(../fonts/PTRoubleSans.eot);
-  src: url(../fonts/PTRoubleSans.eot?#iefix) format("embedded-opentype"), url(../fonts/PTRoubleSans.svg) format("svg"), url(../fonts/PTRoubleSans.woff) format("woff"), url(../fonts/PTRoubleSans.ttf) format("truetype");
+  font-family: 'ProximaNovaExtrabold';
+  src: url(../fonts/ProximaNovaExtrabold.eot);
+  src: url(../fonts/ProximaNovaExtrabold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNovaExtrabold.woff) format("woff"), url(../fonts/ProximaNovaExtrabold.ttf) format("truetype"), url(../fonts/ProximaNovaExtrabold.svg) format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaSemibold';
+  src: url(../fonts/ProximaNovaSemibold.eot);
+  src: url(../fonts/ProximaNovaSemibold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNovaSemibold.woff) format("woff"), url(../fonts/ProximaNovaSemibold.ttf) format("truetype"), url(../fonts/ProximaNovaSemibold.svg) format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaRegular';
+  src: url(../fonts/ProximaNovaRegular.eot);
+  src: url(../fonts/ProximaNovaRegular.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNovaRegular.woff) format("woff"), url(../fonts/ProximaNovaRegular.ttf) format("truetype"), url(../fonts/ProximaNovaRegular.svg) format("svg");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNovaLight';
+  src: url(../fonts/ProximaNovaLight.eot);
+  src: url(../fonts/ProximaNovaLight.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNovaLight.woff) format("woff"), url(../fonts/ProximaNovaLight.ttf) format("truetype"), url(../fonts/ProximaNovaLight.svg) format("svg");
+  font-weight: 300;
   font-style: normal;
 }
 html, body {
@@ -229,7 +234,7 @@ html {
 
 body {
   font: 14px/1 Verdana, "Geneva CY", "DejaVu Sans", sans-serif;
-  color: black;
+  color: #000;
 }
 
 .hide {
@@ -398,3 +403,5 @@ body {
   height: 150px;
   background: red;
 }
+
+/*# sourceMappingURL=main_global.css.map */
