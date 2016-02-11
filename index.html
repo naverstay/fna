@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page_slider_mod">
   <head>
     <title>FNA главная</title><!-- saved from url=(0014)about:internet -->
     <meta charset="utf-8"/>
@@ -7,39 +7,108 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="format-detection" content="telephone=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="styles/main_global.css" media="all"/>
-    <script src="js/jquery1.10.js"></script>
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="styles/main_global.css?no_cache" media="all"/>
+    <script src="js/jquery1.10.js?no_cache"></script>
+    <script src="js/chosen.jquery.js?no_cache"></script>
+    <!--script(src='js/jquery.mousewheel.min.js')-->
+    <script src="js/jquery.fullPage.js?no_cache"></script>
+    <script src="js/script.js?no_cache"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="rect_1024"></div>
-      <div class="base">
+      <div class="base"><a href="#" class="icon-go_top go_top_btn goTopBtn"></a>
         <div class="header">
-          <div class="section_inner clearfix">
-            <div class="top_menu_holder">
+          <div class="top_menu_holder">
+            <div class="section_inner clearfix">
               <ul class="top_menu">
-                <li class="top_m_item"><a href="#" class="gl_link icon-puzzle"><span>Все бизнесрешения</span></a></li>
-                <li class="top_m_item"><a href="#" class="gl_link icon-briefcase"><span>Генеральному директору</span></a></li>
-                <li class="top_m_item"><a href="#" class="gl_link"><span>Фин. директору  <br> Гл. бухгалтеру</span></a></li>
-                <li class="top_m_item"><a href="#" class="gl_link"><span>Собственнику  <br>  Иностранным компаниям</span></a></li>
-                <li class="top_m_item"><a href="#" class="gl_link"><span>Контактная информация</span></a></li>
+                <li class="top_m_item"><a href="#" class="gl_link icon-puzzle"><span>Все бизнес  <br> решения</span></a></li>
+                <li class="top_m_item"><a href="#" class="gl_link icon-briefcase"><span>Генеральному <br> директору</span></a></li>
+                <li class="top_m_item"><a href="#" class="gl_link icon-rub"><span>Фин. директору  <br> Гл. бухгалтеру</span></a></li>
+                <li class="top_m_item"><a href="#" class="gl_link icon-city"><span>Собственнику  <br>  Иностранным компаниям</span></a></li>
+                <li class="top_m_item"><a href="#" class="gl_link icon-map_pin"><span>Контактная  <br>  информация</span></a></li>
               </ul>
             </div>
-            <ul class="main_menu">
-              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">О нас</span></a></li>
-              <li class="menu_item"><a href="#" class="menu_link bg_color_blue_mod"><span class="link_text">ОТЗЫВЫ</span></a></li>
-              <li class="menu_item"><a href="#" class="menu_link bg_color_orange_mod"><span class="link_text">ЛУЧШИЕ ПРЕДЛОЖЕНИЯ</span></a></li>
-              <li class="menu_item"><a href="#" class="menu_link bg_color_green_mod"><span class="link_text">Заказать тур</span></a></li>
-              <li class="menu_item"><a href="#" class="menu_link bg_color_red_mod"><span class="link_text">РЕЙТИНГИ</span></a></li>
-              <li class="menu_item"><a href="#" class="menu_link bg_color_orange_mod"><span class="link_text">ПОЛЕЗНОЕ</span></a></li>
-              <li class="menu_item"><a href="#" class="menu_link bg_color_green_mod"><span class="link_text">КОНТАКТЫ</span></a></li>
-            </ul>
+          </div>
+          <div class="section_inner clearfix">
+            <div class="logo_section">
+              <div class="logo_holder"><a href="#" class="logo icon-wiseadvice-logo"></a></div>
+              <div class="fl">
+                <div class="mb">
+                  <div class="company_name">ФНА &middot; Аудит</div>
+                </div>
+              </div>
+              <div class="fl">
+                <div class="mb">
+                  <div class="company_slogan">Профессионально  <br>  для бизнеса</div>
+                </div>
+              </div>
+              <div class="fr">
+                <div class="mb"><a href="#" class="callback_phone icon-phone">+7 495 134-32-23</a></div>
+              </div>
+              <div class="fr">
+                <div class="mb"><a href="#" class="callback_btn btn_v1 btn_white">Заказать звонок</a></div>
+              </div>
+            </div>
+            <div class="nav">
+              <div class="main_menu_holder">
+                <ul class="main_menu">
+                  <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="mb icon-home home_link"></span></a></li>
+                  <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="mb">О компании</span></a></li>
+                  <li class="menu_item"><a href="#" class="menu_link bg_color_blue_mod"><span class="mb">Выбор услуг</span></a></li>
+                  <li class="menu_item"><a href="#" class="menu_link bg_color_orange_mod"><span class="mb">Истории успеха</span></a></li>
+                  <li class="menu_item"><a href="#" class="menu_link bg_color_green_mod"><span class="mb">Отзывы клиентов</span></a></li>
+                  <li class="menu_item"><a href="#" class="menu_link bg_color_red_mod"><span class="mb">Цены</span></a></li>
+                  <li class="menu_item"><a href="#" class="menu_link bg_color_orange_mod"><span class="mb">Контакты</span></a></li>
+                </ul>
+              </div>
+              <div class="user_menu_holder">
+                <ul class="user_menu">
+                  <li class="user_m_item">
+                    <div class="lang_menu chosen_v1 mb no_search">
+                      <select class="chosen-select">
+                        <option selected="selected" class="lang_flag flag_gb">Eng</option>
+                        <option class="lang_flag flag_rf">Рус</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="user_m_item"><a href="#" class="user_m_link icon-facebook"></a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="main_content"></div>
+        <div class="main_slider pageSlider">
+          <div class="slide_section section_v1 firstPage">
+            <div class="slide_img"><img src="i/index/first_screen.jpg"></div>
+            <div class="slide_content">
+              <div class="scroll_down_btn">
+                <div class="scroll-btn"><a href="#"><span class="mouse"><span class="mouse_wheel"></span></span><span class="learn_more">Узнай больше</span></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="slide_section section_v1 secondPage">
+            <div class="slide_img"><img src="i/index/first_screen.jpg"></div>
+            <div class="slide_content"></div>
+          </div>
+          <div class="slide_section section_v1 thirdPage">
+            <div class="slide_img"><img src="i/index/first_screen.jpg"></div>
+            <div class="slide_content"></div>
+          </div>
+          <div class="slide_section section_v1 forthPage">
+            <div class="slide_img"><img src="i/index/first_screen.jpg"></div>
+            <div class="slide_content"></div>
+          </div>
+          <div class="slide_section section_v1 secondPage">
+            <div class="slide_img"><img src="i/index/first_screen.jpg"></div>
+            <div class="slide_content"></div>
+          </div>
+          <div class="slide_section section_v1 thirdPage">
+            <div class="slide_img"><img src="i/index/first_screen.jpg"></div>
+            <div class="slide_content"></div>
+          </div>
+        </div>
       </div>
-      <div class="footer"></div>
     </div>
   </body>
 </html>

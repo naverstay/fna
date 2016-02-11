@@ -1,16 +1,52 @@
 include mixins
 doctype html
-html(lang='ru')
+html(lang='ru' class='page_slider_mod')
     +dev_head('FNA главная')
 
     body
         .wrapper
             .rect_1024
             .base
+                a.icon-go_top.go_top_btn.goTopBtn(href='#')
                 +header()
 
+                div.main_slider.pageSlider
+                    .slide_section.section_v1.firstPage
+                        .slide_img: img(src='i/index/first_screen.jpg')
+                        
+                        .slide_content
+                            .scroll_down_btn
+                                .scroll-btn
+                                    a(href='#')
+                                        span.mouse
+                                            span.mouse_wheel
+                                        span.learn_more Узнай больше
+                            
 
-                div.main_content
+                    .slide_section.section_v1.secondPage
+                        .slide_img: img(src='i/index/first_screen.jpg')
+                        .slide_content
+                            
+
+                    .slide_section.section_v1.thirdPage
+                        .slide_img: img(src='i/index/first_screen.jpg')
+                        .slide_content
+                            
+                        
+                    .slide_section.section_v1.forthPage
+                        .slide_img: img(src='i/index/first_screen.jpg')
+                        .slide_content
+                                                        
+
+                    .slide_section.section_v1.secondPage
+                        .slide_img: img(src='i/index/first_screen.jpg')
+                        .slide_content
+                            
+
+                    .slide_section.section_v1.thirdPage
+                        .slide_img: img(src='i/index/first_screen.jpg')
+                        .slide_content
+                            
+                            
 
 
-            +footer()
