@@ -245,7 +245,7 @@ body {
 .user_m_item {
   float: left;
   position: relative;
-  padding: 0 30px;
+  padding: 0 20px 0 34px;
   min-height: 24px;
 
   &:before {
@@ -479,7 +479,7 @@ body {
 }
 
 .lang_menu {
-
+  min-width: 60px;
 }
 
 .chzn-drop {
@@ -523,7 +523,7 @@ body {
     top: 50%;
     left: 0;
     margin-top: -10px;
-    width: 30px;
+    width: 26px;
     height: 20px;
   }
 
@@ -585,10 +585,11 @@ body {
 
 .chzn_item {
   cursor: pointer;
+  position: relative;
+  line-height: 26px;
   display: block;
-  min-width: 120px;
-  padding: 0px 6px;
-  line-height: 20px;
+  padding: 0 5px 0 30px;
+
   color: #5e5e5e;
 
   &:hover {
@@ -609,6 +610,12 @@ body {
 .slide_section {
 
   &.section_v1 {
+
+    .section_inner {
+      position: relative;
+      z-index: 1;
+      padding-top: 50px;
+    }
 
     .slide_img {
       position: absolute;
@@ -641,6 +648,32 @@ body {
 
 }
 
+.slide_bg_v1 {
+  background: #dee0e7;
+}
+
+.hero_block {
+  float: left;
+  max-width: 360px;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.block_title {
+  font: 48px/1 $ProximaNovaExtrabold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.block_subcaption {
+  font: 18px/1 $ProximaNovaLight;
+}
+
+.hero_slogan {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
 //************  buttons
 
 .btn_v1 {
@@ -671,6 +704,10 @@ body {
 
 // **********  text
 
+.text_underline {
+  text-decoration: underline;
+}
+
 .text_center {
   text-align: center;
 }
@@ -685,6 +722,14 @@ body {
 
 .text_upper {
   text-transform: uppercase;
+}
+
+.color_gray {
+  color: #282828;
+}
+
+.color_gray_2 {
+  color: #5b5a5a;
 }
 
 $rectWidth: 1140px;

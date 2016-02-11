@@ -29,6 +29,12 @@ $(function ($) {
     });
 
 
+    $('.learnMoreBtn').on('click', function () {
+        $('a[href="#secondPage"]').click();
+        return false;
+    });
+
+
     if ($('.chosen-select').length) {
         $('.chosen-select').chosen({width: "100%", className: "form_o_b_item form_o_b_value_edit_mode"});
     }
