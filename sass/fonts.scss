@@ -1,3 +1,7 @@
+.fp-tableCell {
+  //vertical-align: top !important;
+}
+
 @font-face {
   font-family: 'ProximaNovaExtrabold';
   src: url(../fonts/ProximaNovaExtrabold.eot);
@@ -5,6 +9,15 @@
   url(../fonts/ProximaNovaExtrabold.woff) format("woff"),
   url(../fonts/ProximaNovaExtrabold.ttf) format("truetype"),
   url(../fonts/ProximaNovaExtrabold.svg) format("svg");
+}
+
+@font-face {
+  font-family: 'ProximaNovaBold';
+  src: url(../fonts/ProximaNovaBold.eot);
+  src: url(../fonts/ProximaNovaBold.eot?#iefix) format("embedded-opentype"),
+  url(../fonts/ProximaNovaBold.woff) format("woff"),
+  url(../fonts/ProximaNovaBold.ttf) format("truetype"),
+  url(../fonts/ProximaNovaBold.svg) format("svg");
 }
 
 @font-face {

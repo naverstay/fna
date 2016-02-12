@@ -1,4 +1,4 @@
-.clearfix:after, .top_menu:after, .logo_section:after, .nav:after {
+.clearfix:after, .top_menu:after, .logo_section:after, .nav:after, .solution_list:after, .history_list:after, .partner_list:after, .choice_list:after {
   position: static;
   display: block;
   height: 0;
@@ -215,6 +215,11 @@ textarea:focus::-moz-placeholder {
   src: url(../fonts/ProximaNovaExtrabold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNovaExtrabold.woff) format("woff"), url(../fonts/ProximaNovaExtrabold.ttf) format("truetype"), url(../fonts/ProximaNovaExtrabold.svg) format("svg");
 }
 @font-face {
+  font-family: 'ProximaNovaBold';
+  src: url(../fonts/ProximaNovaBold.eot);
+  src: url(../fonts/ProximaNovaBold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNovaBold.woff) format("woff"), url(../fonts/ProximaNovaBold.ttf) format("truetype"), url(../fonts/ProximaNovaBold.svg) format("svg");
+}
+@font-face {
   font-family: 'ProximaNovaSemibold';
   src: url(../fonts/ProximaNovaSemibold.eot);
   src: url(../fonts/ProximaNovaSemibold.eot?#iefix) format("embedded-opentype"), url(../fonts/ProximaNovaSemibold.woff) format("woff"), url(../fonts/ProximaNovaSemibold.ttf) format("truetype"), url(../fonts/ProximaNovaSemibold.svg) format("svg");
@@ -337,7 +342,7 @@ textarea:focus::-moz-placeholder {
   content: "\e914";
 }
 
-.icon-checkmark:before {
+.icon-checkmark:before, .solution_item:before {
   content: "\e916";
 }
 
@@ -615,6 +620,10 @@ body {
   min-height: 100%;
 }
 
+b {
+  font-family: "ProximaNovaBold", sans-serif;
+}
+
 .fl {
   float: left;
 }
@@ -674,6 +683,9 @@ body {
 }
 .top_m_item .gl_link span {
   font-size: 14px;
+}
+.top_m_item .gl_link:hover span {
+  text-decoration: underline;
 }
 .top_m_item:last-child {
   float: right;
@@ -1109,10 +1121,12 @@ body {
   background: #e2e2e2 !important;
 }
 
+.slide_section.section_v1 .slide_s_inner {
+  padding-top: 50px;
+}
 .slide_section.section_v1 .section_inner {
   position: relative;
   z-index: 1;
-  padding-top: 50px;
 }
 .slide_section.section_v1 .slide_img {
   position: absolute;
@@ -1152,6 +1166,7 @@ body {
   font: 48px/1 "ProximaNovaExtrabold", sans-serif;
   text-transform: uppercase;
   margin-bottom: 30px;
+  letter-spacing: .65px;
 }
 
 .block_subcaption {
@@ -1161,6 +1176,197 @@ body {
 .hero_slogan {
   font-size: 16px;
   line-height: 1.4;
+}
+
+.solution_list {
+  margin-left: -44px;
+  padding-top: 20px;
+}
+
+.solution_col {
+  padding-left: 55px;
+  margin-bottom: 25px;
+}
+@media only screen and (min-width: 960px) {
+  .solution_col {
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .solution_col {
+    width: 25%;
+  }
+}
+
+.solution_item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.solution_item:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  color: #91969c;
+  border: 2px solid #91969c;
+  text-align: center;
+}
+
+.solution_header {
+  padding-left: 20px;
+}
+.solution_header.header_red {
+  color: #951a37;
+}
+.solution_header.header_blue {
+  color: #1a4895;
+}
+.solution_header.header_green {
+  color: #1a9551;
+}
+.solution_header.header_yellow {
+  color: #e18309;
+}
+
+.solution_caption {
+  font: 24px "ProximaNovaBold", sans-serif;
+  margin-bottom: 25px;
+  letter-spacing: -.2px;
+}
+
+.solution_icon {
+  height: 120px;
+}
+.solution_icon:before {
+  font-size: 100px;
+}
+
+.history_list {
+  margin-left: -52px;
+  padding-top: 40px;
+}
+@media only screen and (min-width: 960px) {
+  .history_list {
+    margin-right: -1%;
+    padding-top: 90px;
+    min-height: 640px;
+  }
+}
+
+.history_item {
+  margin-bottom: 30px;
+}
+.history_item p {
+  line-height: 22px;
+}
+@media only screen and (min-width: 960px) {
+  .history_item {
+    float: left;
+    width: 33%;
+    padding-left: 52px;
+  }
+}
+
+.history_img {
+  margin-bottom: 30px;
+}
+.history_img img {
+  display: block;
+  max-width: 100%;
+}
+
+.history_caption {
+  font: 23px "ProximaNovaExtrabold", sans-serif;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.partner_list {
+  margin-left: -30px;
+  padding-top: 65px;
+}
+
+.partner_item {
+  margin-bottom: 70px;
+  padding-left: 30px;
+  text-align: center;
+}
+@media only screen and (min-width: 960px) {
+  .partner_item {
+    width: 50%;
+    float: left;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .partner_item {
+    width: 25%;
+  }
+}
+
+.partner_logo {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 12px;
+}
+.partner_logo img {
+  display: block;
+  max-width: 100%;
+}
+
+.choice_list {
+  padding-top: 50px;
+}
+
+@media only screen and (min-width: 960px) {
+  .choice_col {
+    width: 50%;
+    float: left;
+  }
+}
+
+.choice_item {
+  min-height: 80px;
+  margin-bottom: 20px;
+  font: 22px "Open Sans", sans-serif;
+}
+
+.gl_link {
+  text-decoration: underline;
+}
+.gl_link:hover {
+  text-decoration: none;
+}
+.gl_link.link_red {
+  color: #cfb8c4;
+}
+.gl_link.link_red span {
+  color: #951a37;
+}
+.gl_link.link_blue {
+  color: #b7c2d7;
+}
+.gl_link.link_blue span {
+  color: #1a4895;
+}
+.gl_link.link_green {
+  color: #b7d1c9;
+}
+.gl_link.link_green span {
+  color: #1a9551;
+}
+.gl_link.link_yellow {
+  color: #dfcdbb;
+}
+.gl_link.link_yellow span {
+  color: #e18309;
 }
 
 .btn_v1 {
@@ -1175,6 +1381,32 @@ body {
   text-decoration: none;
   padding: 0 25px;
   border: 2px solid;
+}
+
+.btn_v2 {
+  height: 50px;
+}
+.btn_v2.get_more_btn {
+  padding: 15px 75px;
+  margin-bottom: 20px;
+  min-width: 240px;
+  font: 14px/20px "ProximaNovaBold", sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btn_red {
+  -webkit-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
+  background: #951a37;
+  color: #fff;
+}
+.btn_red:hover {
+  background: #7d0f29;
 }
 
 .btn_white {
@@ -1205,6 +1437,10 @@ body {
 
 .text_upper {
   text-transform: uppercase;
+}
+
+.color_white {
+  color: #dee0e7;
 }
 
 .color_gray {

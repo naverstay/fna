@@ -8,7 +8,7 @@ html(lang='ru' class='page_slider_mod')
             .rect_1024
             .base
                 a.icon-go_top.go_top_btn.goTopBtn(href='#')
-                +header()
+                //+header()
 
                 div.main_slider.pageSlider
                     .slide_section.section_v1.firstPage
@@ -19,8 +19,9 @@ html(lang='ru' class='page_slider_mod')
                                     span.mouse
                                         span.mouse_wheel
                                     span.learn_more Узнай больше
-                                    
-                        .section_inner.clearfix
+                        +header()
+
+                        .section_inner.clearfix.slide_s_inner
                             .hero_block
                                 h1.block_title Контроль —  <br> первый шаг  <br>  к
                                     span.text_underline доверию
@@ -35,124 +36,204 @@ html(lang='ru' class='page_slider_mod')
 
                             ul.solution_list
                                 li.solution_col
-                                    .solution_icon.icon-puzzle_2
-                                    .solution_caption: span Все решения для бизнеса
+                                    .solution_header.header_red
+                                        .solution_icon.icon-puzzle_2
+                                        .solution_caption: a.gl_link.link_red(href='#'): span Все решения для бизнеса
                                     
                                     .solution_item
                                         b Все виды аудита:
                                         p 
-                                            a.gl_link(href='#') обязательный, комплексный, инициативный, налоговый, Due Diligence, МСА
+                                            a.gl_link.link_red(href='#'): span обязательный, комплексный, инициативный, налоговый, Due Diligence, МСА
                                                                         
                                     .solution_item
                                         b Все услуги по МСФО: 
                                         p 
-                                            a.gl_link(href='#') трансформация отчетности, аудит по МСФО и МСА
-                                                                                
+                                            a.gl_link.link_red(href='#'): span трансформация отчетности, аудит по МСФО и МСА
+
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Налоговые юристы
+                                            a.gl_link.link_red(href='#'): span Налоговые юристы
                                             | : возврат переплат, сопровождение проверок, разрешение споров по налогам
                                                                         
                                     .solution_item
                                         p Еще 50+ услуг в одном месте: 
                                         p 
-                                            a.gl_link(href='#') WiseAdvice Consulting Group >>
+                                            a.gl_link.link_red(href='#'): span WiseAdvice Consulting Group >>
                                             
                                 li.solution_col
-                                    .solution_icon.icon-briefcase
-                                    .solution_caption: span Генеральному директору
+                                    .solution_header.header_blue
+                                        .solution_icon.icon-briefcase
+                                        .solution_caption: a.gl_link.link_blue(href='#'): span Генеральному директору
                                     
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Получить аудиторское заключение
+                                            a.gl_link.link_red(href='#'): span Получить аудиторское заключение
                                             | : провести аудит — исполнить закон 302-ФЗ
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Проконтролировать и оптимизировать
+                                            a.gl_link.link_red(href='#'): span Проконтролировать и оптимизировать
                                             |  финансовые показатели, затраты, налоги и др.
 
 
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Снизить риски 
+                                            a.gl_link.link_red(href='#'): span Снизить риски 
                                             |  и личную ответственность, избежать штрафов 
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Получить кредит
+                                            a.gl_link.link_red(href='#'): span Получить кредит
                                             |  повысить доверие учредителей                                             
                                 li.solution_col
-                                    .solution_icon.icon-rub
-                                    .solution_caption: span Фин. директору Глав. бухгалтеру
+                                    .solution_header.header_green
+                                        .solution_icon.icon-rub
+                                        .solution_caption: a.gl_link.link_green(href='#'): span Фин. директору Глав. бухгалтеру
                                     
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Проверить состояние учета, 
+                                            a.gl_link.link_red(href='#'): span Проверить состояние учета, 
                                             | вовремя найти и исправить замечания, подтвердить отчетность 
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Выявить налоговые риски 
+                                            a.gl_link.link_red(href='#'): span Выявить налоговые риски 
                                             |  подготовиться к налоговой проверке, исключить штрафы
 
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Получить рекомендациии опыт 
+                                            a.gl_link.link_red(href='#'): span Получить рекомендациии опыт 
                                             | , повысить квалификацию
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Оптимизировать работу бухгалтерской службы
+                                            a.gl_link.link_red(href='#'): span Оптимизировать работу бухгалтерской службы
                                             | , улучшить автоматизацию, процессы и пр.
                                                                
                                 li.solution_col
-                                    .solution_icon.icon-city
-                                    .solution_caption: span СобственникуИностр. компаниям
+                                    .solution_header.header_yellow
+                                        .solution_icon.icon-city
+                                        .solution_caption: a.gl_link.link_yellow(href='#'): span Собственнику Иностр. компаниям
                                     
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Независимая проверка финансовых показателей
+                                            a.gl_link.link_red(href='#'): span Независимая проверка финансовых показателей
                                             | , включая размер прибылии дивидендов
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Контроль и оптимизация 
+                                            a.gl_link.link_red(href='#'): span Контроль и оптимизация 
                                             |  налогов, завышения расходов / закупочных цен, бизнес-процессов и т.п. 
 
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Проверка бизнеса (Due Diligence) 
+                                            a.gl_link.link_red(href='#'): span Проверка бизнеса (Due Diligence) 
                                             |  перед покупкой, подготовить к продаже;
 
                                     .solution_item
                                         p 
-                                            a.gl_link(href='#') Привлечение финансирование 
+                                            a.gl_link.link_red(href='#'): span Привлечение финансирование 
                                             | . Повысить доверие партнеров, инвесторов
-                                            
+                                        
+                            .text_center
+                                a.btn_v2.btn_red.get_more_btn(href='#') Выбор услуг
                                 
                     .slide_section.section_v1.thirdPage
                         .slide_img: img(src='i/index/history_section.jpg')
-                        .section_inner.clearfix
+                        .section_inner.clearfix.color_white
+
+                            .text_center
+                                h2.block_title История успеха
+                                h3.block_subcaption Нашими клиентами с 2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании
+                            
+                            ul.history_list
+                                li.history_item
+                                    .history_img: img(src='i/index/history_1.jpg')
+                                    .history_caption: a.gl_link.color_white(href='#'): span Складской комплекс на территории Москвы (Due Diligence)
+                                    p Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.
                                 
+                                li.history_item
+                                    .history_img: img(src='i/index/history_2.jpg')
+                                    .history_caption: a.gl_link.color_white(href='#'): span Иностранный импортер кондитерской продукции
+                                    p Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.
                                 
-                    .slide_section.section_v1.secondPage
+                                li.history_item
+                                    .history_img: img(src='i/index/history_3.jpg')
+                                    .history_caption: a.gl_link.color_white(href='#'): span Производство в Подмосковье — партнер Самсунг
+                                    p Самсунг  предъявляет к своим поставщикам серьезные требования не только по качеству продукции, но и по финансовой устойчивости компании.
+                                
+                    .slide_section.section_v1.forthPage
                         .slide_img.slide_bg_v1
                         .section_inner.clearfix
                             .text_center
                                 h2.block_title.color_gray Нам доверяют
                                 h3.block_subcaption.color_gray_2 Нашими клиентами с 2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании
-
-                        
-                    .slide_section.section_v1.forthPage
-                        .slide_img: img(src='i/index/first_screen.jpg')
-                        .section_inner.clearfix
-                                                        
-
-                    .slide_section.section_v1.secondPage
-                        .slide_img: img(src='i/index/first_screen.jpg')
-                        .section_inner.clearfix
+                                 
+                            ul.partner_list
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_1.png')
+                                    .partenr_name Предприятие <br> по производству сыра
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_2.png')
+                                    .partenr_name Страхование  <br> автомобилей
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_3.png')
+                                    .partenr_name Крупнейшая розничная сеть  <br>  по торговле одеждой
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_4.png')
+                                    .partenr_name Девелопер жилой  <br>  недвижимости
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_5.png')
+                                    .partenr_name Предприятие  <br> по производству сыра
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_6.png')
+                                    .partenr_name Страхование  <br> автомобилей
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_7.png')
+                                    .partenr_name Крупнейшая розничная сеть  <br>  по торговле одеждой
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_8.png')
+                                    .partenr_name Девелопер жилой  <br>  недвижимости
                             
+                            .text_center
+                                a.btn_v2.btn_red.get_more_btn(href='#') клиенты
+                                        
+        
+                    .slide_section.section_v1.secondPage
+                        .slide_img: img(src='i/index/choice_section.jpg')
+                        .section_inner.clearfix.color_white
+
+                            .text_center
+                                h2.block_title Почему нас выбирают?
+
+                            ul.choice_list
+                                li.choice_col
+                                    .choice_item.icon-briefcase
+                                        p Делаем самое выгодное предложение по соотношению цена-качество
+                                    .choice_item.icon-briefcase
+                                        p Защищаем перед налоговыми органами, даём финансовые гарантии
+                                    .choice_item.icon-coffee
+                                        p Используем дружелюбныйи комфортный подход в работе
+                                    .choice_item.icon-graph
+                                        p Делаем сложное простыми понятным, даем наглядные результаты
+                                        
+                                li.choice_col
+                                    .choice_item.icon-pie
+                                        p Знаем специфику всех отраслей российской экономики и бизнеса
+                                    .choice_item.icon-calendar
+                                        p Экономим время: имеем убедительный опыт уникальной команды для быстрого решения
+                                    .choice_item.icon-gift
+                                        p Даём полезные бонусы бесплатно. Для вас доступна обширная программа поддержки
+                                    .choice_item.icon-nest
+                                        p Избавляем от лишнего поиска. Более 50 бизнес-услуг в одной ГК WiseAdvice Consulting Group
+
 
                     .slide_section.section_v1.thirdPage
                         .slide_img: img(src='i/index/first_screen.jpg')

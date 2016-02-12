@@ -94,7 +94,7 @@ function init_main_slider() {
         //sectionsColor: ['#ccc', '#fff'],
         paddingTop: '0',
         paddingBottom: '0',
-        fixedElements: '#header, .footer',
+        fixedElements: '#header, #footer',
         responsiveWidth: 0,
         responsiveHeight: 0,
 

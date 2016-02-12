@@ -46,6 +46,10 @@ body {
 
 }
 
+b {
+  font-family: $ProximaNovaBold;
+}
+
 .base {
 
 }
@@ -114,8 +118,14 @@ body {
     span {
       @extend .mb;
       font-size: 14px;
-
     }
+
+    &:hover {
+      span {
+        text-decoration: underline;
+      }
+    }
+
   }
 
   &:last-child {
@@ -611,10 +621,13 @@ body {
 
   &.section_v1 {
 
+    .slide_s_inner {
+      padding-top: 50px;
+    }
+
     .section_inner {
       position: relative;
       z-index: 1;
-      padding-top: 50px;
     }
 
     .slide_img {
@@ -663,6 +676,7 @@ body {
   font: 48px/1 $ProximaNovaExtrabold;
   text-transform: uppercase;
   margin-bottom: 30px;
+  letter-spacing: .65px;
 }
 
 .block_subcaption {
@@ -672,6 +686,221 @@ body {
 .hero_slogan {
   font-size: 16px;
   line-height: 1.4;
+}
+
+.solution_list {
+  @extend %clearfix;
+  margin-left: -44px;
+  padding-top: 20px;
+}
+
+.solution_col {
+  padding-left: 55px;
+  margin-bottom: 25px;
+
+  @include respond-to-min($tablet) {
+    width: 50%;
+    float: left;
+  }
+
+  @include respond-to-min($desktop) {
+    width: 25%;
+  }
+
+}
+
+.solution_item {
+  @extend .icon-checkmark;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  line-height: 22px;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    color: #91969c;
+    border: 2px solid #91969c;
+    text-align: center;
+  }
+
+}
+
+.solution_header {
+  padding-left: 20px;
+
+  &.header_red {
+    color: #951a37;
+  }
+
+  &.header_blue {
+    color: #1a4895;
+  }
+
+  &.header_green {
+    color: #1a9551;
+  }
+
+  &.header_yellow {
+    color: #e18309;
+  }
+
+}
+
+.solution_caption {
+  font: 24px $ProximaNovaBold;
+  margin-bottom: 25px;
+  letter-spacing: -.2px;
+}
+
+.solution_icon {
+  height: 120px;
+
+  &:before {
+    font-size: 100px;
+  }
+}
+
+.history_list {
+  @extend %clearfix;
+  margin-left: -52px;
+  padding-top: 40px;
+
+  @include respond-to-min($tablet) {
+    margin-right: -1%;
+    padding-top: 90px;
+    min-height: 640px;
+  }
+
+}
+
+.history_item {
+  margin-bottom: 30px;
+
+  p {
+    line-height: 22px;
+  }
+
+  @include respond-to-min($tablet) {
+    float: left;
+    width: 33%;
+    padding-left: 52px;
+  }
+
+}
+
+.history_img {
+  margin-bottom: 30px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.history_caption {
+  font: 23px $ProximaNovaExtrabold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.partner_list {
+  @extend %clearfix;
+  margin-left: -30px;
+  padding-top: 65px;
+}
+
+.partner_item {
+  margin-bottom: 70px;
+  padding-left: 30px;
+  text-align: center;
+
+  @include respond-to-min($tablet) {
+    width: 50%;
+    float: left;
+  }
+
+  @include respond-to-min($desktop) {
+    width: 25%;
+  }
+
+}
+
+.partner_logo {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 12px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.choice_list {
+  @extend %clearfix;
+  padding-top: 50px;
+}
+
+.choice_col {
+  @include respond-to-min($tablet) {
+    width: 50%;
+    float: left;
+  }
+}
+
+.choice_item {
+  min-height: 80px;
+  margin-bottom: 20px;
+  font: 22px $ProximaNovaLight;
+}
+
+.gl_link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &.link_red {
+    color: #cfb8c4;
+
+    span {
+      color: #951a37;
+    }
+  }
+
+  &.link_blue {
+    color: #b7c2d7;
+
+    span {
+      color: #1a4895;
+    }
+  }
+
+  &.link_green {
+    color: #b7d1c9;
+
+    span {
+      color: #1a9551;
+    }
+  }
+
+  &.link_yellow {
+    color: #dfcdbb;
+
+    span {
+      color: #e18309;
+    }
+  }
+
 }
 
 //************  buttons
@@ -688,6 +917,34 @@ body {
     text-decoration: none;
     padding: 0 25px;
     border: 2px solid;
+  }
+
+}
+
+.btn_v2 {
+  height: 50px;
+
+  &.get_more_btn {
+    padding: 15px 75px;
+    margin-bottom: 20px;
+    min-width: 240px;
+    font: 14px/20px $ProximaNovaBold;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+}
+
+.btn_red {
+  @include transition_all(background .3s);
+  background: #951a37;
+  color: #fff;
+
+  &:hover {
+    background: #7d0f29;
   }
 
 }
@@ -722,6 +979,10 @@ body {
 
 .text_upper {
   text-transform: uppercase;
+}
+
+.color_white {
+  color: #dee0e7;
 }
 
 .color_gray {
