@@ -5,7 +5,7 @@ $ProximaNovaExtrabold: 'ProximaNovaExtrabold', sans-serif;
 $ProximaNovaBold: 'ProximaNovaBold', sans-serif;
 $ProximaNovaSemibold: 'ProximaNovaSemibold', sans-serif;
 $ProximaNovaRegular: 'ProximaNovaRegular', sans-serif;
-$ProximaNovaLight: 'Open Sans', sans-serif;
+$ProximaNovaLight: 'ProximaNovaLight', sans-serif;
 $OpenSans: 'Open Sans', sans-serif;
 $font_1: "Trebuchet MS", Helvetica, sans-serif;
 $font_2: 'DSGooseRegular', Arial, Helvetica, sans-serif;
@@ -50,7 +50,7 @@ $fotorama_slider_a_w: 62px;
 
 //-------------------------------------------------------text_colors
 $default_t_color: #000;
-$placeholder_color: #ccc;
+$placeholder_color: #bbb;
 $color_black_g: #29353d;
 $color_grey_g: #8ba3b5;
 $color_green_g: #7db335;
@@ -484,6 +484,12 @@ $arrSize: 32px;
 
 @mixin respond-to-min($custom1) {
   @media only screen and (min-width: $custom1) {
+    @content;
+  }
+}
+
+@mixin respond-to-min-h($custom1) {
+  @media only screen and (min-height: $custom1) {
     @content;
   }
 }

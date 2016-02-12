@@ -157,13 +157,13 @@ textarea::-moz-placeholder {
 	color : $placeholder_color;
 }
 
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
+input:focus:not(:empty)::-webkit-input-placeholder,
+textarea:focus:not(:empty)::-webkit-input-placeholder {
 	color : rgba(0, 0, 0, 0) !important;
 }
 
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
+input:focus:not(:empty)::-moz-placeholder,
+textarea:focus:not(:empty)::-moz-placeholder {
 	color : rgba(0, 0, 0, 0) !important;
 }
 

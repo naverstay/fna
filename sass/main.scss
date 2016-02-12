@@ -6,6 +6,8 @@ $desktop: 1200px;
 $tablet: 960px;
 $mobile: 960px;
 
+$tablet_h: 800px;
+
 html, body {
   height: 100%;
 }
@@ -20,7 +22,6 @@ html {
 
       .wrapper {
         height: 100%;
-        overflow: hidden;
       }
     }
   }
@@ -42,6 +43,8 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
+  overflow: hidden;
+
   //min-width: 960px;
 
 }
@@ -444,6 +447,10 @@ b {
 
 #fp-nav {
 
+  @include respond-to-max($desktop) {
+    display: none;
+  }
+
   &.right {
     right: 36px;
   }
@@ -628,6 +635,15 @@ b {
     .section_inner {
       position: relative;
       z-index: 1;
+      padding: 10px 0;
+    }
+
+    .slide_s_inner {
+      padding-top: 60px;
+    }
+
+    .header .section_inner {
+      padding: 0;
     }
 
     .slide_img {
@@ -665,18 +681,33 @@ b {
   background: #dee0e7;
 }
 
+.slide_bg_v2 {
+  background: #951a37;
+}
+
 .hero_block {
   float: left;
   max-width: 360px;
   padding-left: 20px;
   color: #fff;
+
+  .block_title {
+    margin-bottom: 30px;
+  }
+
 }
 
 .block_title {
   font: 48px/1 $ProximaNovaExtrabold;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
+  margin-bottom: 2.6%;
   letter-spacing: .65px;
+}
+
+.block_caption {
+  font: 24px/1 $ProximaNovaLight;
+  margin-bottom: 15px;
 }
 
 .block_subcaption {
@@ -690,27 +721,39 @@ b {
 
 .solution_list {
   @extend %clearfix;
-  margin-left: -44px;
-  padding-top: 20px;
+  margin-left: -4px;
+  //padding-top: 20px;
+
+  @include respond-to-min-h($tablet-h) {
+    padding-top: 2%;
+    margin-left: -44px;
+  }
+
 }
 
 .solution_col {
-  padding-left: 55px;
-  margin-bottom: 25px;
+  padding-left: 15px;
+  margin-bottom: 10px;
 
   @include respond-to-min($tablet) {
-    width: 50%;
-    float: left;
+    //width: 50%;
+    //float: left;
   }
 
   @include respond-to-min($desktop) {
     width: 25%;
+    float: left;
+  }
+
+  @include respond-to-min-h($tablet-h) {
+    padding-left: 55px;
+    margin-bottom: 25px;
   }
 
 }
 
 .solution_item {
-  @extend .icon-checkmark;
+  @extend .icon-checkmark2;
   position: relative;
   padding-left: 20px;
   margin-bottom: 14px;
@@ -776,6 +819,9 @@ b {
   @include respond-to-min($tablet) {
     margin-right: -1%;
     padding-top: 90px;
+  }
+
+  @include respond-to-min-h($tablet_h) {
     min-height: 640px;
   }
 
@@ -811,24 +857,35 @@ b {
   text-transform: uppercase;
 }
 
+.partner_list_holder {
+  margin: 0 auto;
+  max-width: 870px;
+}
+
 .partner_list {
   @extend %clearfix;
-  margin-left: -30px;
+  margin-left: -20px;
   padding-top: 65px;
 }
 
 .partner_item {
-  margin-bottom: 70px;
+  //margin-bottom: 70px;
+  margin-bottom: 4%;
   padding-left: 30px;
   text-align: center;
+  width: 50%;
+  float: left;
 
   @include respond-to-min($tablet) {
-    width: 50%;
-    float: left;
+    width: 25%;
+  }
+
+  @include respond-to-min-h($tablet-h) {
+    margin-bottom: 8%;
   }
 
   @include respond-to-min($desktop) {
-    width: 25%;
+    //width: 25%;
   }
 
 }
@@ -844,9 +901,14 @@ b {
   }
 }
 
+.choice_list_holder {
+  margin: 0 auto;
+}
+
 .choice_list {
   @extend %clearfix;
-  padding-top: 50px;
+  padding-top: 40px;
+  margin-bottom: 20px;
 }
 
 .choice_col {
@@ -856,10 +918,62 @@ b {
   }
 }
 
+.choice_info {
+  font: 18px/28px $ProximaNovaLight;
+  color: #fff;
+  text-align: center;
+}
+
 .choice_item {
-  min-height: 80px;
+  position: relative;
+  padding-left: 50px;
+  min-height: 70px;
   margin-bottom: 20px;
   font: 22px $ProximaNovaLight;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+  }
+
+  @include respond-to-min($tablet) {
+    padding-left: 190px;
+
+    &:before {
+      left: 90px;
+      font-size: 70px;
+    }
+  }
+
+  @include respond-to-min-h($tablet_h) {
+    min-height: 85px;
+    margin-bottom: 50px;
+  }
+}
+
+.order_form_holder {
+  margin: 0 auto;
+  max-width: 556px;
+  padding: 5px 0;
+
+  @include respond-to-min-h($tablet_h) {
+    padding: 30px 0;
+  }
+}
+
+.form_tip {
+  //margin: 45px 0 30px;
+  margin: 2% 0;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+
+  @include respond-to-min-h($tablet_h) {
+    margin: 8% 0 5.5%;
+  }
+
 }
 
 .gl_link {
@@ -903,6 +1017,89 @@ b {
 
 }
 
+//************  forms
+
+.hidden_input {
+  display: none;
+}
+
+.check_emul {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 7px;
+
+  .hidden_input:checked + .check_text {
+    @extend .icon-checkmark2;
+  }
+
+}
+
+.check_text {
+  display: block;
+  position: relative;
+  padding-left: 62px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 36px;
+    border: 3px solid #fff;
+  }
+
+}
+
+.form_row {
+  @extend %clearfix;
+
+  &.service_row {
+    font: 16px $ProximaNovaLight;
+
+    @include respond-to-min-h($tablet_h) {
+      padding-bottom: 20px;
+    }
+  }
+
+  &.cell_2 {
+    margin-left: -27px;
+
+    .form_cell {
+      padding-left: 27px;
+      float: left;
+      width: 50%;
+    }
+  }
+}
+
+.form_cell {
+
+  &.cell_v1 {
+    margin-bottom: 19px;
+  }
+}
+
+.f_input {
+  display: block;
+  width: 100%;
+
+  &.input_v1 {
+    border-radius: 2px;
+    background: #fff;
+    padding: 15px 20px;
+    color: #000;
+    font: 16px/20px $ProximaNovaRegular;
+  }
+}
+
+textarea.input_v1 {
+  height: 120px;
+}
+
 //************  buttons
 
 .btn_v1 {
@@ -924,9 +1121,33 @@ b {
 .btn_v2 {
   height: 50px;
 
+  &.order_btn {
+    padding: 15px 40px;
+    min-width: 204px;
+    font: 14px/20px $ProximaNovaBold;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+
+    &:before {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: -8px;
+      margin-right: 8px;
+      font-size: 24px;
+    }
+
+    @include respond-to-min-h($tablet_h) {
+      margin-bottom: 20px;
+    }
+
+  }
+
   &.get_more_btn {
     padding: 15px 75px;
-    margin-bottom: 20px;
     min-width: 240px;
     font: 14px/20px $ProximaNovaBold;
     display: inline-block;
@@ -934,8 +1155,11 @@ b {
     border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none;
-  }
 
+    @include respond-to-min-h($tablet_h) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .btn_red {
@@ -952,6 +1176,11 @@ b {
 .btn_white {
   border-color: #fff;
   color: #fff;
+}
+
+.btn_white_2 {
+  background: #fff;
+  color: #282828;
 }
 
 .green_btn {

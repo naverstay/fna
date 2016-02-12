@@ -169,7 +169,7 @@ html(lang='ru' class='page_slider_mod')
                                 h2.block_title.color_gray Нам доверяют
                                 h3.block_subcaption.color_gray_2 Нашими клиентами с 2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании
                                  
-                            ul.partner_list
+                            .partner_list_holder: ul.partner_list
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_1.png')
                                     .partenr_name Предприятие <br> по производству сыра
@@ -206,18 +206,18 @@ html(lang='ru' class='page_slider_mod')
                                 a.btn_v2.btn_red.get_more_btn(href='#') клиенты
                                         
         
-                    .slide_section.section_v1.secondPage
+                    .slide_section.section_v1.fifthPage
                         .slide_img: img(src='i/index/choice_section.jpg')
                         .section_inner.clearfix.color_white
 
                             .text_center
                                 h2.block_title Почему нас выбирают?
 
-                            ul.choice_list
+                            .choice_list_holder: ul.choice_list
                                 li.choice_col
-                                    .choice_item.icon-briefcase
+                                    .choice_item.icon-bag
                                         p Делаем самое выгодное предложение по соотношению цена-качество
-                                    .choice_item.icon-briefcase
+                                    .choice_item.icon-defence
                                         p Защищаем перед налоговыми органами, даём финансовые гарантии
                                     .choice_item.icon-coffee
                                         p Используем дружелюбныйи комфортный подход в работе
@@ -234,11 +234,68 @@ html(lang='ru' class='page_slider_mod')
                                     .choice_item.icon-nest
                                         p Избавляем от лишнего поиска. Более 50 бизнес-услуг в одной ГК WiseAdvice Consulting Group
 
-
-                    .slide_section.section_v1.thirdPage
-                        .slide_img: img(src='i/index/first_screen.jpg')
-                        .section_inner.clearfix
+                            .choice_info
+                                p Лучшие аргументы и факты — это 
+                                    a.gl_link.color_white(href='#') истории успеха 
+                                    |  и 
+                                    a.gl_link.color_white(href='#') отзывы наших клиентов 
+                                    | <br> Посмотрите, как наши отличия могут стать вашими  
+                                    a.gl_link.color_white(href='#')  преимуществами
+                                    
+                    .slide_section.section_v1.sixthPage
+                        .slide_img.slide_bg_v2
+                        .section_inner.clearfix.color_white
+                            .text_center
+                                h2.block_title Заказать и познакомиться
+                                h3.block_caption Ваша скидка −10% при обращении с сайта.
+                                
+                            .order_form_holder
+                                form(action='#')
+                                    
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_name') Имя и фамилия
+                                        .input_w: input#order_name.f_input.input_v1(placeholder='Имя и фамилия')
+                                    
+                                    .form_row.cell_2
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_phone') Телефон
+                                            .input_w: input#order_phone.f_input.input_v1(placeholder='Телефон')
+                                
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_email') Электронная почта
+                                            .input_w: input#order_email.f_input.input_v1(placeholder='Электронная почта')
                             
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_comments') Комментарии
+                                        .input_w: textarea#order_comments.f_input.input_v1(placeholder='Комментарии')
                             
+                                    .form_tip Выберите полезные услуги для знакомства
 
+                                    .form_row.cell_2.service_row
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Консультация аудитора — получить ответ 
+                                                        span.text_underline бесплатно
+                                     
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Посетить Круглый стол — повысить квалификацию 10 час ИПБ
+                                     
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Совет юриста по налогам — как лучше исключить риски
+                                     
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Встретиться с аудиторами — узнать варианты решенияпроблем
 
+                                    .text_center
+                                        button.btn_v2.btn_white_2.order_btn.icon-go_top Отправить
