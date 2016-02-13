@@ -20,13 +20,32 @@ html(lang='ru' class='page_slider_mod')
                                         span.mouse_wheel
                                     span.learn_more Узнай больше
                         +header()
-
-                        .section_inner.clearfix.slide_s_inner
-                            .hero_block
-                                h1.block_title Контроль —  <br> первый шаг  <br>  к
-                                    span.text_underline доверию
-                                .hero_slogan Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.
+                                
+                        .slider_holder
+                            .heroSlider.hero_slider
+                                .hero_slide: .section_inner.clearfix.slide_s_inner
+                                    .hero_block
+                                        h1.block_title Контроль —  <br> первый шаг  <br>  к 
+                                            span.text_underline  доверию
+                                        .hero_slogan Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.
+                                
                             
+                                .hero_slide: .section_inner.clearfix.slide_s_inner
+                                    .hero_block
+                                        h1.block_title Слайд 2  <br> первый шаг  <br>  к 
+                                            span.text_underline  доверию
+                                        .hero_slogan Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.
+                                
+                            
+                                .hero_slide: .section_inner.clearfix.slide_s_inner
+                                    .hero_block
+                                        h1.block_title Слайд 3  <br> первый шаг  <br>  к 
+                                            span.text_underline  доверию
+                                        .hero_slogan Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.
+                                            
+                            .hero_slider_controls: .section_inner
+                                .slide_prev.heroSlidePrev.icon-go_top
+                                .slide_next.heroSlideNext.icon-go_top
 
                     .slide_section.section_v1.secondPage
                         .slide_img.slide_bg_v1
@@ -36,9 +55,9 @@ html(lang='ru' class='page_slider_mod')
 
                             ul.solution_list
                                 li.solution_col
-                                    .solution_header.header_red
-                                        .solution_icon.icon-puzzle_2
-                                        .solution_caption: a.gl_link.link_red(href='#'): span Все решения для бизнеса
+                                    a.solution_header.header_red.gl_link.link_red(href='#')
+                                        .solution_icon.icon-puzzle
+                                        .solution_caption: span Все решения для бизнеса
                                     
                                     .solution_item
                                         b Все виды аудита:
@@ -61,9 +80,9 @@ html(lang='ru' class='page_slider_mod')
                                             a.gl_link.link_red(href='#'): span WiseAdvice Consulting Group >>
                                             
                                 li.solution_col
-                                    .solution_header.header_blue
-                                        .solution_icon.icon-briefcase
-                                        .solution_caption: a.gl_link.link_blue(href='#'): span Генеральному директору
+                                    a.solution_header.header_blue.gl_link.link_blue(href='#')
+                                        .solution_icon.icon-gen_direcor
+                                        .solution_caption: span Генеральному директору
                                     
                                     .solution_item
                                         p 
@@ -86,9 +105,9 @@ html(lang='ru' class='page_slider_mod')
                                             a.gl_link.link_red(href='#'): span Получить кредит
                                             |  повысить доверие учредителей                                             
                                 li.solution_col
-                                    .solution_header.header_green
-                                        .solution_icon.icon-rub
-                                        .solution_caption: a.gl_link.link_green(href='#'): span Фин. директору Глав. бухгалтеру
+                                    a.solution_header.header_green.gl_link.link_green(href='#')
+                                        .solution_icon.icon-director
+                                        .solution_caption: span Фин. директору Глав. бухгалтеру
                                     
                                     .solution_item
                                         p 
@@ -111,9 +130,9 @@ html(lang='ru' class='page_slider_mod')
                                             | , улучшить автоматизацию, процессы и пр.
                                                                
                                 li.solution_col
-                                    .solution_header.header_yellow
-                                        .solution_icon.icon-city
-                                        .solution_caption: a.gl_link.link_yellow(href='#'): span Собственнику Иностр. компаниям
+                                    a.solution_header.header_yellow.gl_link.link_yellow(href='#')
+                                        .solution_icon.icon-owner
+                                        .solution_caption: span Собственнику Иностр. компаниям
                                     
                                     .solution_item
                                         p 
@@ -132,8 +151,7 @@ html(lang='ru' class='page_slider_mod')
 
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Привлечение финансирование 
-                                            | . Повысить доверие партнеров, инвесторов
+                                            | <a href="#" class="gl_link link_red"><span>Привлечение финансирование</span></a>. Повысить доверие партнеров, инвесторов
                                         
                             .text_center
                                 a.btn_v2.btn_red.get_more_btn(href='#') Выбор услуг
@@ -144,22 +162,22 @@ html(lang='ru' class='page_slider_mod')
 
                             .text_center
                                 h2.block_title История успеха
-                                h3.block_subcaption Нашими клиентами с 2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании
+                                h3.block_subcaption Узнайте, как мы учитываем специфику российского законодательства  <br> и помогаем росту бизнеса в России из историй успеха
                             
                             ul.history_list
                                 li.history_item
                                     .history_img: img(src='i/index/history_1.jpg')
-                                    .history_caption: a.gl_link.color_white(href='#'): span Складской комплекс на территории Москвы (Due Diligence)
+                                    .history_caption: a.gl_link.link_white(href='#'): span Складской комплекс на территории Москвы (Due Diligence)
                                     p Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.
                                 
                                 li.history_item
                                     .history_img: img(src='i/index/history_2.jpg')
-                                    .history_caption: a.gl_link.color_white(href='#'): span Иностранный импортер кондитерской продукции
+                                    .history_caption: a.gl_link.link_white(href='#'): span Иностранный импортер кондитерской продукции
                                     p Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.
                                 
                                 li.history_item
                                     .history_img: img(src='i/index/history_3.jpg')
-                                    .history_caption: a.gl_link.color_white(href='#'): span Производство в Подмосковье — партнер Самсунг
+                                    .history_caption: a.gl_link.link_white(href='#'): span Производство в Подмосковье — партнер Самсунг
                                     p Самсунг  предъявляет к своим поставщикам серьезные требования не только по качеству продукции, но и по финансовой устойчивости компании.
                                 
                     .slide_section.section_v1.forthPage
@@ -236,11 +254,11 @@ html(lang='ru' class='page_slider_mod')
 
                             .choice_info
                                 p Лучшие аргументы и факты — это 
-                                    a.gl_link.color_white(href='#') истории успеха 
+                                    a.gl_link.link_white(href='#'): span истории успеха
                                     |  и 
-                                    a.gl_link.color_white(href='#') отзывы наших клиентов 
-                                    | <br> Посмотрите, как наши отличия могут стать вашими  
-                                    a.gl_link.color_white(href='#')  преимуществами
+                                    a.gl_link.link_white(href='#'): span отзывы наших клиентов
+                                    |  <br> Посмотрите, как наши отличия могут стать вашими  
+                                    a.gl_link.link_white(href='#'): span преимуществами
                                     
                     .slide_section.section_v1.sixthPage
                         .slide_img.slide_bg_v2
@@ -299,3 +317,6 @@ html(lang='ru' class='page_slider_mod')
 
                                     .text_center
                                         button.btn_v2.btn_white_2.order_btn.icon-go_top Отправить
+
+        +scripts()
+        

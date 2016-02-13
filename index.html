@@ -8,12 +8,6 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="styles/main_global.css?no_cache" media="all"/>
-    <script src="js/device.min.js?no_cache"></script>
-    <script src="js/jquery1.10.js?no_cache"></script>
-    <script src="js/chosen.jquery.js?no_cache"></script>
-    <!--script(src='js/jquery.mousewheel.min.js')-->
-    <script src="js/jquery.fullPage.js?no_cache"></script>
-    <script src="js/script.js?no_cache"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -30,7 +24,7 @@
               <div class="top_menu_holder">
                 <div class="section_inner clearfix">
                   <ul class="top_menu">
-                    <li class="top_m_item"><a href="#" class="gl_link icon-puzzle"><span>Все бизнес  <br> решения</span></a></li>
+                    <li class="top_m_item"><a href="#" class="gl_link icon-puzzle_2"><span>Все бизнес  <br> решения</span></a></li>
                     <li class="top_m_item"><a href="#" class="gl_link icon-briefcase"><span>Генеральному <br> директору</span></a></li>
                     <li class="top_m_item"><a href="#" class="gl_link icon-rub"><span>Фин. директору  <br> Гл. бухгалтеру</span></a></li>
                     <li class="top_m_item"><a href="#" class="gl_link icon-city"><span>Собственнику  <br>  Иностранным компаниям</span></a></li>
@@ -73,14 +67,7 @@
                   <div class="user_menu_holder">
                     <ul class="user_menu">
                       <li class="user_m_item">
-                        <div class="mb">
-                          <div class="lang_menu chosen_v1 no_search">
-                            <select class="chosen-select">
-                              <option selected="selected" class="lang_flag flag_gb">Eng</option>
-                              <option class="lang_flag flag_rf">Рус</option>
-                            </select>
-                          </div>
-                        </div>
+                        <div class="mb"><a href="#" class="lang_link"><img src="i/flag_gb.jpg"/><span>Eng</span></a></div>
                       </li>
                       <li class="user_m_item">
                         <div class="mb"><a href="#" class="user_m_link icon-facebook"></a></div>
@@ -90,10 +77,38 @@
                 </div>
               </div>
             </div>
-            <div class="section_inner clearfix slide_s_inner">
-              <div class="hero_block">
-                <h1 class="block_title">Контроль —  <br> первый шаг  <br>  к<span class="text_underline">доверию</span></h1>
-                <div class="hero_slogan">Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.</div>
+            <div class="slider_holder">
+              <div class="heroSlider hero_slider">
+                <div class="hero_slide">
+                  <div class="section_inner clearfix slide_s_inner">
+                    <div class="hero_block">
+                      <h1 class="block_title">Контроль —  <br> первый шаг  <br>  к <span class="text_underline"> доверию</span></h1>
+                      <div class="hero_slogan">Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero_slide">
+                  <div class="section_inner clearfix slide_s_inner">
+                    <div class="hero_block">
+                      <h1 class="block_title">Слайд 2  <br> первый шаг  <br>  к <span class="text_underline"> доверию</span></h1>
+                      <div class="hero_slogan">Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hero_slide">
+                  <div class="section_inner clearfix slide_s_inner">
+                    <div class="hero_block">
+                      <h1 class="block_title">Слайд 3  <br> первый шаг  <br>  к <span class="text_underline"> доверию</span></h1>
+                      <div class="hero_slogan">Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hero_slider_controls">
+                <div class="section_inner">
+                  <div class="slide_prev heroSlidePrev icon-go_top"></div>
+                  <div class="slide_next heroSlideNext icon-go_top"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -104,11 +119,9 @@
                 <h2 class="block_title color_gray">Решения для бизнеса</h2>
               </div>
               <ul class="solution_list">
-                <li class="solution_col">
-                  <div class="solution_header header_red">
-                    <div class="solution_icon icon-puzzle_2"></div>
-                    <div class="solution_caption"><a href="#" class="gl_link link_red"><span>Все решения для бизнеса</span></a></div>
-                  </div>
+                <li class="solution_col"><a href="#" class="solution_header header_red gl_link link_red">
+                    <div class="solution_icon icon-puzzle"></div>
+                    <div class="solution_caption"><span>Все решения для бизнеса</span></div></a>
                   <div class="solution_item"><b>Все виды аудита:</b>
                     <p> <a href="#" class="gl_link link_red"><span>обязательный, комплексный, инициативный, налоговый, Due Diligence, МСА</span></a></p>
                   </div>
@@ -123,11 +136,9 @@
                     <p> <a href="#" class="gl_link link_red"><span>WiseAdvice Consulting Group >></span></a></p>
                   </div>
                 </li>
-                <li class="solution_col">
-                  <div class="solution_header header_blue">
-                    <div class="solution_icon icon-briefcase"></div>
-                    <div class="solution_caption"><a href="#" class="gl_link link_blue"><span>Генеральному директору</span></a></div>
-                  </div>
+                <li class="solution_col"><a href="#" class="solution_header header_blue gl_link link_blue">
+                    <div class="solution_icon icon-gen_direcor"></div>
+                    <div class="solution_caption"><span>Генеральному директору</span></div></a>
                   <div class="solution_item">
                     <p> <a href="#" class="gl_link link_red"><span>Получить аудиторское заключение</span></a>: провести аудит — исполнить закон 302-ФЗ</p>
                   </div>
@@ -141,11 +152,9 @@
                     <p> <a href="#" class="gl_link link_red"><span>Получить кредит</span></a> повысить доверие учредителей                                             </p>
                   </div>
                 </li>
-                <li class="solution_col">
-                  <div class="solution_header header_green">
-                    <div class="solution_icon icon-rub"></div>
-                    <div class="solution_caption"><a href="#" class="gl_link link_green"><span>Фин. директору Глав. бухгалтеру</span></a></div>
-                  </div>
+                <li class="solution_col"><a href="#" class="solution_header header_green gl_link link_green">
+                    <div class="solution_icon icon-director"></div>
+                    <div class="solution_caption"><span>Фин. директору Глав. бухгалтеру</span></div></a>
                   <div class="solution_item">
                     <p> <a href="#" class="gl_link link_red"><span>Проверить состояние учета, </span></a>вовремя найти и исправить замечания, подтвердить отчетность </p>
                   </div>
@@ -159,11 +168,9 @@
                     <p> <a href="#" class="gl_link link_red"><span>Оптимизировать работу бухгалтерской службы</span></a>, улучшить автоматизацию, процессы и пр.</p>
                   </div>
                 </li>
-                <li class="solution_col">
-                  <div class="solution_header header_yellow">
-                    <div class="solution_icon icon-city"></div>
-                    <div class="solution_caption"><a href="#" class="gl_link link_yellow"><span>Собственнику Иностр. компаниям</span></a></div>
-                  </div>
+                <li class="solution_col"><a href="#" class="solution_header header_yellow gl_link link_yellow">
+                    <div class="solution_icon icon-owner"></div>
+                    <div class="solution_caption"><span>Собственнику Иностр. компаниям</span></div></a>
                   <div class="solution_item">
                     <p> <a href="#" class="gl_link link_red"><span>Независимая проверка финансовых показателей</span></a>, включая размер прибылии дивидендов</p>
                   </div>
@@ -174,7 +181,10 @@
                     <p> <a href="#" class="gl_link link_red"><span>Проверка бизнеса (Due Diligence) </span></a> перед покупкой, подготовить к продаже;</p>
                   </div>
                   <div class="solution_item">
-                    <p> <a href="#" class="gl_link link_red"><span>Привлечение финансирование </span></a>. Повысить доверие партнеров, инвесторов</p>
+                    <p>
+                       
+                      <a href="#" class="gl_link link_red"><span>Привлечение финансирование</span></a>. Повысить доверие партнеров, инвесторов
+                    </p>
                   </div>
                 </li>
               </ul>
@@ -186,22 +196,22 @@
             <div class="section_inner clearfix color_white">
               <div class="text_center">
                 <h2 class="block_title">История успеха</h2>
-                <h3 class="block_subcaption">Нашими клиентами с 2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании</h3>
+                <h3 class="block_subcaption">Узнайте, как мы учитываем специфику российского законодательства  <br> и помогаем росту бизнеса в России из историй успеха</h3>
               </div>
               <ul class="history_list">
                 <li class="history_item">
                   <div class="history_img"><img src="i/index/history_1.jpg"></div>
-                  <div class="history_caption"><a href="#" class="gl_link color_white"><span>Складской комплекс на территории Москвы (Due Diligence)</span></a></div>
+                  <div class="history_caption"><a href="#" class="gl_link link_white"><span>Складской комплекс на территории Москвы (Due Diligence)</span></a></div>
                   <p>Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.</p>
                 </li>
                 <li class="history_item">
                   <div class="history_img"><img src="i/index/history_2.jpg"></div>
-                  <div class="history_caption"><a href="#" class="gl_link color_white"><span>Иностранный импортер кондитерской продукции</span></a></div>
+                  <div class="history_caption"><a href="#" class="gl_link link_white"><span>Иностранный импортер кондитерской продукции</span></a></div>
                   <p>Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.</p>
                 </li>
                 <li class="history_item">
                   <div class="history_img"><img src="i/index/history_3.jpg"></div>
-                  <div class="history_caption"><a href="#" class="gl_link color_white"><span>Производство в Подмосковье — партнер Самсунг</span></a></div>
+                  <div class="history_caption"><a href="#" class="gl_link link_white"><span>Производство в Подмосковье — партнер Самсунг</span></a></div>
                   <p>Самсунг  предъявляет к своим поставщикам серьезные требования не только по качеству продукции, но и по финансовой устойчивости компании.</p>
                 </li>
               </ul>
@@ -284,7 +294,7 @@
                 </ul>
               </div>
               <div class="choice_info">
-                <p>Лучшие аргументы и факты — это <a href="#" class="gl_link color_white">истории успеха </a> и <a href="#" class="gl_link color_white">отзывы наших клиентов </a><br> Посмотрите, как наши отличия могут стать вашими  <a href="#" class="gl_link color_white"> преимуществами</a></p>
+                <p>Лучшие аргументы и факты — это <a href="#" class="gl_link link_white"><span>истории успеха</span></a> и <a href="#" class="gl_link link_white"><span>отзывы наших клиентов</span></a> <br> Посмотрите, как наши отличия могут стать вашими  <a href="#" class="gl_link link_white"><span>преимуществами</span></a></p>
               </div>
             </div>
           </div>
@@ -356,5 +366,15 @@
         </div>
       </div>
     </div>
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="js/device.min.js?no_cache"></script>
+    <script src="js/jquery1.10.js?no_cache"></script>
+    <script src="js/chosen.jquery.js?no_cache"></script>
+    <!--script(src='js/jquery.mousewheel.min.js')-->
+    <script src="js/jquery.fullPage.js?no_cache"></script>
+    <script src="js/slick.js?no_cache"></script>
+    <script src="js/script.js?no_cache"></script>
   </body>
 </html>

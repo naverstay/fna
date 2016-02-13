@@ -8,13 +8,19 @@ mixin dev_head(page_title)
         meta(name="format-detection", content="telephone=no")
         meta(name='viewport', content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='styles/main_global.css?no_cache', media='all')
-        //-script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
-        script(src='js/device.min.js?no_cache')
-        script(src='js/jquery1.10.js?no_cache')
-        script(src='js/chosen.jquery.js?no_cache')
-        //script(src='js/jquery.mousewheel.min.js')
-        script(src='js/jquery.fullPage.js?no_cache')
-        script(src='js/script.js?no_cache')
+
+mixin scripts()
+    | <!--[if IE]>
+    | <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    | <![endif]-->
+    //-script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
+    script(src='js/device.min.js?no_cache')
+    script(src='js/jquery1.10.js?no_cache')
+    script(src='js/chosen.jquery.js?no_cache')
+    //script(src='js/jquery.mousewheel.min.js')
+    script(src='js/jquery.fullPage.js?no_cache')
+    script(src='js/slick.js?no_cache')
+    script(src='js/script.js?no_cache')
 
 
 mixin loop_while(counter)
@@ -27,8 +33,42 @@ mixin header(active_menu)
     div.header
         .top_menu_holder
             .section_inner.clearfix
+                //-ul.top_menu
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-fna-svg--fixmenu-01
+                        span Все бизнес  <br> решения
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-fna-svg--fixmenu-02
+                        span Генеральному <br> директору
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-fna-svg--fixmenu-03
+                        span Фин. директору  <br> Гл. бухгалтеру
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-fna-svg--fixmenu-04
+                        span Собственнику  <br>  Иностранным компаниям
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-fna-svg--fixmenu-05
+                        span Контактная  <br>  информация
+
+                //-ul.top_menu
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-icon--puzzle
+                        span Все бизнес  <br> решения
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-icon--briefcase
+                        span Генеральному <br> директору
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-icon--rub
+                        span Фин. директору  <br> Гл. бухгалтеру
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-icon--city
+                        span Собственнику  <br>  Иностранным компаниям
+                    li.top_m_item: a.gl_link(href='#')
+                        span.link_icon.svg-icon--map_pin
+                        span Контактная  <br>  информация
+                    
                 ul.top_menu
-                    li.top_m_item: a.gl_link.icon-puzzle(href='#'): span Все бизнес  <br> решения
+                    li.top_m_item: a.gl_link.icon-puzzle_2(href='#'): span Все бизнес  <br> решения
                     li.top_m_item: a.gl_link.icon-briefcase(href='#'): span Генеральному <br> директору
                     li.top_m_item: a.gl_link.icon-rub(href='#'): span Фин. директору  <br> Гл. бухгалтеру
                     li.top_m_item: a.gl_link.icon-city(href='#'): span Собственнику  <br>  Иностранным компаниям
@@ -82,7 +122,12 @@ mixin header(active_menu)
                 .user_menu_holder
                     ul.user_menu
                         li.user_m_item
-                            .mb: .lang_menu.chosen_v1.no_search
+                            .mb
+                                a.lang_link(href='#')
+                                    img(src='i/flag_gb.jpg')
+                                    span Eng
+                                
+                            //-.mb: .lang_menu.chosen_v1.no_search
                                 select.chosen-select
                                     option.lang_flag.flag_gb(selected) Eng
                                     option.lang_flag.flag_rf Рус

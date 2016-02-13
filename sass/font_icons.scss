@@ -7,7 +7,7 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"], .icon-before {
   &:before {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'fna_icons' !important;
@@ -22,6 +22,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
+
+.icon-checkmark3:before {
+  content: "\e918";
 }
 
 .icon-checkmark:before {

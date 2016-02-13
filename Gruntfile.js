@@ -41,6 +41,38 @@ module.exports = function (grunt) {
                     ext: ".html"
                 }]
             }
+        },
+        svg_sprite: {
+            complex: {
+
+                // Target basics 
+                expand: true,
+                src: ['icon/*.svg'],
+                dest: 'styles/',
+
+                // Target options 
+                options: {
+                    shape: {
+                        dimension: {			// Set maximum dimensions 
+                            maxWidth: 32,
+                            maxHeight: 32
+                        },
+                        spacing: {			// Add padding 
+                            padding: 10
+                        },
+                        dest: 'svg/'	// Keep the intermediate files 
+                    },
+                    mode: {
+                        view: {			// Activate the «view» mode 
+                            bust: false,
+                            render: {
+                                scss: true		// Activate Sass output (with default options) 
+                            }
+                        },
+                        symbol: false		// Activate the «symbol» mode 
+                    }
+                }
+            }
         }
 
     });
