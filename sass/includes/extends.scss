@@ -134,7 +134,7 @@
   }
 
   %clearfix {
-    &:after {
+    &::after {
       position: static;
       display: block;
       height: 0;
@@ -178,7 +178,7 @@
   }
 
   %butt_halo_v1 {
-    &:after {
+    &::after {
       $w: 7px;
       z-index: -1;
       position: absolute;
@@ -196,7 +196,7 @@
     position: relative;
     @include clearfix;
 
-    &:before {
+    &::before {
       position: absolute;
       width: 1px;
       top: 0;
@@ -208,7 +208,7 @@
   %main_block_shadow {
     @include main_bg;
 
-    &:before {
+    &::before {
       $box_w: 150px;
       $box_w2: 500%;
       $box_color: rgba(200, 216, 228, .9);
@@ -224,7 +224,7 @@
       @include border_radius_shadow($box_w2, $box_w);
     }
 
-    &:after {
+    &::after {
       $p: 40px;
       position: absolute;
       height: 1px;
@@ -279,7 +279,7 @@
   }
 
   %help_ico {
-    &:before {
+    &::before {
       z-index: 100;
       position: absolute;
       width: 18px;
@@ -299,7 +299,7 @@
   }
 
   %help_new_ico {
-    &:before {
+    &::before {
       box-sizing: border-box;
       z-index: 5;
       position: absolute;
@@ -550,8 +550,8 @@
     background-color: #91c5e7;
     cursor: pointer;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       width: 3px;
       height: 3px;
@@ -561,28 +561,28 @@
       @include transition(all, .2s);
     }
 
-    &:before {
+    &::before {
       left: $fullscreen_icon_w;
       border-width: 2px 0 0 2px;
     }
-    &:after {
+    &::after {
       right: $fullscreen_icon_w;
       border-width: 2px 2px 0 0;
     }
 
     &:hover {
-      &:before {
+      &::before {
         @include transform_translate((-$fullscreen_icon_hover_w), (-$fullscreen_icon_hover_w));
       }
-      &:after {
+      &::after {
         @include transform_translate($fullscreen_icon_hover_w, (-$fullscreen_icon_hover_w));
       }
     }
   }
 
   %fullscreen_icon_sub {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       width: 3px;
       height: 3px;
@@ -592,21 +592,21 @@
       @include transition(all, .2s);
     }
 
-    &:before {
+    &::before {
       left: $fullscreen_icon_w;
       border-width: 0 0 2px 2px;
     }
-    &:after {
+    &::after {
       right: $fullscreen_icon_w;
       border-width: 0 2px 2px 0;
     }
   }
   //	.fotorama__fullscreen-icon:hover & {
   //
-  //			&:before {
+  //			&::before {
   //				@include transform_translate((-$fullscreen_icon_hover_w), $fullscreen_icon_hover_w);
   //			}
-  //			&:after {
+  //			&::after {
   //				@include transform_translate($fullscreen_icon_hover_w, $fullscreen_icon_hover_w);
   //			}
   //		}
@@ -623,13 +623,13 @@
     @include transform_translate(0, -50%, false, false, true);
     @include transition;
 
-    &:after,
-    &:before {
+    &::after,
+    &::before {
       box-sizing: border-box;
       position: absolute;
       content: "";
     }
-    &:before {
+    &::before {
       z-index: 2;
       width: 12px;
       height: 12px;
@@ -639,7 +639,7 @@
       border-width: 3px 0 0 3px;
     }
 
-    &:after {
+    &::after {
       $f: -4px;
       z-index: 1;
       top: $f;
@@ -653,11 +653,11 @@
     &:hover,
     &:focus {
       background: #fff;
-      &:before {
+      &::before {
         border-color: #7e8f98;
       }
 
-      &:after {
+      &::after {
         border-color: #fff;
       }
     }
@@ -669,7 +669,7 @@
     z-index: 5;
     left: -$fotorama_slider_a_w/2;
 
-    &:before {
+    &::before {
       right: 12px;
       @include transform_rotate(-45);
     }
@@ -679,7 +679,7 @@
     z-index: 5;
     right: -$fotorama_slider_a_w/2;
 
-    &:before {
+    &::before {
       left: 12px;
       @include transform_rotate(135);
     }
@@ -733,8 +733,8 @@
     border: 1px solid #c3d1d9;
     background-color: #fff;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       z-index: 2;
       position: absolute;
       display: none;

@@ -28,26 +28,26 @@
 		display: none !important;
 	}
 	.portfolio {
-		&:before, &:after {
+		&::before, &::after {
 			display: none !important;
 		}
 	}
 	.blog {
-		&:before, &:after {
+		&::before, &::after {
 			display: none !important;
 		}
 	}
 	.services {
-		&:before, &:after {
+		&::before, &::after {
 			display: none !important;
 		}
 	}
 	.our_projects {
-		&:before, &:after {
+		&::before, &::after {
 			display: none !important;
 		}
 	}
-	.portfolio_carusel, .circle, .wrapper:before, .portfolio_all, .blog_all, .section_description div.s_d_wrap {
+	.portfolio_carusel, .circle, .wrapper::before, .portfolio_all, .blog_all, .section_description div.s_d_wrap {
 		display: none !important;
 	}
 	.portfolio, .blog, .services, .our_projects {
@@ -55,7 +55,7 @@
 	}
 	.section_description {
 		background: none !important;
-		&:after, &:before {
+		&::after, &::before {
 			background: none !important;
 		}
 	}
@@ -103,14 +103,14 @@
 			color: #444 !important;
 			text-decoration: underline;
 		}
-		&:after {
+		&::after {
 			content: " (" attr(href) ")";
 		}
 	}
-	abbr:after {
+	abbr::after {
 		content: " (" attr(title) ")";
 	}
-	.ir a:after, .o_p_h_line a:after, .portfolio_desc .img a:after, .portfolio_carusel .p_c_l_item a:after, .gallery_3 .g3_item a:after, .mod_1 a:after, .entry-meta a:after, .entry-content a:after, .comment-author a:after {
+	.ir a::after, .o_p_h_line a::after, .portfolio_desc .img a::after, .portfolio_carusel .p_c_l_item a::after, .gallery_3 .g3_item a::after, .mod_1 a::after, .entry-meta a::after, .entry-content a::after, .comment-author a::after {
 		content: "";
 	}
 	// Don't show links for images */
@@ -166,7 +166,7 @@
 	.s_butt_b_link {
 		background: none;
 		color: #000 !important;
-		&:before, &:after {
+		&::before, &::after {
 			background: none;
 			color: #000 !important;
 		}

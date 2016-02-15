@@ -8,7 +8,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"], .icon-before {
-  &:before {
+  &::before {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'fna_icons' !important;
     speak: none;
@@ -24,103 +24,103 @@
   }
 }
 
-.icon-checkmark3:before {
+.icon-checkmark3::before {
   content: "\e918";
 }
 
-.icon-checkmark:before {
+.icon-checkmark::before {
   content: "\e916";
 }
 
-.icon-go_top:before {
+.icon-go_top::before {
   content: "\e915";
 }
 
-.icon-nest:before {
+.icon-nest::before {
   content: "\e900";
 }
 
-.icon-gift:before {
+.icon-gift::before {
   content: "\e901";
 }
 
-.icon-calendar:before {
+.icon-calendar::before {
   content: "\e902";
 }
 
-.icon-pie:before {
+.icon-pie::before {
   content: "\e903";
 }
 
-.icon-graph:before {
+.icon-graph::before {
   content: "\e904";
 }
 
-.icon-coffee:before {
+.icon-coffee::before {
   content: "\e905";
 }
 
-.icon-defence:before {
+.icon-defence::before {
   content: "\e906";
 }
 
-.icon-bag:before {
+.icon-bag::before {
   content: "\e907";
 }
 
-.icon-owner:before {
+.icon-owner::before {
   content: "\e908";
 }
 
-.icon-director:before {
+.icon-director::before {
   content: "\e909";
 }
 
-.icon-gen_direcor:before {
+.icon-gen_direcor::before {
   content: "\e90a";
 }
 
-.icon-puzzle:before {
+.icon-puzzle::before {
   content: "\e90b";
 }
 
-.icon-facebook:before {
+.icon-facebook::before {
   content: "\e90c";
 }
 
-.icon-home:before {
+.icon-home::before {
   content: "\e90d";
 }
 
-.icon-map_pin:before {
+.icon-map_pin::before {
   content: "\e90e";
 }
 
-.icon-phone:before {
+.icon-phone::before {
   content: "\e90f";
 }
 
-.icon-wiseadvice-logo:before {
+.icon-wiseadvice-logo::before {
   content: "\e910";
 }
 
-.icon-city:before {
+.icon-city::before {
   content: "\e911";
 }
 
-.icon-rub:before {
+.icon-rub::before {
   content: "\e912";
 }
 
-.icon-briefcase:before {
+.icon-briefcase::before {
   content: "\e913";
 }
 
-.icon-puzzle_2:before {
+.icon-puzzle_2::before {
   content: "\e914";
 }
 
-.icon-checkmark2:before {
+.icon-checkmark2::before {
   content: "\e917";
 }
 

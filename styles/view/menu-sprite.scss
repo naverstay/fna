@@ -1,0 +1,54 @@
+%svg-common {
+  background: url("svg/menu-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-01 {
+  @extend %svg-common;
+  background-position: 50.98039215686274% 0;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-01-dims {
+  width: 51px;
+  height: 51px;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-02 {
+  @extend %svg-common;
+  background-position: 0 0;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-02-dims {
+  width: 52px;
+  height: 50.25px;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-03 {
+  @extend %svg-common;
+  background-position: 99.69993224276449% 0;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-03-dims {
+  width: 49.69px;
+  height: 49.69px;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-04 {
+  @extend %svg-common;
+  background-position: 50.48543689320388% 98.07692307692308%;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-04-dims {
+  width: 50px;
+  height: 51px;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-05 {
+  @extend %svg-common;
+  background-position: 0 98.52941176470588%;
+}
+
+.svg-svg-menu--fna-svg--fixmenu-05-dims {
+  width: 44.31px;
+  height: 52px;
+}
+

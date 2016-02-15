@@ -10,7 +10,7 @@
 	border-radius: 5px;
 	box-shadow: 0 2px 16px rgba(147, 181, 198, .69);
 
-//	&:before {
+//	&::before {
 //		z-index: 1;
 //		position: absolute;
 //		width: 10px;
@@ -23,7 +23,7 @@
 //		@include transform_rotate(45);
 //	}
 //
-//	&:after {
+//	&::after {
 //		z-index: 2;
 //		position: absolute;
 //		height: 15px !important;
@@ -54,7 +54,7 @@
 		border-radius: 50%;
 		box-shadow: inset 0 0 0 2px $color_b;
 
-		&:after {
+		&::after {
 			z-index: 2;
 			position: absolute;
 			width: 8px;
@@ -70,7 +70,7 @@
 		&:focus {
 			box-shadow: inset 0 0 0 2px $color_b_h;
 
-			&:after {
+			&::after {
 				border-color: $color_b_h;
 			}
 		}
@@ -83,7 +83,7 @@
 	.ui-datepicker-prev {
 		left: 28px;
 
-		&:after {
+		&::after {
 			right: 6px;
 			@include transform(rotate(-45deg) translatez(0));
 		}
@@ -91,7 +91,7 @@
 	.ui-datepicker-next {
 		right: 28px;
 
-		&:after {
+		&::after {
 			left: 6px;
 			@include transform(rotate(135deg) translatez(0));
 		}

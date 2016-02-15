@@ -4,12 +4,12 @@ $gl_blue_v1: #24a6df;
 
 $desktop: 1200px;
 $tablet: 960px;
-$mobile: 960px;
+$mobile: 720px;
 
 $tablet_h: 800px;
 
 html, body {
-  height: 100%;
+  height: 100% !important;
 }
 
 html {
@@ -53,10 +53,6 @@ b {
   font-family: $ProximaNovaBold;
 }
 
-.base {
-
-}
-
 .fl {
   float: left;
 }
@@ -80,20 +76,84 @@ b {
 //*************************** header
 
 .header {
+  @extend %translate3d;
+  @include transition_all(height .3s);
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: 5;
+
+  @include respond-to-max($desktop) {
+    .open_menu & {
+      height: 100%;
+      //position: fixed;
+      //
+      //.top_menu_holder,
+      //.logo_section {
+      //  display: none;
+      //}
+    }
+  }
+
+  @include respond-to-min($desktop) {
+    position: fixed;
+  }
 }
 
 .top_menu_holder {
-  background: rgba(0, 0, 0, .8);
+
+  @include respond-to-min($desktop) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 50px;
+      background: rgba(0, 0, 0, .8);
+    }
+
+    .header_fixed & {
+
+      &::before {
+        background: #951a37;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+      }
+
+      .logo_section,
+      .top_menu {
+        display: none;
+      }
+    }
+  }
 }
 
 .top_menu {
   @extend %clearfix;
   line-height: 50px;
+
+  @include respond-to-max($desktop) {
+    padding: 0 55px;
+    display: none;
+
+    .top_m_item {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.link_icon {
+  position: absolute;
+  left: -9px;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  margin-top: -24px;
 }
 
 .top_m_item {
@@ -108,7 +168,7 @@ b {
     color: #6c7177;
     text-decoration: none;
 
-    &:before {
+    &::before {
       position: absolute;
       left: 0;
       top: 50%;
@@ -135,7 +195,6 @@ b {
     float: right;
     margin-right: 0;
   }
-
 }
 
 .logo_section {
@@ -149,14 +208,51 @@ b {
     text-align: left;
   }
 
+  @include respond-to-max($desktop) {
+    > .fl,
+    > .fr {
+      float: none;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 5px;
+    }
+  }
+
+  @include respond-to-max($mobile) {
+    //> .fl,
+    //> .fr {
+    //  display: none;
+    //}
+  }
+}
+
+.partner_logo_holder {
+  text-align: center;
+  line-height: normal;
+  margin-top: 15px;
+  display: none;
+
+  @include respond-to-min($desktop) {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    width: 204px;
+    height: 50px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 .logo_holder {
-  position: absolute;
-  left: 50%;
-  top: 50%;
   text-align: center;
-  line-height: normal;
+
+  @include respond-to-min($desktop) {
+    margin: 0;
+  }
 }
 
 .logo {
@@ -165,28 +261,32 @@ b {
   position: relative;
   width: 204px;
   height: 50px;
-  margin: -25px 0 0 -107px;
+  overflow: hidden;
 
-  &:before {
+  &::before {
     display: inline-block;
     vertical-align: top;
     font-size: 200px;
     line-height: 50px;
     color: #fff;
   }
-
 }
 
 .company_name {
   color: #fff;
   font: 40px $ProximaNovaExtrabold;
   letter-spacing: -.75px;
-  margin-right: 35px;
+
+  @include respond-to-min($tablet) {
+    margin-right: 35px;
+  }
+
 }
 
 .company_slogan {
   color: #fff;
   font: 16px $ProximaNovaLight;
+  text-align: left;
 }
 
 .callback_phone {
@@ -199,7 +299,7 @@ b {
   padding-left: 40px;
   letter-spacing: -.1px;
 
-  &:before {
+  &::before {
     position: absolute;
     left: 0;
     top: 50%;
@@ -207,23 +307,155 @@ b {
     margin-top: -17px;
     color: #fff;
   }
+}
 
+.main_menu_holder {
+  padding-bottom: 15px;
+
+  @include respond-to-min($desktop) {
+    float: left;
+    padding: 0;
+
+    .menu_item {
+      float: left;
+    }
+  }
+}
+
+.user_menu_holder {
+  padding: 20px 0;
+
+  @include respond-to-min($desktop) {
+    float: right;
+    padding: 0;
+  }
+}
+
+.nav_overlay {
+  @include transition_all(opacity .3s);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 30000px;
+  width: 10000px;
+  content: '';
+  pointer-events: none;
+  opacity: 0;
+  background: rgba(0, 0, 0, .45);
+}
+
+.nav_holder {
+  @include transition_all(transform .3s, box-shadow .3s);
+  background: #951a37;
+
+  @include respond-to-max($desktop) {
+    z-index: 6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 100vh;
+    max-width: calc(100% - 50px);
+    pointer-events: none;
+    -webkit-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+
+    &::before {
+      background: #951a37;
+      content: '';
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      height: 30000px;
+    }
+
+    .open_menu & {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      transform: translate(0, 0);
+      pointer-events: all;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+
+      .nav_overlay {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
 }
 
 .nav {
   @extend %clearfix;
+  @include transition_all(transform .3s);
   background: #951a37;
-  line-height: 50px;
-  padding: 0 15px;
+  max-height: 100%;
+  overflow-y: auto;
+  position: relative;
+  z-index: 2;
+
+  @include respond-to-min($desktop) {
+    line-height: 50px;
+    //padding: 0 15px;
+    height: 50px;
+    overflow: hidden;
+
+    .user_menu {
+      .user_m_item:last-child {
+        padding-right: 35px;
+      }
+    }
+
+    .home_link {
+      padding-left: 15px;
+    }
+  }
+}
+
+.open_menu_btn {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: none;
+  width: 50px;
   height: 50px;
-}
+  cursor: pointer;
+  pointer-events: all;
+  background: #951a37;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .35);
 
-.main_menu_holder {
-  float: left;
-}
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    margin-left: -10px;
+  }
 
-.menu_item {
-  float: left;
+  &::before {
+    margin-top: -1px;
+    height: 2px;
+    background: #fff;
+  }
+
+  &::after {
+    height: 20px;
+    margin-top: -10px;
+    border: solid #fff;
+    border-width: 2px 0;
+  }
+
+  &:hover {
+    background: #7d0f29;
+  }
+
+  @include respond-to-max($desktop) {
+    display: block;
+  }
 }
 
 .menu_link {
@@ -245,6 +477,11 @@ b {
 
 .home_link {
   font-size: 21px;
+
+  @include respond-to-max($desktop) {
+    padding-right: 10px;
+    display: none;
+  }
 }
 
 .lang_link {
@@ -266,10 +503,6 @@ b {
 
 }
 
-.user_menu_holder {
-  float: right;
-}
-
 .user_menu {
   display: inline-block;
   vertical-align: middle;
@@ -281,7 +514,7 @@ b {
   padding: 0 20px 0 32px;
   min-height: 24px;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     left: 0;
@@ -292,6 +525,15 @@ b {
     background: #aa485f;
   }
 
+  @include respond-to-max($desktop) {
+    padding: 0 15px;
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
 
 .user_m_link {
@@ -300,7 +542,7 @@ b {
   text-decoration: none;
   color: #fff;
 
-  &:before {
+  &::before {
     font-size: 18px;
   }
 
@@ -321,7 +563,7 @@ b {
   z-index: 3;
   opacity: 0;
 
-  &:before {
+  &::before {
     display: inline-block;
     vertical-align: middle;
     font-size: 26px;
@@ -330,6 +572,32 @@ b {
 
   .show_go_top & {
     @include transform_translate(0, 0);
+    opacity: 1;
+  }
+
+  @include respond-to-max($tablet) {
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+.gl_overlay {
+  @include transition_all(opacity .3s);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  background: rgba(0, 0, 0, .45);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  display: none;
+
+  .open_menu & {
+    pointer-events: all;
+    visibility: visible;
     opacity: 1;
   }
 
@@ -400,6 +668,11 @@ b {
   width: 130px;
   z-index: 3;
   text-align: center;
+
+  @include respond-to-max($tablet) {
+    bottom: 10px;
+    display: none;
+  }
 }
 
 .scroll-btn {
@@ -444,6 +717,11 @@ b {
   box-sizing: border-box;
   border: 2px solid white;
   border-radius: 12px;
+
+  @include respond-to-max($tablet) {
+    width: 20px;
+    height: 30px;
+  }
 }
 
 .learn_more {
@@ -535,11 +813,37 @@ b {
 
 }
 
+.slider_holder {
+  height: 100vh;
+}
+
 .hero_slider {
   @extend %clearfix;
+  @include transition_all(opacity .3s);
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
   height: 100%;
   position: relative;
   z-index: 1;
+
+  .slick-list,
+  .slick-track {
+    height: 100%;
+  }
+
+  &.slick-initialized {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+
+    ~ .hero_slider_controls {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+  }
 
   .slick-prev,
   .slick-next {
@@ -548,39 +852,58 @@ b {
 }
 
 .hero_slider_controls {
+  @include transition_all(opacity .3s);
   z-index: 2;
   position: absolute;
   top: 50%;
   right: 0;
   left: 0;
   margin-top: 5px;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+
+  .section_inner {
+    padding: 0 !important;
+  }
 
   .slide_prev,
   .slide_next {
+    position: absolute;
+    top: 0;
     cursor: pointer;
     color: #fff;
     width: 80px;
     height: 80px;
 
-    &:before {
+    &::before {
       position: absolute;
       font-size: 80px;
+    }
+
+    @include respond-to-max($tablet) {
+      width: 40px;
+      height: 40px;
+
+      &::before {
+        font-size: 40px;
+      }
     }
   }
 
   .slide_prev {
-    float: left;
+    left: 0;
 
-    &:before {
+    &::before {
       left: 0;
       @include transform_rotate(-90);
     }
   }
 
   .slide_next {
-    float: right;
+    right: 0;
 
-    &:before {
+    &::before {
       right: 0;
       @include transform_rotate(90);
     }
@@ -589,6 +912,19 @@ b {
 
 .hero_slide {
   float: left;
+  height: 100%;
+
+  .gl_table {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gl_table_cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
 }
 
 .chzn-single {
@@ -608,7 +944,7 @@ b {
 .lang_flag {
   padding-left: 32px;
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -619,13 +955,13 @@ b {
   }
 
   &.flag_gb {
-    &:before {
+    &::before {
       background: url(../i/sprite.png) no-repeat 0 0;
     }
   }
 
   &.flag_rf {
-    &:before {
+    &::before {
       background: url(../i/sprite.png) no-repeat -28px 0;
     }
   }
@@ -700,23 +1036,39 @@ b {
   min-width: 100vw;
 }
 
+.header_fixed {
+
+  @include respond-to-min($desktop) {
+    .slide_section.section_v1 .section_inner {
+      padding-top: 50px;
+    }
+  }
+}
+
 .slide_section {
 
   &.section_v1 {
-    height: 100vh;
+    position: relative;
 
-    .slide_s_inner {
-      padding-top: 50px;
+    &:first-child {
+      min-height: 100vh;
     }
 
     .section_inner {
       position: relative;
       z-index: 1;
       padding: 10px 0;
+
+      @include respond-to-max($desktop) {
+        padding: 25px 10px 5px;
+      }
     }
 
     .slide_s_inner {
-      padding-top: 60px;
+
+      @include respond-to-min($tablet) {
+        padding-top: 60px;
+      }
     }
 
     .header .section_inner {
@@ -772,6 +1124,14 @@ b {
     margin-bottom: 30px;
   }
 
+  @include respond-to-max($tablet) {
+    padding: 0 30px;
+    max-width: none;
+
+    .block_title {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .block_title {
@@ -780,11 +1140,19 @@ b {
   //margin-bottom: 30px;
   margin-bottom: 2.1%;
   letter-spacing: .65px;
+
+  @include respond-to-max($tablet) {
+    font-size: 32px;
+  }
 }
 
 .block_caption {
   font: 24px/1 $ProximaNovaLight;
   margin-bottom: 15px;
+
+  @include respond-to-max($tablet) {
+    font-size: 20px;
+  }
 }
 
 .block_subcaption {
@@ -813,13 +1181,14 @@ b {
   margin-bottom: 10px;
 
   @include respond-to-min($tablet) {
-    //width: 50%;
-    //float: left;
+    width: 49.3%;
+    display: inline-block;
+    vertical-align: top;
   }
 
   @include respond-to-min($desktop) {
-    width: 25%;
     float: left;
+    width: 25%;
   }
 
   @include respond-to-min-h($tablet-h) {
@@ -830,18 +1199,19 @@ b {
 
 .solution_item {
   @extend .icon-before;
-  @extend .icon-checkmark2;
+  @extend .icon-checkmark3;
   position: relative;
-  padding-left: 20px;
+  padding-left: 25px;
   margin-bottom: 14px;
   font-size: 15px;
   line-height: 22px;
+  letter-spacing: -.18px;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 0;
     left: -4px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
     border-radius: 100%;
     width: 20px;
@@ -853,9 +1223,26 @@ b {
 }
 
 .solution_header {
-  display: block;
+  @extend %clearfix;
+  display: inline-block;
+  vertical-align: top;
   text-decoration: none;
   padding-left: 20px;
+
+  @include respond-to-max($tablet) {
+    padding-left: 0;
+    line-height: 120px;
+    white-space: nowrap;
+
+    .solution_icon,
+    .solution_caption {
+      display: inline-block;
+      vertical-align: middle;
+      white-space: normal;
+      line-height: normal;
+      max-width: 65%;
+    }
+  }
 
   &.header_red {
     color: #951a37;
@@ -884,18 +1271,22 @@ b {
 .solution_icon {
   height: 120px;
 
-  &:before {
+  @include respond-to-max($tablet) {
+    margin-right: 10px;
+  }
+
+  &::before {
     font-size: 100px;
   }
 }
 
 .history_list {
   @extend %clearfix;
-  margin-left: -52px;
   padding-top: 40px;
 
   @include respond-to-min($tablet) {
     margin-right: -1%;
+    margin-left: -52px;
     padding-top: 80px;
   }
 
@@ -906,6 +1297,7 @@ b {
 }
 
 .history_item {
+  overflow: hidden;
   margin-bottom: 30px;
 
   p {
@@ -926,6 +1318,16 @@ b {
   img {
     display: block;
     max-width: 100%;
+  }
+
+  @include respond-to-max($tablet) {
+    float: left;
+    margin-right: 20px;
+  }
+
+  @include respond-to-max($mobile) {
+    float: none;
+    margin: 0 0 10px;
   }
 }
 
@@ -959,27 +1361,36 @@ b {
   margin-bottom: 4%;
   padding-left: 10px;
   text-align: center;
-  width: 50%;
-  float: left;
+  width: 49.35%;
+  display: inline-block;
+  vertical-align: top;
 
   @include respond-to-min($tablet) {
-    width: 25%;
+    width: 24.65%;
   }
 
   @include respond-to-min-h($tablet-h) {
-    margin-bottom: 8%;
+    margin-bottom: 7.5%;
   }
 
   @include respond-to-min($desktop) {
     padding-left: 30px;
   }
 
+  @include respond-to-max($tablet) {
+    margin-bottom: 25px;
+  }
+}
+
+.partenr_name {
+  font: 14px/20px $ProximaNovaRegular;
+  letter-spacing: -.45px;
 }
 
 .partner_logo {
   display: inline-block;
   vertical-align: top;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 
   img {
     display: block;
@@ -995,6 +1406,10 @@ b {
   @extend %clearfix;
   padding-top: 40px;
   margin-bottom: 20px;
+
+  @include respond-to-max($tablet) {
+    margin-bottom: 60px;
+  }
 }
 
 .choice_col {
@@ -1008,6 +1423,11 @@ b {
   font: 18px/28px $ProximaNovaLight;
   color: #fff;
   text-align: center;
+
+  @include respond-to-max($desktop) {
+    margin-bottom: 20px;
+  }
+
 }
 
 .choice_item {
@@ -1017,7 +1437,7 @@ b {
   margin-bottom: 20px;
   font: 22px $ProximaNovaLight;
 
-  &:before {
+  &::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -1027,7 +1447,7 @@ b {
   @include respond-to-min($tablet) {
     padding-left: 190px;
 
-    &:before {
+    &::before {
       left: 90px;
       font-size: 70px;
     }
@@ -1036,6 +1456,16 @@ b {
   @include respond-to-min-h($tablet_h) {
     min-height: 85px;
     margin-bottom: 50px;
+  }
+
+  @include respond-to-max($tablet) {
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+    &::before {
+      margin-top: -5px;
+    }
   }
 }
 
@@ -1046,6 +1476,9 @@ b {
 
   @include respond-to-min-h($tablet_h) {
     padding: 30px 0;
+  }
+  @include respond-to-max($desktop) {
+    padding-bottom: 0;
   }
 }
 
@@ -1171,8 +1604,10 @@ b {
     display: block;
     position: relative;
     padding-left: 62px;
+    line-height: 42px;
+    min-height: 42px;
 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       top: 0;
@@ -1204,8 +1639,11 @@ b {
 
     .form_cell {
       padding-left: 27px;
-      float: left;
-      width: 50%;
+
+      @include respond-to-min($tablet) {
+        float: left;
+        width: 50%;
+      }
     }
   }
 }
@@ -1266,8 +1704,9 @@ textarea.input_v1 {
     text-transform: uppercase;
     text-decoration: none;
     position: relative;
+    margin-bottom: 20px;
 
-    &:before {
+    &::before {
       display: inline-block;
       vertical-align: middle;
       margin-left: -8px;
@@ -1290,6 +1729,7 @@ textarea.input_v1 {
     border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none;
+    margin-bottom: 20px;
 
     @include respond-to-min-h($tablet_h) {
       margin-bottom: 20px;
@@ -1305,7 +1745,6 @@ textarea.input_v1 {
   &:hover {
     background: #7d0f29;
   }
-
 }
 
 .btn_white {
@@ -1378,7 +1817,7 @@ $rectWidth: 1140px;
   z-index: 10;
   pointer-events: none;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1388,7 +1827,7 @@ $rectWidth: 1140px;
     background: red;
   }
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     left: 0;
@@ -1407,6 +1846,18 @@ $rectWidth: 1140px;
   left: 0;
   height: 150px;
   background: red;
+}
+
+.mob_hidden {
+  @include respond-to-max($tablet) {
+    display: none !important;
+  }
+}
+
+.dt_hidden {
+  @include respond-to-min($desktop) {
+    display: none !important;
+  }
 }
 
 //  todo remove

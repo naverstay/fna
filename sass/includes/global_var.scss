@@ -758,7 +758,7 @@ $arrSize: 32px;
 }
 
 @mixin clearfix {
-  &:after {
+  &::after {
     content: "";
     display: block;
     height: 0;
@@ -1227,7 +1227,7 @@ $arrSize: 32px;
 }
 
 @mixin top_grad_v1($height : 88px, $side_indent : 0) {
-  &:before {
+  &::before {
     z-index: -1;
     position: absolute;
     height: $height;

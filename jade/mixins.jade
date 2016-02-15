@@ -9,6 +9,9 @@ mixin dev_head(page_title)
         meta(name='viewport', content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='styles/main_global.css?no_cache', media='all')
 
+mixin popups()
+    .gl_overlay.closeMenu
+        
 mixin scripts()
     | <!--[if IE]>
     | <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,106 +36,108 @@ mixin header(active_menu)
     div.header
         .top_menu_holder
             .section_inner.clearfix
-                //-ul.top_menu
+                ul.top_menu
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-fna-svg--fixmenu-01
+                        span.link_icon.svg-svg-menu--fna-svg--fixmenu-01
                         span Все бизнес  <br> решения
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-fna-svg--fixmenu-02
+                        span.link_icon.svg-svg-menu--fna-svg--fixmenu-02
                         span Генеральному <br> директору
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-fna-svg--fixmenu-03
+                        span.link_icon.svg-svg-menu--fna-svg--fixmenu-03
                         span Фин. директору  <br> Гл. бухгалтеру
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-fna-svg--fixmenu-04
+                        span.link_icon.svg-svg-menu--fna-svg--fixmenu-04
                         span Собственнику  <br>  Иностранным компаниям
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-fna-svg--fixmenu-05
+                        span.link_icon.svg-svg-menu--fna-svg--fixmenu-05
                         span Контактная  <br>  информация
 
                 //-ul.top_menu
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-icon--puzzle
+                        span.link_icon.icon-puzzle
                         span Все бизнес  <br> решения
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-icon--briefcase
+                        span.link_icon.icon-briefcase
                         span Генеральному <br> директору
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-icon--rub
+                        span.link_icon.icon-rub
                         span Фин. директору  <br> Гл. бухгалтеру
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-icon--city
+                        span.link_icon.icon-city
                         span Собственнику  <br>  Иностранным компаниям
                     li.top_m_item: a.gl_link(href='#')
-                        span.link_icon.svg-icon--map_pin
+                        span.link_icon.icon-map_pin
                         span Контактная  <br>  информация
                     
-                ul.top_menu
+                //-ul.top_menu
                     li.top_m_item: a.gl_link.icon-puzzle_2(href='#'): span Все бизнес  <br> решения
                     li.top_m_item: a.gl_link.icon-briefcase(href='#'): span Генеральному <br> директору
                     li.top_m_item: a.gl_link.icon-rub(href='#'): span Фин. директору  <br> Гл. бухгалтеру
                     li.top_m_item: a.gl_link.icon-city(href='#'): span Собственнику  <br>  Иностранным компаниям
                     li.top_m_item: a.gl_link.icon-map_pin(href='#'): span Контактная  <br>  информация
 
-        .section_inner.clearfix
-            .logo_section
-                .logo_holder
-                    a.logo.icon-wiseadvice-logo(href='#')
-                .fl
-                    .mb
-                        .company_name ФНА &middot; Аудит
-                            
-                .fl
-                    .mb
-                        .company_slogan Профессионально  <br>  для бизнеса
-                            
-                .fr
-                    .mb
-                        a.callback_phone.icon-phone(href='#') +7 495 134-32-23
-
-                .fr
-                    .mb
-                        a.callback_btn.btn_v1.btn_white(href='#') Заказать звонок
-
-            .nav
-                .main_menu_holder
-                    ul.main_menu
-                        li.menu_item
-                            a.menu_link.bg_color_white_mod(href='#')
-                                span.mb.icon-home.home_link
-                        li.menu_item
-                            a.menu_link.bg_color_white_mod(href='#')
-                                span.mb О компании
-                        li.menu_item
-                            a.menu_link.bg_color_blue_mod(href='#')
-                                span.mb Выбор услуг
-                        li.menu_item
-                            a.menu_link.bg_color_orange_mod(href='#')
-                                span.mb Истории успеха
-                        li.menu_item
-                            a.menu_link.bg_color_green_mod(href='#')
-                                span.mb Отзывы клиентов
-                        li.menu_item
-                            a.menu_link.bg_color_red_mod(href='#')
-                                span.mb Цены
-                        li.menu_item
-                            a.menu_link.bg_color_orange_mod(href='#')
-                                span.mb Контакты
-
-                .user_menu_holder
-                    ul.user_menu
-                        li.user_m_item
-                            .mb
-                                a.lang_link(href='#')
-                                    img(src='i/flag_gb.jpg')
-                                    span Eng
+            .section_inner.clearfix
+                .logo_section
+                    .partner_logo_holder
+                        a.logo.icon-wiseadvice-logo(href='#')
+                    .fl.logo_holder
+                        .mb
+                            .company_name ФНА&nbsp;&middot;&nbsp;Аудит
                                 
-                            //-.mb: .lang_menu.chosen_v1.no_search
-                                select.chosen-select
-                                    option.lang_flag.flag_gb(selected) Eng
-                                    option.lang_flag.flag_rf Рус
-                        li.user_m_item
-                            .mb: a.user_m_link.icon-facebook(href='#')
+                    .fl.mob_hidden
+                        .mb
+                            .company_slogan Профессионально  <br>  для бизнеса
+                                
+                    .fr.mob_hidden
+                        .mb
+                            a.callback_phone.icon-phone(href='#') +7 495 134-32-23
+    
+                    .fr.mob_hidden
+                        .mb
+                            a.callback_btn.btn_v1.btn_white(href='#') Заказать звонок
+    
+                .nav_holder
+                    .open_menu_btn.openMenu
+                    .nav_overlay.closeMenu
+                    .nav
+                        .user_menu_holder
+                            ul.user_menu
+                                li.user_m_item
+                                    .mb
+                                        a.lang_link(href='#')
+                                            img(src='i/flag_gb.jpg')
+                                            span Eng
+                                    //-.mb: .lang_menu.chosen_v1.no_search
+                                        select.chosen-select
+                                            option.lang_flag.flag_gb(selected) Eng
+                                            option.lang_flag.flag_rf Рус
+                                li.user_m_item
+                                    .mb: a.user_m_link.icon-facebook(href='#')
+                        .main_menu_holder
+                            ul.main_menu
+                                li.menu_item
+                                    a.menu_link.bg_color_white_mod(href='#')
+                                        span.mb.icon-home.home_link
+                                        span.mb.dt_hidden Главная
+                                li.menu_item
+                                    a.menu_link.bg_color_white_mod(href='#')
+                                        span.mb О компании
+                                li.menu_item
+                                    a.menu_link.bg_color_blue_mod(href='#')
+                                        span.mb Выбор услуг
+                                li.menu_item
+                                    a.menu_link.bg_color_orange_mod(href='#')
+                                        span.mb Истории успеха
+                                li.menu_item
+                                    a.menu_link.bg_color_green_mod(href='#')
+                                        span.mb Отзывы клиентов
+                                li.menu_item
+                                    a.menu_link.bg_color_red_mod(href='#')
+                                        span.mb Цены
+                                li.menu_item
+                                    a.menu_link.bg_color_orange_mod(href='#')
+                                        span.mb Контакты
                     
 
 mixin footer()

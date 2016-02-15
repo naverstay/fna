@@ -1,6 +1,6 @@
 include mixins
 doctype html
-html(lang='ru' class='page_slider_mod')
+html(lang='ru' class='page_slider_mod_')
     +dev_head('FNA главная')
 
     body
@@ -8,46 +8,58 @@ html(lang='ru' class='page_slider_mod')
             .rect_1024
             .base
                 a.icon-go_top.go_top_btn.goTopBtn(href='#')
-                //+header()
+                +header()
 
                 div.main_slider.pageSlider
                     .slide_section.section_v1.firstPage
                         .slide_img: img(src='i/index/first_screen.jpg')
                         .scroll_down_btn
                             .scroll-btn
-                                a.learnMoreBtn(href='#')
+                                a.learnMoreBtn(href='#secondScreen')
                                     span.mouse
                                         span.mouse_wheel
                                     span.learn_more Узнай больше
-                        +header()
+                        //+header()
                                 
                         .slider_holder
                             .heroSlider.hero_slider
-                                .hero_slide: .section_inner.clearfix.slide_s_inner
+                                .hero_slide: .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
                                     .hero_block
-                                        h1.block_title Контроль —  <br> первый шаг  <br>  к 
-                                            span.text_underline  доверию
-                                        .hero_slogan Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.
+                                        h1.block_title Контроль — 
+                                            span.mob_hidden <br>
+                                            span  первый шаг 
+                                            span.mob_hidden <br> 
+                                            span  к&nbsp;
+                                            span.text_underline доверию
+                                        .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
                                 
                             
-                                .hero_slide: .section_inner.clearfix.slide_s_inner
+                                .hero_slide: .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
                                     .hero_block
-                                        h1.block_title Слайд 2  <br> первый шаг  <br>  к 
-                                            span.text_underline  доверию
-                                        .hero_slogan Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.
+                                        h1.block_title Слайд 2  
+                                            span.mob_hidden <br>
+                                            span  первый шаг 
+                                            span.mob_hidden <br> 
+                                            span  к&nbsp;
+                                            span.text_underline доверию
+                                        .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
                                 
                             
-                                .hero_slide: .section_inner.clearfix.slide_s_inner
+                                .hero_slide: .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
                                     .hero_block
-                                        h1.block_title Слайд 3  <br> первый шаг  <br>  к 
-                                            span.text_underline  доверию
-                                        .hero_slogan Поможем не терять бизнес и держать руку на пульсе благодаря системному контролю не требующему постоянных действий.
+                                        h1.block_title Слайд 3  
+                                            span.mob_hidden <br>
+                                            span  первый шаг 
+                                            span.mob_hidden <br> 
+                                            span  к&nbsp;
+                                            span.text_underline доверию
+                                        .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
                                             
                             .hero_slider_controls: .section_inner
-                                .slide_prev.heroSlidePrev.icon-go_top
+                                .slide_prev.heroSlidePrev.icon-go_top(style='display:none;')
                                 .slide_next.heroSlideNext.icon-go_top
 
-                    .slide_section.section_v1.secondPage
+                    #secondScreen.slide_section.section_v1.secondPage
                         .slide_img.slide_bg_v1
                         .section_inner.clearfix
                             .text_center
@@ -57,7 +69,7 @@ html(lang='ru' class='page_slider_mod')
                                 li.solution_col
                                     a.solution_header.header_red.gl_link.link_red(href='#')
                                         .solution_icon.icon-puzzle
-                                        .solution_caption: span Все решения для бизнеса
+                                        .solution_caption: span Все решения для бизнеса
                                     
                                     .solution_item
                                         b Все виды аудита:
@@ -75,7 +87,7 @@ html(lang='ru' class='page_slider_mod')
                                             | : возврат переплат, сопровождение проверок, разрешение споров по налогам
                                                                         
                                     .solution_item
-                                        p Еще 50+ услуг в одном месте: 
+                                        p Еще 50+ услуг в&nbsp;одном месте: 
                                         p 
                                             a.gl_link.link_red(href='#'): span WiseAdvice Consulting Group >>
                                             
@@ -91,13 +103,13 @@ html(lang='ru' class='page_slider_mod')
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Проконтролировать и оптимизировать
+                                            a.gl_link.link_red(href='#'): span Проконтролировать и оптимизировать
                                             |  финансовые показатели, затраты, налоги и др.
 
 
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Снизить риски 
+                                            a.gl_link.link_red(href='#'): span Снизить риски
                                             |  и личную ответственность, избежать штрафов 
                                                                         
                                     .solution_item
@@ -111,17 +123,17 @@ html(lang='ru' class='page_slider_mod')
                                     
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Проверить состояние учета, 
-                                            | вовремя найти и исправить замечания, подтвердить отчетность 
+                                            a.gl_link.link_red(href='#'): span Проверить состояние учета
+                                            | , вовремя найти и исправить замечания, подтвердить отчетность 
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Выявить налоговые риски 
-                                            |  подготовиться к налоговой проверке, исключить штрафы
+                                            a.gl_link.link_red(href='#'): span Выявить налоговые риски
+                                            |  подготовиться к&nbsp;налоговой проверке, исключить штрафы
 
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Получить рекомендациии опыт 
+                                            a.gl_link.link_red(href='#'): span Получить рекомендации опыт
                                             | , повысить квалификацию
                                                                         
                                     .solution_item
@@ -141,13 +153,13 @@ html(lang='ru' class='page_slider_mod')
                                                                         
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Контроль и оптимизация 
+                                            a.gl_link.link_red(href='#'): span Контроль и оптимизация
                                             |  налогов, завышения расходов / закупочных цен, бизнес-процессов и т.п. 
 
                                     .solution_item
                                         p 
-                                            a.gl_link.link_red(href='#'): span Проверка бизнеса (Due Diligence) 
-                                            |  перед покупкой, подготовить к продаже;
+                                            a.gl_link.link_red(href='#'): span Проверка бизнеса (Due Diligance)
+                                            |  перед покупкой, подготовить к&nbsp;продаже;
 
                                     .solution_item
                                         p 
@@ -162,30 +174,30 @@ html(lang='ru' class='page_slider_mod')
 
                             .text_center
                                 h2.block_title История успеха
-                                h3.block_subcaption Узнайте, как мы учитываем специфику российского законодательства  <br> и помогаем росту бизнеса в России из историй успеха
+                                h3.block_subcaption Узнайте, как мы учитываем специфику российского законодательства  <br> и помогаем росту бизнеса в&nbsp;России из&nbsp;историй успеха
                             
                             ul.history_list
                                 li.history_item
                                     .history_img: img(src='i/index/history_1.jpg')
-                                    .history_caption: a.gl_link.link_white(href='#'): span Складской комплекс на территории Москвы (Due Diligence)
-                                    p Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.
+                                    .history_caption: a.gl_link.link_white(href='#'): span Складской комплекс на&nbsp;территории Москвы (Due Diligence)
+                                    p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
                                 
                                 li.history_item
                                     .history_img: img(src='i/index/history_2.jpg')
-                                    .history_caption: a.gl_link.link_white(href='#'): span Иностранный импортер кондитерской продукции
-                                    p Проведение независимого расширенного аудита на предмет выявление скрытых обязательств организации, владеющей активами.
+                                    .history_caption: a.gl_link.link_white(href='#'): span Иностранный импортер кондитерской продукции
+                                    p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
                                 
                                 li.history_item
                                     .history_img: img(src='i/index/history_3.jpg')
-                                    .history_caption: a.gl_link.link_white(href='#'): span Производство в Подмосковье — партнер Самсунг
-                                    p Самсунг  предъявляет к своим поставщикам серьезные требования не только по качеству продукции, но и по финансовой устойчивости компании.
+                                    .history_caption: a.gl_link.link_white(href='#'): span Производство в Подмосковье - партнер Самсунг
+                                    p Самсунг  предъявляет к&nbsp;своим поставщикам серьезные требования не&nbsp;только по качеству продукции, но и по&nbsp;финансовой устойчивости компании.
                                 
                     .slide_section.section_v1.forthPage
                         .slide_img.slide_bg_v1
                         .section_inner.clearfix
                             .text_center
                                 h2.block_title.color_gray Нам доверяют
-                                h3.block_subcaption.color_gray_2 Нашими клиентами с 2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании
+                                h3.block_subcaption.color_gray_2 Нашими клиентами с&nbsp;2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании
                                  
                             .partner_list_holder: ul.partner_list
                                 li.partner_item
@@ -238,7 +250,7 @@ html(lang='ru' class='page_slider_mod')
                                     .choice_item.icon-defence
                                         p Защищаем перед налоговыми органами, даём финансовые гарантии
                                     .choice_item.icon-coffee
-                                        p Используем дружелюбныйи комфортный подход в работе
+                                        p Используем дружелюбныйи комфортный подход в&nbsp;работе
                                     .choice_item.icon-graph
                                         p Делаем сложное простыми понятным, даем наглядные результаты
                                         
@@ -250,7 +262,7 @@ html(lang='ru' class='page_slider_mod')
                                     .choice_item.icon-gift
                                         p Даём полезные бонусы бесплатно. Для вас доступна обширная программа поддержки
                                     .choice_item.icon-nest
-                                        p Избавляем от лишнего поиска. Более 50 бизнес-услуг в одной ГК WiseAdvice Consulting Group
+                                        p Избавляем от лишнего поиска. Более 50 бизнес-услуг в&nbsp;одной ГК WiseAdvice Consulting Group
 
                             .choice_info
                                 p Лучшие аргументы и факты — это 
@@ -265,7 +277,7 @@ html(lang='ru' class='page_slider_mod')
                         .section_inner.clearfix.color_white
                             .text_center
                                 h2.block_title Заказать и познакомиться
-                                h3.block_caption Ваша скидка −10% при обращении с сайта.
+                                h3.block_caption Ваша скидка −10% при обращении с&nbsp;сайта.
                                 
                             .order_form_holder
                                 form(action='#')
@@ -313,10 +325,12 @@ html(lang='ru' class='page_slider_mod')
                                             label.check_emul
                                                 input.hidden_input(type='checkbox')
                                                 span.check_text 
-                                                    span.mb Встретиться с аудиторами — узнать варианты решенияпроблем
+                                                    span.mb Встретиться с&nbsp;аудиторами — узнать варианты решенияпроблем
 
                                     .text_center
                                         button.btn_v2.btn_white_2.order_btn.icon-go_top Отправить
 
+        +popups()
+        
         +scripts()
         

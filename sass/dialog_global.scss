@@ -47,7 +47,7 @@
 
 	.ui-helper-clearfix {
 		display: block;
-		&:after {
+		&::after {
 			display: block;
 			height: 0;
 			clear: both;
