@@ -1293,7 +1293,6 @@ b {
   @include respond-to-min-h($tablet_h) {
     min-height: 640px;
   }
-
 }
 
 .history_item {
@@ -1427,7 +1426,14 @@ b {
   @include respond-to-max($desktop) {
     margin-bottom: 20px;
   }
+}
 
+.choice_icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 0;
+  left: 0;
 }
 
 .choice_item {
@@ -1438,6 +1444,7 @@ b {
   font: 22px $ProximaNovaLight;
 
   &::before {
+
     position: absolute;
     top: 0;
     left: 0;

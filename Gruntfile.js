@@ -47,15 +47,15 @@ module.exports = function (grunt) {
 
                 // Target basics 
                 expand: true,
-                src: ['svg-menu/*.svg'],
+                src: ['svg-why/*.svg'],
                 dest: 'styles/',
 
                 // Target options 
                 options: {
                     shape: {
                         dimension: {			// Set maximum dimensions 
-                            maxWidth: 50,
-                            maxHeight: 50
+                            maxWidth: 140,
+                            maxHeight: 140
                         },
                         spacing: {			// Add padding 
                             padding: 1

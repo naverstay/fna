@@ -1,9 +1,9 @@
-%svg-common {
+%svg-common-menu {
   background: url("svg/menu-sprite.view.svg") no-repeat;
 }
 
 .svg-svg-menu--fna-svg--fixmenu-01 {
-  @extend %svg-common;
+  @extend %svg-common-menu;
   background-position: 50.98039215686274% 0;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .svg-svg-menu--fna-svg--fixmenu-02 {
-  @extend %svg-common;
+  @extend %svg-common-menu;
   background-position: 0 0;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .svg-svg-menu--fna-svg--fixmenu-03 {
-  @extend %svg-common;
+  @extend %svg-common-menu;
   background-position: 99.69993224276449% 0;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .svg-svg-menu--fna-svg--fixmenu-04 {
-  @extend %svg-common;
+  @extend %svg-common-menu;
   background-position: 50.48543689320388% 98.07692307692308%;
 }
 
@@ -43,7 +43,7 @@
 }
 
 .svg-svg-menu--fna-svg--fixmenu-05 {
-  @extend %svg-common;
+  @extend %svg-common-menu;
   background-position: 0 98.52941176470588%;
 }
 

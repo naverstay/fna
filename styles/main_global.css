@@ -738,6 +738,82 @@ html.fp-enabled,
   height: 52px;
 }
 
+.svg-svg-why--svg--fna-svg--why-01, .svg-svg-why--svg--fna-svg--why-02, .svg-svg-why--svg--fna-svg--why-03, .svg-svg-why--svg--fna-svg--why-04, .svg-svg-why--svg--fna-svg--why-05, .svg-svg-why--svg--fna-svg--why-06, .svg-svg-why--svg--fna-svg--why-07, .svg-svg-why--svg--fna-svg--why-08 {
+  background: url("svg/why-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-why--svg--fna-svg--why-01 {
+  background-position: 0 0;
+}
+
+.svg-svg-why--svg--fna-svg--why-01-dims {
+  width: 74px;
+  height: 68.82px;
+}
+
+.svg-svg-why--svg--fna-svg--why-02 {
+  background-position: 0 48.12587412587412%;
+}
+
+.svg-svg-why--svg--fna-svg--why-02-dims {
+  width: 73.87px;
+  height: 74px;
+}
+
+.svg-svg-why--svg--fna-svg--why-03 {
+  background-position: 49.98649013780059% 0;
+}
+
+.svg-svg-why--svg--fna-svg--why-03-dims {
+  width: 72.96px;
+  height: 74px;
+}
+
+.svg-svg-why--svg--fna-svg--why-04 {
+  background-position: 99.97278911564625% 0;
+}
+
+.svg-svg-why--svg--fna-svg--why-04-dims {
+  width: 74px;
+  height: 68.58px;
+}
+
+.svg-svg-why--svg--fna-svg--why-05 {
+  background-position: 99.97278911564625% 47.95804195804196%;
+}
+
+.svg-svg-why--svg--fna-svg--why-05-dims {
+  width: 74px;
+  height: 74px;
+}
+
+.svg-svg-why--svg--fna-svg--why-06 {
+  background-position: 0 99.87412587412588%;
+}
+
+.svg-svg-why--svg--fna-svg--why-06-dims {
+  width: 74px;
+  height: 74px;
+}
+
+.svg-svg-why--svg--fna-svg--why-07 {
+  background-position: 49.60450462528489% 99.87412587412588%;
+}
+
+.svg-svg-why--svg--fna-svg--why-07-dims {
+  width: 71.82px;
+  height: 74px;
+}
+
+.svg-svg-why--svg--fna-svg--why-08 {
+  background-position: 99.19727891156462% 98.76901798063624%;
+}
+
+.svg-svg-why--svg--fna-svg--why-08-dims {
+  width: 74px;
+  height: 72.4px;
+}
+
 html, body {
   height: 100% !important;
 }
@@ -2043,6 +2119,14 @@ b {
   .choice_info {
     margin-bottom: 20px;
   }
+}
+
+.choice_icon {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 0;
+  left: 0;
 }
 
 .choice_item {
