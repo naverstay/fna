@@ -1,0 +1,44 @@
+%svg-common-home {
+	background: url("svg/home-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-home--fna-svg--facebook-ico {
+  @extend %svg-common-home;
+  background-position: 56.82272337996003% 98.18181818181819%;
+}
+
+.svg-svg-home--fna-svg--facebook-ico-dims {
+  width: 28.94px;
+  height: 38px;
+}
+
+.svg-svg-home--fna-svg--home-ico {
+  @extend %svg-common-home;
+  background-position: 0 99.77827050997783%;
+}
+
+.svg-svg-home--fna-svg--home-ico-dims {
+  width: 39.81px;
+  height: 38.88px;
+}
+
+.svg-svg-home--fna-svg--phone-icon {
+  @extend %svg-common-home;
+  background-position: 0 0;
+}
+
+.svg-svg-home--fna-svg--phone-icon-dims {
+  width: 54px;
+  height: 54px;
+}
+
+.svg-svg-home--fna-svg--up-icon {
+  @extend %svg-common-home;
+  background-position: 98.52216748768473% 0;
+}
+
+.svg-svg-home--fna-svg--up-icon-dims {
+  width: 44.19px;
+  height: 41.69px;
+}
+

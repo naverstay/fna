@@ -25,7 +25,6 @@ mixin scripts()
     script(src='js/slick.js?no_cache')
     script(src='js/script.js?no_cache')
 
-
 mixin loop_while(counter)
     -i=0;
     while i < counter
@@ -77,68 +76,79 @@ mixin header(active_menu)
                     li.top_m_item: a.gl_link.icon-city(href='#'): span Собственнику  <br>  Иностранным компаниям
                     li.top_m_item: a.gl_link.icon-map_pin(href='#'): span Контактная  <br>  информация
 
-            .section_inner.clearfix
-                .logo_section
-                    .partner_logo_holder
-                        a.logo.icon-wiseadvice-logo(href='#')
-                    .fl.logo_holder
-                        .mb
-                            .company_name ФНА&nbsp;&middot;&nbsp;Аудит
-                                
-                    .fl.mob_hidden
-                        .mb
-                            .company_slogan Профессионально  <br>  для бизнеса
-                                
-                    .fr.mob_hidden
-                        .mb
-                            a.callback_phone.icon-phone(href='#') +7 495 134-32-23
+mixin header_menu()
+    .section_inner.clearfix
+        .logo_section
+            .partner_logo_holder
+                //a.logo.icon-wiseadvice-logo(href='#')
+                a.logo(href='#')
+                    .logo_icon
+            .fl.logo_holder
+                .mb
+                    .company_name ФНА&nbsp;&middot;&nbsp;Аудит
+                        
+            .fl.mob_hidden
+                .mb
+                    .company_slogan Профессионально  <br>  для бизнеса
+                        
+            .fr.mob_hidden
+                .mb
+                    a.callback_phone(href='#')
+                        span.callback_icon
+                            span.svg-svg-home--fna-svg--phone-icon
+                        span +7 495 134-32-23
     
-                    .fr.mob_hidden
-                        .mb
-                            a.callback_btn.btn_v1.btn_white(href='#') Заказать звонок
+            .fr.mob_hidden
+                .mb
+                    a.callback_btn.btn_v1.btn_white(href='#') Заказать звонок
     
-                .nav_holder
-                    .open_menu_btn.openMenu
-                    .nav_overlay.closeMenu
-                    .nav
-                        .user_menu_holder
-                            ul.user_menu
-                                li.user_m_item
-                                    .mb
-                                        a.lang_link(href='#')
-                                            img(src='i/flag_gb.jpg')
-                                            span Eng
-                                    //-.mb: .lang_menu.chosen_v1.no_search
-                                        select.chosen-select
-                                            option.lang_flag.flag_gb(selected) Eng
-                                            option.lang_flag.flag_rf Рус
-                                li.user_m_item
-                                    .mb: a.user_m_link.icon-facebook(href='#')
-                        .main_menu_holder
-                            ul.main_menu
-                                li.menu_item
-                                    a.menu_link.bg_color_white_mod(href='#')
-                                        span.mb.icon-home.home_link
-                                        span.mb.dt_hidden Главная
-                                li.menu_item
-                                    a.menu_link.bg_color_white_mod(href='#')
-                                        span.mb О компании
-                                li.menu_item
-                                    a.menu_link.bg_color_blue_mod(href='#')
-                                        span.mb Выбор услуг
-                                li.menu_item
-                                    a.menu_link.bg_color_orange_mod(href='#')
-                                        span.mb Истории успеха
-                                li.menu_item
-                                    a.menu_link.bg_color_green_mod(href='#')
-                                        span.mb Отзывы клиентов
-                                li.menu_item
-                                    a.menu_link.bg_color_red_mod(href='#')
-                                        span.mb Цены
-                                li.menu_item
-                                    a.menu_link.bg_color_orange_mod(href='#')
-                                        span.mb Контакты
-                    
+        .nav_holder
+            .open_menu_btn.openMenu
+            .nav_overlay.closeMenu
+            .nav
+                .user_menu_holder
+                    ul.user_menu
+                        li.user_m_item
+                            .mb
+                                a.lang_link(href='#')
+                                    img(src='i/flag_gb.jpg')
+                                    span Eng
+                            //-.mb: .lang_menu.chosen_v1.no_search
+                                select.chosen-select
+                                    option.lang_flag.flag_gb(selected) Eng
+                                    option.lang_flag.flag_rf Рус
+                        li.user_m_item
+                            //-.mb: a.user_m_link.icon-facebook(href='#')
+                            .mb: a.user_m_link(href='#')
+                                span.soc_icon
+                                    span.svg-svg-home--fna-svg--facebook-ico
+                .main_menu_holder
+                    ul.main_menu
+                        li.menu_item
+                            a.menu_link.bg_color_white_mod(href='#')
+                                //-span.mb.icon-home.home_link
+                                span.mb.home_link
+                                    span.svg-svg-home--fna-svg--home-ico.home_link_icon.svg-svg-home--fna-svg--home-ico-dims
+                                span.mb.dt_hidden Главная
+                        li.menu_item
+                            a.menu_link.bg_color_white_mod(href='#')
+                                span.mb О компании
+                        li.menu_item
+                            a.menu_link.bg_color_blue_mod(href='#')
+                                span.mb Выбор услуг
+                        li.menu_item
+                            a.menu_link.bg_color_orange_mod(href='#')
+                                span.mb Истории успеха
+                        li.menu_item
+                            a.menu_link.bg_color_green_mod(href='#')
+                                span.mb Отзывы клиентов
+                        li.menu_item
+                            a.menu_link.bg_color_red_mod(href='#')
+                                span.mb Цены
+                        li.menu_item
+                            a.menu_link.bg_color_orange_mod(href='#')
+                                span.mb Контакты
+            
 
 mixin footer()
     .footer

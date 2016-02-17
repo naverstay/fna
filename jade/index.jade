@@ -7,8 +7,11 @@ html(lang='ru' class='page_slider_mod_')
         .wrapper
             .rect_1024
             .base
-                a.icon-go_top.go_top_btn.goTopBtn(href='#')
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
                 +header()
+                .header_menu_holder
+                    +header_menu()
 
                 div.main_slider.pageSlider
                     .slide_section.section_v1.firstPage
@@ -23,15 +26,16 @@ html(lang='ru' class='page_slider_mod_')
                                 
                         .slider_holder
                             .heroSlider.hero_slider
-                                .hero_slide: .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
-                                    .hero_block
-                                        h1.block_title Контроль — 
-                                            span.mob_hidden <br>
-                                            span  первый шаг 
-                                            span.mob_hidden <br> 
-                                            span  к&nbsp;
-                                            span.text_underline доверию
-                                        .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
+                                .hero_slide
+                                    .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
+                                        .hero_block
+                                            h1.block_title Контроль — 
+                                                span.mob_hidden <br>
+                                                span  первый шаг 
+                                                span.mob_hidden <br> 
+                                                span  к&nbsp;
+                                                span.text_underline доверию
+                                            .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
                                 
                             
                                 .hero_slide: .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
@@ -68,7 +72,8 @@ html(lang='ru' class='page_slider_mod_')
                             ul.solution_list
                                 li.solution_col
                                     a.solution_header.header_red.gl_link.link_red(href='#')
-                                        .solution_icon.icon-puzzle
+                                        .solution_icon
+                                            .service_icon.svg-svg-services--services-01-dims.svg-svg-services--services-01
                                         .solution_caption: span Все решения для бизнеса
                                     
                                     .solution_item
@@ -93,7 +98,8 @@ html(lang='ru' class='page_slider_mod_')
                                             
                                 li.solution_col
                                     a.solution_header.header_blue.gl_link.link_blue(href='#')
-                                        .solution_icon.icon-gen_direcor
+                                        .solution_icon
+                                            .service_icon.svg-svg-services--services-02-dims.svg-svg-services--services-02
                                         .solution_caption: span Генеральному директору
                                     
                                     .solution_item
@@ -118,7 +124,8 @@ html(lang='ru' class='page_slider_mod_')
                                             |  повысить доверие учредителей                                             
                                 li.solution_col
                                     a.solution_header.header_green.gl_link.link_green(href='#')
-                                        .solution_icon.icon-director
+                                        .solution_icon
+                                            .service_icon.svg-svg-services--services-03-dims.svg-svg-services--services-03
                                         .solution_caption: span Фин. директору Глав. бухгалтеру
                                     
                                     .solution_item
@@ -143,7 +150,8 @@ html(lang='ru' class='page_slider_mod_')
                                                                
                                 li.solution_col
                                     a.solution_header.header_yellow.gl_link.link_yellow(href='#')
-                                        .solution_icon.icon-owner
+                                        .solution_icon
+                                            .service_icon.svg-svg-services--services-04-dims.svg-svg-services--services-04
                                         .solution_caption: span Собственнику Иностр. компаниям
                                     
                                     .solution_item
@@ -245,31 +253,39 @@ html(lang='ru' class='page_slider_mod_')
 
                             .choice_list_holder: ul.choice_list
                                 li.choice_col
-                                    .choice_item.icon-bag
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-01
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-01.svg-svg-why--why-01-dims
                                         p Делаем самое выгодное предложение по соотношению цена-качество
-                                    .choice_item.icon-defence
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-02
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-02.svg-svg-why--why-02-dims
                                         p Защищаем перед налоговыми органами, даём финансовые гарантии
-                                    .choice_item.icon-coffee
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-03
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-03.svg-svg-why--why-03-dims
                                         p Используем дружелюбныйи комфортный подход в&nbsp;работе
-                                    .choice_item.icon-graph
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-04
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-04.svg-svg-why--why-04-dims
                                         p Делаем сложное простыми понятным, даем наглядные результаты
                                         
                                 li.choice_col
-                                    .choice_item.icon-pie
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-05
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-05.svg-svg-why--why-05-dims
                                         p Знаем специфику всех отраслей российской экономики и бизнеса
-                                    .choice_item.icon-calendar
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-06
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-06.svg-svg-why--why-06-dims
                                         p Экономим время: имеем убедительный опыт уникальной команды для быстрого решения
-                                    .choice_item.icon-gift
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-07
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-07.svg-svg-why--why-07-dims
                                         p Даём полезные бонусы бесплатно. Для вас доступна обширная программа поддержки
-                                    .choice_item.icon-nest
-                                        .choice_icon.svg-svg-why--svg--fna-svg--why-08
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-08.svg-svg-why--why-08-dims
                                         p Избавляем от лишнего поиска. Более 50 бизнес-услуг в&nbsp;одной ГК WiseAdvice Consulting Group
 
                             .choice_info

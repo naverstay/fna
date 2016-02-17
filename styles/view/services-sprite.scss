@@ -1,0 +1,44 @@
+%svg-common-services {
+	background: url("svg/services-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-services--services-01 {
+  @extend %svg-common-services;
+  background-position: 87.48026315789474% 91.8013698630137%;
+}
+
+.svg-svg-services--services-01-dims {
+  width: 120px;
+  height: 120px;
+}
+
+.svg-svg-services--services-02 {
+  @extend %svg-common-services;
+  background-position: 0 99.88076607794918%;
+}
+
+.svg-svg-services--services-02-dims {
+  width: 132.97px;
+  height: 131.81px;
+}
+
+.svg-svg-services--services-03 {
+  @extend %svg-common-services;
+  background-position: 99.81793023086446% 0;
+}
+
+.svg-svg-services--services-03-dims {
+  width: 134.69px;
+  height: 132.09px;
+}
+
+.svg-svg-services--services-04 {
+  @extend %svg-common-services;
+  background-position: 0 0;
+}
+
+.svg-svg-services--services-04-dims {
+  width: 137.06px;
+  height: 134.03px;
+}
+

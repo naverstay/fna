@@ -47,7 +47,7 @@ module.exports = function (grunt) {
 
                 // Target basics 
                 expand: true,
-                src: ['svg-why/*.svg'],
+                src: ['svg-services/*.svg'],
                 dest: 'styles/',
 
                 // Target options 
@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                             maxHeight: 140
                         },
                         spacing: {			// Add padding 
-                            padding: 1
+                            padding: 10
                         },
                         dest: 'svg/'	// Keep the intermediate files 
                     },
