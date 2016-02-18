@@ -47,6 +47,16 @@ body {
 
   //min-width: 960px;
 
+  &.inner_page {
+    @include respond-to-min($desktop) {
+      padding-top: 260px;
+    }
+  }
+
+  &.history_bg {
+    background: #25354c url(../i/history/bg_history.jpg) no-repeat 50% 0;
+  }
+
 }
 
 b {
@@ -313,6 +323,7 @@ b {
   color: #fff;
   font: 40px $ProximaNovaExtrabold;
   letter-spacing: -.75px;
+  text-decoration: none;
 
   @include respond-to-min($tablet) {
     margin-right: 35px;
@@ -526,6 +537,11 @@ b {
   font: 18px/46px $ProximaNovaSemibold;
   letter-spacing: -.2px;
 
+  .active & {
+    cursor: default;
+  }
+
+  .active &,
   &:hover {
     background: #7d0f29;
   }
@@ -1386,10 +1402,22 @@ b {
   @extend %clearfix;
   padding-top: 40px;
 
+  &.col_2_mod {
+    padding-top: 0;
+    padding-bottom: 33px;
+  }
+
   @include respond-to-min($tablet) {
     margin-right: -1%;
     margin-left: -52px;
     padding-top: 80px;
+
+    &.col_2_mod {
+      padding-top: 0;
+      margin-right: 0;
+      margin-left: -23px;
+    }
+
   }
 
   @include respond-to-min-h($tablet_h) {
@@ -1405,12 +1433,24 @@ b {
     line-height: 22px;
   }
 
+  .col_2_mod & {
+    margin-bottom: 23px;
+  }
+
   @include respond-to-min($tablet) {
     float: left;
     width: 33%;
     padding-left: 52px;
-  }
 
+    .col_2_mod & {
+      width: 50%;
+      padding-left: 23px;
+
+      &:nth-child(2n + 1) {
+        clear: both;
+      }
+    }
+  }
 }
 
 .history_img {
@@ -1811,6 +1851,19 @@ textarea.input_v1 {
     border-style: solid;
   }
 
+  &.load_more_btn {
+    cursor: pointer;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 36px;
+    text-decoration: none;
+    padding: 0 25px;
+    border-width: 2px;
+    border-style: solid;
+  }
+
 }
 
 .btn_v2 {
@@ -1915,6 +1968,10 @@ textarea.input_v1 {
 
 .color_white {
   color: #dee0e7;
+}
+
+.color_white_2 {
+  color: #fdfdfd;
 }
 
 .color_gray {

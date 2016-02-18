@@ -76,16 +76,28 @@ mixin header(active_menu)
                     li.top_m_item: a.gl_link.icon-city(href='#'): span Собственнику  <br>  Иностранным компаниям
                     li.top_m_item: a.gl_link.icon-map_pin(href='#'): span Контактная  <br>  информация
 
-mixin header_menu()
+mixin link_o_span (is_link, link_href, cls, txt)
+    - if (is_link)
+        a(class=cls href=link_href)!= txt
+            block
+    - else
+        span(class=cls)!= txt
+            block
+
+mixin header_menu(active_menu, index_link)
     .section_inner.clearfix
         .logo_section
             .partner_logo_holder
                 //a.logo.icon-wiseadvice-logo(href='#')
-                a.logo(href='#')
+                a.logo(href= index_link ? 'index.html' : '#')
                     .logo_icon
             .fl.logo_holder
                 .mb
-                    .company_name ФНА&nbsp;&middot;&nbsp;Аудит
+                    +link_o_span(index_link, 'index.html' , 'company_name' , 'ФНА&nbsp;&middot;&nbsp;Аудит')
+                    //- if (index_link)
+                    //    a.company_name(href='index.html') ФНА&nbsp;&middot;&nbsp;Аудит
+                    //- else
+                    //    span.company_name ФНА&nbsp;&middot;&nbsp;Аудит
                         
             .fl.mob_hidden
                 .mb
@@ -124,29 +136,29 @@ mixin header_menu()
                                     span.svg-svg-home--fna-svg--facebook-ico
                 .main_menu_holder
                     ul.main_menu
-                        li.menu_item
-                            a.menu_link.bg_color_white_mod(href='#')
+                        li.menu_item(class = active_menu == 1 ? 'active' : '')
+                            +link_o_span(!(active_menu == 1), 'index.html', 'menu_link', '')
                                 //-span.mb.icon-home.home_link
                                 span.mb.home_link
                                     span.svg-svg-home--fna-svg--home-ico.home_link_icon.svg-svg-home--fna-svg--home-ico-dims
                                 span.mb.dt_hidden Главная
-                        li.menu_item
-                            a.menu_link.bg_color_white_mod(href='#')
+                        li.menu_item(class = active_menu == 2 ? 'active' : '')
+                            +link_o_span(!(active_menu == 2), 'history.html', 'menu_link', '')
                                 span.mb О компании
-                        li.menu_item
-                            a.menu_link.bg_color_blue_mod(href='#')
+                        li.menu_item(class = active_menu == 3 ? 'active' : '')
+                            +link_o_span(!(active_menu == 3), 'history.html', 'menu_link', '')
                                 span.mb Выбор услуг
-                        li.menu_item
-                            a.menu_link.bg_color_orange_mod(href='#')
+                        li.menu_item(class = active_menu == 4 ? 'active' : '')
+                            +link_o_span(!(active_menu == 4), 'history.html', 'menu_link', '')
                                 span.mb Истории успеха
-                        li.menu_item
-                            a.menu_link.bg_color_green_mod(href='#')
+                        li.menu_item(class = active_menu == 5 ? 'active' : '')
+                            +link_o_span(!(active_menu == 5), 'reviews.html', 'menu_link', '')
                                 span.mb Отзывы клиентов
-                        li.menu_item
-                            a.menu_link.bg_color_red_mod(href='#')
+                        li.menu_item(class = active_menu == 6 ? 'active' : '')
+                            +link_o_span(!(active_menu == 6), 'history.html', 'menu_link', '')
                                 span.mb Цены
-                        li.menu_item
-                            a.menu_link.bg_color_orange_mod(href='#')
+                        li.menu_item(class = active_menu == 7 ? 'active' : '')
+                            +link_o_span(!(active_menu == 7), 'history.html', 'menu_link', '')
                                 span.mb Контакты
             
 

@@ -1,0 +1,41 @@
+.page_title {
+  font: 48px $ProximaNovaExtrabold;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+}
+
+.content_holder {
+  @extend %clearfix;
+
+  &.aside_r_mod {
+    .content_block {
+      margin-right: 240px;
+      float: left;
+    }
+  }
+
+}
+
+.aside_right {
+  float: right;
+  max-width: 200px;
+  margin-left: -100%;
+}
+
+.history_unit {
+
+  .history_item_v2 & {
+    height: 495px;
+    overflow: hidden;
+    background: #fff;
+    padding: 50px;
+
+    .history_caption {
+      letter-spacing: -.3px;
+    }
+  }
+}
+
+
+

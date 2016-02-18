@@ -11,7 +11,7 @@ html(lang='ru' class='page_slider_mod_')
                     span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
                 +header()
                 .header_menu_holder
-                    +header_menu()
+                    +header_menu(1)
 
                 div.main_slider.pageSlider
                     .slide_section.section_v1.firstPage
@@ -185,17 +185,17 @@ html(lang='ru' class='page_slider_mod_')
                                 h3.block_subcaption Узнайте, как мы учитываем специфику российского законодательства  <br> и помогаем росту бизнеса в&nbsp;России из&nbsp;историй успеха
                             
                             ul.history_list
-                                li.history_item
+                                li.history_item: .history_unit
                                     .history_img: img(src='i/index/history_1.jpg')
                                     .history_caption: a.gl_link.link_white(href='#'): span Складской комплекс на&nbsp;территории Москвы (Due Diligence)
                                     p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
                                 
-                                li.history_item
+                                li.history_item: .history_unit
                                     .history_img: img(src='i/index/history_2.jpg')
                                     .history_caption: a.gl_link.link_white(href='#'): span Иностранный импортер кондитерской продукции
                                     p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
                                 
-                                li.history_item
+                                li.history_item: .history_unit
                                     .history_img: img(src='i/index/history_3.jpg')
                                     .history_caption: a.gl_link.link_white(href='#'): span Производство в Подмосковье - партнер Самсунг
                                     p Самсунг  предъявляет к&nbsp;своим поставщикам серьезные требования не&nbsp;только по качеству продукции, но и по&nbsp;финансовой устойчивости компании.

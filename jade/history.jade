@@ -1,0 +1,56 @@
+include mixins
+doctype html
+html(lang='ru' class='page_slider_mod_')
+    +dev_head('FNA истории')
+
+    body
+        .wrapper.history_bg.inner_page
+            .rect_1024
+            .base
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
+                +header()
+                .header_menu_holder
+                    +header_menu(4, true)
+
+                div.main_content
+                    .section_inner
+                        h1.page_title.color_white_2 Истории успеха
+                        
+                        .content_holder.aside_r_mod
+                            .content_block
+                                ul.history_list.col_2_mod.history_item_v2
+                                    +loop_while(2)
+                                        li.history_item: .history_unit
+                                            .history_img: img(src='i/index/history_1.jpg')
+                                            .history_caption: a.gl_link.link_red(href='#'): span Складской комплекс на&nbsp;территории Москвы (Due Diligence)
+                                            p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
+                                        
+                                        li.history_item: .history_unit
+                                            .history_img: img(src='i/index/history_2.jpg')
+                                            .history_caption: a.gl_link.link_red(href='#'): span Иностранный импортер кондитерской продукции
+                                            p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
+                                        
+                                        li.history_item: .history_unit
+                                            .history_img: img(src='i/index/history_3.jpg')
+                                            .history_caption: a.gl_link.link_red(href='#'): span Производство в Подмосковье - партнер Самсунг
+                                            p Самсунг  предъявляет к&nbsp;своим поставщикам серьезные требования не&nbsp;только по качеству продукции, но и по&nbsp;финансовой устойчивости компании.
+                                
+                                .text_center
+                                    a.btn_v1.load_more_btn.btn_white(href='#') Показать еще успешные истории
+                                            
+                            .aside_right
+                                select.select2
+                                    option(value='Все услуги') Все услуги
+                                    option(value='Обязательный аудит') Обязательный аудит
+                                    option(value='Услуги МФСО и МСА') Услуги МФСО и МСА
+                                    option(value='Налоговый аудит') Налоговый аудит
+                                    option(value='Комплексный аудит') Комплексный аудит
+                                    option(value='Due Diligence') Due Diligence
+                                    option(value='Инициативный аудит') Инициативный аудит
+                                    option(value='Форензик') Форензик
+
+        +popups()
+        
+        +scripts()
+        
