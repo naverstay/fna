@@ -247,6 +247,11 @@ b {
   }
 
   @include respond-to-max($desktop) {
+
+    .header_fixed & {
+      display: none;
+    }
+    
     > .fl,
     > .fr {
       float: none;
@@ -1859,7 +1864,7 @@ textarea.input_v1 {
     font-size: 16px;
     line-height: 36px;
     text-decoration: none;
-    padding: 0 25px;
+    padding: 0 40px 0 50px;
     border-width: 2px;
     border-style: solid;
   }

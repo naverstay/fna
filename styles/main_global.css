@@ -1077,6 +1077,9 @@ b {
   text-align: left;
 }
 @media only screen and (max-width: 1199px) {
+  .header_fixed .logo_section {
+    display: none;
+  }
   .logo_section > .fl,
   .logo_section > .fr {
     float: none;
@@ -2542,7 +2545,7 @@ textarea.input_v1 {
   font-size: 16px;
   line-height: 36px;
   text-decoration: none;
-  padding: 0 25px;
+  padding: 0 40px 0 50px;
   border-width: 2px;
   border-style: solid;
 }
@@ -2763,6 +2766,11 @@ textarea.input_v1 {
 }
 .history_item_v2 .history_unit .history_caption {
   letter-spacing: -.3px;
+}
+
+.load_more_block {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 /*# sourceMappingURL=main_global.css.map */

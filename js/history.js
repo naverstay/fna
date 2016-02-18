@@ -34,6 +34,7 @@ $(function ($) {
         return false;
     });
 
+
     $('.openMenu').on('click', function () {
 
         body_var.toggleClass('open_menu');
