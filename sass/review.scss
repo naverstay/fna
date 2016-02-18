@@ -1,5 +1,5 @@
 .review_list {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .review_item {
@@ -39,20 +39,21 @@
   font: 18px/28px $ProximaNovaLight;
 
   > ul {
-    padding-left: 30px;
+    padding-left: 10px;
     margin-bottom: 10px;
 
     > li {
       position: relative;
-      padding-left: 10px;
+      padding-left: 30px;
       margin-top: 10px;
 
       &:before {
-        content: '+';
+        @extend .svg-svg-history--li-point;
+        @extend .svg-svg-history--li-point-dims;
         position: absolute;
         left: 0;
         top: 0;
-        color: #951a37;
+        content: '';
       }
     }
   }

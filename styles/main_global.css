@@ -902,6 +902,55 @@ html.fp-enabled,
   height: 134.03px;
 }
 
+.svg-svg-history--li-point, .review_text > ul > li:before, .svg-svg-history--open-modal, .svg-svg-history--refresh, .svg-svg-history--send, .svg-svg-history--up-icon {
+  background: url("svg/history-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-history--li-point, .review_text > ul > li:before {
+  background-position: 46.4375% 100%;
+}
+
+.svg-svg-history--li-point-dims, .review_text > ul > li:before {
+  width: 28px;
+  height: 28px;
+}
+
+.svg-svg-history--open-modal {
+  background-position: 0 100%;
+}
+
+.svg-svg-history--open-modal-dims {
+  width: 29.72px;
+  height: 28px;
+}
+
+.svg-svg-history--refresh {
+  background-position: 98.87959366596952% 0;
+}
+
+.svg-svg-history--refresh-dims {
+  width: 25.06px;
+  height: 28px;
+}
+
+.svg-svg-history--send {
+  background-position: 0 0;
+}
+
+.svg-svg-history--send-dims {
+  width: 34px;
+  height: 34px;
+}
+
+.svg-svg-history--up-icon {
+  background-position: 56.84668115699716% 0;
+}
+
+.svg-svg-history--up-icon-dims {
+  width: 32.19px;
+  height: 29.69px;
+}
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -3165,6 +3214,10 @@ textarea.input_v1 {
   height: 120px;
 }
 
+.btn_icon {
+  margin-left: -4px;
+}
+
 .btn_v1 {
   height: 40px;
 }
@@ -3177,7 +3230,7 @@ textarea.input_v1 {
   text-transform: uppercase;
   font: 13px/38px "ProximaNovaSemibold", sans-serif;
   text-decoration: none;
-  padding: 0 30px 0 30px;
+  padding: 0 30px;
   letter-spacing: 0.5px;
   border-width: 1px;
   border-style: solid;
@@ -3194,6 +3247,7 @@ textarea.input_v1 {
   border-style: solid;
 }
 .btn_v1.load_more_btn {
+  position: relative;
   cursor: pointer;
   border-radius: 20px;
   display: inline-block;
@@ -3201,7 +3255,7 @@ textarea.input_v1 {
   font-size: 16px;
   line-height: 36px;
   text-decoration: none;
-  padding: 0 40px 0 50px;
+  padding: 0 25px;
   border-width: 2px;
   border-style: solid;
 }
@@ -3516,7 +3570,7 @@ textarea.input_v1 {
 }
 
 .review_list {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .review_item {
@@ -3553,20 +3607,19 @@ textarea.input_v1 {
   font: 18px/28px "ProximaNovaLight", sans-serif;
 }
 .review_text > ul {
-  padding-left: 30px;
+  padding-left: 10px;
   margin-bottom: 10px;
 }
 .review_text > ul > li {
   position: relative;
-  padding-left: 10px;
+  padding-left: 30px;
   margin-top: 10px;
 }
 .review_text > ul > li:before {
-  content: '+';
   position: absolute;
   left: 0;
   top: 0;
-  color: #951a37;
+  content: '';
 }
 @media only screen and (min-width: 960px) {
   .review_text {

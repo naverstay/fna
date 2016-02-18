@@ -1,0 +1,54 @@
+%svg-common-history {
+  background: url("svg/history-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-history--li-point {
+  @extend %svg-common-history;
+  background-position: 46.4375% 100%;
+}
+
+.svg-svg-history--li-point-dims {
+  width: 28px;
+  height: 28px;
+}
+
+.svg-svg-history--open-modal {
+  @extend %svg-common-history;
+  background-position: 0 100%;
+}
+
+.svg-svg-history--open-modal-dims {
+  width: 29.72px;
+  height: 28px;
+}
+
+.svg-svg-history--refresh {
+  @extend %svg-common-history;
+  background-position: 98.87959366596952% 0;
+}
+
+.svg-svg-history--refresh-dims {
+  width: 25.06px;
+  height: 28px;
+}
+
+.svg-svg-history--send {
+  @extend %svg-common-history;
+  background-position: 0 0;
+}
+
+.svg-svg-history--send-dims {
+  width: 34px;
+  height: 34px;
+}
+
+.svg-svg-history--up-icon {
+  @extend %svg-common-history;
+  background-position: 56.84668115699716% 0;
+}
+
+.svg-svg-history--up-icon-dims {
+  width: 32.19px;
+  height: 29.69px;
+}
+

@@ -1852,6 +1852,10 @@ textarea.input_v1 {
 
 //************  buttons
 
+.btn_icon {
+  margin-left: -4px;
+}
+
 .btn_v1 {
   height: 40px;
 
@@ -1864,7 +1868,7 @@ textarea.input_v1 {
     text-transform: uppercase;
     font: 13px/38px $ProximaNovaSemibold;
     text-decoration: none;
-    padding: 0 30px 0 30px;
+    padding: 0 30px;
     letter-spacing: 0.5px;
     border-width: 1px;
     border-style: solid;
@@ -1883,6 +1887,7 @@ textarea.input_v1 {
   }
 
   &.load_more_btn {
+    position: relative;
     cursor: pointer;
     border-radius: 20px;
     display: inline-block;
@@ -1890,11 +1895,10 @@ textarea.input_v1 {
     font-size: 16px;
     line-height: 36px;
     text-decoration: none;
-    padding: 0 40px 0 50px;
+    padding: 0 25px;
     border-width: 2px;
     border-style: solid;
   }
-
 }
 
 .btn_v2 {
@@ -1981,7 +1985,7 @@ textarea.input_v1 {
   background: $gl_green;
 }
 
-// **********  text
+// **********  text 
 
 .text_underline {
   text-decoration: underline;

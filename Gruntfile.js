@@ -47,18 +47,18 @@ module.exports = function (grunt) {
 
                 // Target basics 
                 expand: true,
-                src: ['svg-services/*.svg'],
+                src: ['svg-history/*.svg'],
                 dest: 'styles/',
 
                 // Target options 
                 options: {
                     shape: {
                         dimension: {			// Set maximum dimensions 
-                            maxWidth: 140,
-                            maxHeight: 140
+                            maxWidth: 32,
+                            maxHeight: 32
                         },
                         spacing: {			// Add padding 
-                            padding: 10
+                            padding: 5
                         },
                         dest: 'svg/'	// Keep the intermediate files 
                     },
