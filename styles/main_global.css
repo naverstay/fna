@@ -1,4 +1,5 @@
-.clearfix::after, .top_menu::after, .logo_section::after, .nav::after, .hero_slider::after, .solution_list::after, .solution_header::after, .history_list::after, .partner_list::after, .choice_list::after, .form_row::after, .content_holder::after, .aside_right::after {
+@charset "UTF-8";
+.clearfix::after, .top_menu::after, .logo_section::after, .nav::after, .hero_slider::after, .solution_list::after, .solution_header::after, .history_list::after, .partner_list::after, .choice_list::after, .form_row::after, .content_holder::after, .aside_right::after, .review_item::after, .review_content::after, .review_author::after {
   position: static;
   display: block;
   height: 0;
@@ -3167,6 +3168,20 @@ textarea.input_v1 {
 .btn_v1 {
   height: 40px;
 }
+.btn_v1.review_btn {
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  text-transform: uppercase;
+  font: 13px/38px "ProximaNovaSemibold", sans-serif;
+  text-decoration: none;
+  padding: 0 30px 0 30px;
+  letter-spacing: 0.5px;
+  border-width: 1px;
+  border-style: solid;
+}
 .btn_v1.callback_btn {
   cursor: pointer;
   border-radius: 20px;
@@ -3246,6 +3261,14 @@ textarea.input_v1 {
   background: #7d0f29;
 }
 
+.btn_gray {
+  -webkit-transition: border-color 0.3s, color 0.3s;
+  -ms-transition: border-color 0.3s, color 0.3s;
+  transition: border-color 0.3s, color 0.3s;
+  border-color: #959ba5;
+  color: #474f5e;
+}
+
 .btn_white {
   -webkit-transition: background 0.3s, color 0.3s;
   -ms-transition: background 0.3s, color 0.3s;
@@ -3288,12 +3311,20 @@ textarea.input_v1 {
   text-transform: uppercase;
 }
 
+.color_red {
+  color: #951a37;
+}
+
 .color_white {
   color: #dee0e7;
 }
 
 .color_white_2 {
   color: #fdfdfd;
+}
+
+.color_black {
+  color: #000;
 }
 
 .color_gray {
@@ -3420,7 +3451,7 @@ textarea.input_v1 {
 .history_item_v2 .history_unit {
   overflow: hidden;
   background: #fff;
-  padding: 50px;
+  padding: 20px;
 }
 .history_item_v2 .history_unit .history_caption {
   letter-spacing: -.3px;
@@ -3428,6 +3459,7 @@ textarea.input_v1 {
 @media only screen and (min-width: 960px) {
   .history_item_v2 .history_unit {
     height: 495px;
+    padding: 50px;
   }
 }
 
@@ -3481,6 +3513,106 @@ textarea.input_v1 {
 .active .aside_m_link {
   cursor: default;
   border-color: #951a37;
+}
+
+.review_list {
+  margin-bottom: 60px;
+}
+
+.review_item {
+  margin-bottom: 20px;
+}
+
+.review_unit {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+}
+.review_unit:before {
+  content: '”';
+  position: absolute;
+  top: 40px;
+  left: -12px;
+  font: bold 100px/1 Georgia, "Century Schoolbook L", serif;
+  color: #951a37;
+}
+@media only screen and (min-width: 960px) {
+  .review_unit {
+    padding: 45px 30px 30px 60px;
+  }
+  .review_unit:before {
+    left: -27px;
+  }
+}
+
+.review_content {
+  margin-bottom: 25px;
+}
+
+.review_text {
+  font: 18px/28px "ProximaNovaLight", sans-serif;
+}
+.review_text > ul {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.review_text > ul > li {
+  position: relative;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+.review_text > ul > li:before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #951a37;
+}
+@media only screen and (min-width: 960px) {
+  .review_text {
+    float: left;
+    width: 63%;
+  }
+  .review_text > ul {
+    padding-left: 30px;
+  }
+}
+
+.review_author {
+  font: 16px "ProximaNovaLight", sans-serif;
+  margin-top: 20px;
+}
+.review_author p {
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 960px) {
+  .review_author {
+    float: right;
+    width: 30%;
+    margin-top: 0;
+  }
+}
+
+.review_a_img {
+  margin: 7px 0 26px;
+}
+.review_a_img img {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+@media only screen and (max-width: 959px) {
+  .review_a_img {
+    float: left;
+    margin-right: 25px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .review_a_img {
+    float: none;
+    margin-right: 0;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main_global.css.map */

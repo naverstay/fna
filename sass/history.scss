@@ -40,7 +40,7 @@
   .history_item_v2 & {
     overflow: hidden;
     background: #fff;
-    padding: 50px;
+    padding: 20px;
 
     .history_caption {
       letter-spacing: -.3px;
@@ -48,6 +48,7 @@
 
     @include respond-to-min($tablet) {
       height: 495px;
+      padding: 50px;
     }
   }
 }
@@ -69,7 +70,7 @@
   .select2-container {
     min-width: 100%;
   }
-  
+
   .select2-dropdown {
     white-space: nowrap;
     width: auto !important;
@@ -116,5 +117,4 @@
     cursor: default;
     border-color: #951a37;
   }
-
 }

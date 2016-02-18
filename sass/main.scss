@@ -1855,6 +1855,21 @@ textarea.input_v1 {
 .btn_v1 {
   height: 40px;
 
+  &.review_btn {
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    text-transform: uppercase;
+    font: 13px/38px $ProximaNovaSemibold;
+    text-decoration: none;
+    padding: 0 30px 0 30px;
+    letter-spacing: 0.5px;
+    border-width: 1px;
+    border-style: solid;
+  }
+
   &.callback_btn {
     cursor: pointer;
     border-radius: 20px;
@@ -1938,6 +1953,12 @@ textarea.input_v1 {
   }
 }
 
+.btn_gray {
+  @include transition_all(border-color .3s, color .3s);
+  border-color: #959ba5;
+  color: #474f5e;
+}
+
 .btn_white {
   @include transition_all(background .3s, color .3s);
   border-color: #fff;
@@ -1982,12 +2003,20 @@ textarea.input_v1 {
   text-transform: uppercase;
 }
 
+.color_red {
+  color: #951a37;
+}
+
 .color_white {
   color: #dee0e7;
 }
 
 .color_white_2 {
   color: #fdfdfd;
+}
+
+.color_black {
+  color: #000;
 }
 
 .color_gray {

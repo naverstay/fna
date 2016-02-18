@@ -1,0 +1,100 @@
+include mixins
+doctype html
+html(lang='ru' class='page_slider_mod_')
+    +dev_head('FNA отзывы')
+
+    body
+        .wrapper.history_bg.inner_page
+            .rect_1024
+            .base
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
+                +header()
+                .header_menu_holder
+                    +header_menu(5, true)
+
+                div.main_content
+                    .section_inner
+                        h1.page_title.color_white_2 Отзывы клиентов
+                        
+                        .content_holder.aside_r_mod
+                            .aside_right
+                                .aside_menu_holder
+                                    .dt_hidden
+                                        select.asideSelect()
+                                            option(value='Все отрасли') Все отрасли
+                                            option(value='Медицина') Медицина
+                                            option(value='Производство') Производство
+                                            option(value='Связь и телеком') Связь и телеком
+                                            option(value='Информационные технологии') Информационные технологии
+                                            option(value='Страхование') Страхование
+                                            option(value='Строительство, недвижимость') Строительство, недвижимость
+                                            option(value='Торговля и дистрибьюция') Торговля и дистрибьюция
+                                            option(value='Транспорт и логистика') Транспорт и логистика
+                                            option(value='Энергетика') Энергетика
+                                            option(value='Проверка контрагентов') Проверка контрагентов
+                                            option(value='Форезник') Форезник
+                                            
+                                        #aside_menu_dropdown.aside_menu_dropdown
+                                    .dt_only
+                                        ul.aside_menu
+                                            li.aside_m_item.active: a.aside_m_link(href='#'): span Все отрасли
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Медицина
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Производство
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Связь и телеком
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Информационные технологии
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Страхование
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Строительство, недвижимость
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Торговля и дистрибьюция
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Транспорт и логистика
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Энергетика
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Проверка контрагентов
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Форезник
+                                            
+                            .content_block
+                                ul.review_list
+                                    +loop_while(2)
+                                        li.review_item: .review_unit
+                                            .review_content
+                                                .review_text
+                                                    p Хотим выразить свою благодарность и 
+                                                        b.color_red рекомендуем
+                                                        |  компанию «Финансовый и налоговый аудит», WiseAdvice Consultin Group, 
+                                                        b.color_red как достойного партнера по аудиту и консалтингу
+                                                        | , поскольку убедились за годы сотрудничества в профессионализме и надежности компании, планируем продолжать сотрудничество и получать профессиональную поддержку ваших аудиторов и экспертов.
+                                                    
+                                                .review_author
+                                                    .review_a_img: img(src='i/reviews/author_1.png')
+                                                    p: b.color_black Албеа Рус 
+                                                    p Производство туб для косметики
+                                                    p: a.gl_link.link_red(href='#'): span albea-group.com
+                                                    
+                                            a.btn_v1.review_btn.btn_gray(href='#') Оригинал отзыва
+
+                                        li.review_item: .review_unit
+                                            .review_content
+                                                .review_text
+                                                    p В ходе исполнения договоров нами были отмечены следующие достоинства: 
+                                                    ul
+                                                        li высокий профессионализм сотрудников; 
+                                                        li внимание к клиенту, как со стороны исполнителей, так и со стороны менеджмента;
+                                                        li четкое соблюдение сроков выполнения проектов. 
+                                                    p
+                                                        b.color_red Рекомендуем для выполнения проектов по МСФО
+                                                        |  любой сложности и направленности.
+                                                .review_author
+                                                    .review_a_img: img(src='i/reviews/author_2.png')
+                                                    p: b.color_black МФК Грас
+                                                    p Строительство зданийи сооружений
+                                                    p: a.gl_link.link_red(href='#'): span fkgras.ru
+                                                
+                                            a.btn_v1.review_btn.btn_gray(href='#') Оригинал отзыва
+
+                                .load_more_block
+                                    a.btn_v1.load_more_btn.btn_white(href='#') Показать еще отзывы
+                                            
+
+        +popups()
+        
+        +scripts(false, false, true)
+        

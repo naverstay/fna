@@ -1,0 +1,111 @@
+.review_list {
+  margin-bottom: 60px;
+}
+
+.review_item {
+  @extend %clearfix;
+  margin-bottom: 20px;
+}
+
+.review_unit {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+
+  &:before {
+    content: '”';
+    position: absolute;
+    top: 40px;
+    left: -12px;
+    font: bold 100px/1 $cross_font_Georgia;
+    color: #951a37;
+  }
+
+  @include respond-to-min($tablet) {
+    padding: 45px 30px 30px 60px;
+
+    &:before {
+      left: -27px;
+    }
+  }
+}
+
+.review_content {
+  @extend %clearfix;
+  margin-bottom: 25px;
+}
+
+.review_text {
+  font: 18px/28px $ProximaNovaLight;
+
+  > ul {
+    padding-left: 30px;
+    margin-bottom: 10px;
+
+    > li {
+      position: relative;
+      padding-left: 10px;
+      margin-top: 10px;
+
+      &:before {
+        content: '+';
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #951a37;
+      }
+    }
+  }
+
+  @include respond-to-min($tablet) {
+    float: left;
+    width: 63%;
+
+    > ul {
+      padding-left: 30px;
+    }
+  }
+}
+
+.review_author {
+  @extend %clearfix;
+  font: 16px $ProximaNovaLight;
+  margin-top: 20px;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  @include respond-to-min($tablet) {
+    float: right;
+    width: 30%;
+    margin-top: 0;
+  }
+}
+
+.review_a_img {
+  margin: 7px 0 26px;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+  }
+
+  @include respond-to-max($tablet) {
+    float: left;
+    margin-right: 25px;
+  }
+
+  @include respond-to-max($mobile) {
+    float: none;
+    margin-right: 0;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
