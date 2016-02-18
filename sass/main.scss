@@ -1901,13 +1901,18 @@ textarea.input_v1 {
   }
 }
 
+.send_icon {
+  margin-right: 5px;
+  margin-left: -18px;
+}
+
 .btn_v2 {
   height: 50px;
 
   &.order_btn {
-    padding: 15px 40px;
+    padding: 0 40px;
     min-width: 204px;
-    font: 14px/20px $ProximaNovaBold;
+    font: 14px/50px $ProximaNovaBold;
     display: inline-block;
     vertical-align: top;
     border-radius: 3px;
