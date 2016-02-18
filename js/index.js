@@ -86,7 +86,7 @@ var popupOrderItem,
     };
 
 $(function ($) {
-
+ 
     $('.learnMoreBtn').on('click', function () {
         var page_link = $('a[href="#secondPage"]');
 
@@ -132,7 +132,7 @@ $(window).on('load', function () {
     }
 }).on('scroll', function () {
 
-  
+
 }).on('resize', function () {
 
     if (win.width() < 1200) {

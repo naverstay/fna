@@ -22,6 +22,7 @@ $(function ($) {
      header.css('marginLeft', (scrollLeft > 0 ? -scrollLeft : 0));
      });*/
 
+
     $('.goTopBtn').on('click', function () {
         var page_link = $('a[href="#firstPage"]');
 

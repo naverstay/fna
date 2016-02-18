@@ -18,6 +18,30 @@ html(lang='ru' class='page_slider_mod_')
                         h1.page_title.color_white_2 Истории успеха
                         
                         .content_holder.aside_r_mod
+                            .aside_right
+                                .aside_menu_holder
+                                    .dt_hidden
+                                        select.asideSelect()
+                                            option(value='Все услуги') Все услуги
+                                            option(value='Обязательный аудит') Обязательный аудит
+                                            option(value='Услуги МФСО и МСА') Услуги МФСО и МСА
+                                            option(value='Налоговый аудит') Налоговый аудит
+                                            option(value='Комплексный аудит') Комплексный аудит
+                                            option(value='Due Diligence') Due Diligence
+                                            option(value='Инициативный аудит') Инициативный аудит
+                                            option(value='Форензик') Форензик
+                                        #aside_menu_dropdown.aside_menu_dropdown
+                                    .dt_only
+                                        ul.aside_menu
+                                            li.aside_m_item.active: a.aside_m_link(href='#'): span Все услуги
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Обязательный аудит
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Услуги МФСО и&nbsp;МСА
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Налоговый аудит
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Комплексный аудит
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Due Diligence
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Инициативный аудит
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Форензик
+                                            
                             .content_block
                                 ul.history_list.col_2_mod.history_item_v2
                                     +loop_while(2)
@@ -39,16 +63,6 @@ html(lang='ru' class='page_slider_mod_')
                                 .load_more_block
                                     a.btn_v1.load_more_btn.btn_white(href='#') Показать еще успешные истории
                                             
-                            .aside_right
-                                select.select2
-                                    option(value='Все услуги') Все услуги
-                                    option(value='Обязательный аудит') Обязательный аудит
-                                    option(value='Услуги МФСО и МСА') Услуги МФСО и МСА
-                                    option(value='Налоговый аудит') Налоговый аудит
-                                    option(value='Комплексный аудит') Комплексный аудит
-                                    option(value='Due Diligence') Due Diligence
-                                    option(value='Инициативный аудит') Инициативный аудит
-                                    option(value='Форензик') Форензик
 
         +popups()
         

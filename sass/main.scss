@@ -48,6 +48,8 @@ body {
   //min-width: 960px;
 
   &.inner_page {
+    padding-top: 80px;
+
     @include respond-to-min($desktop) {
       padding-top: 260px;
     }
@@ -81,6 +83,13 @@ b {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
+
+  .inner_page .main_content & {
+    @include respond-to-max($desktop) {
+      padding: 25px 10px 5px;
+    }
+  }
+
 }
 
 //*************************** header
@@ -88,7 +97,7 @@ b {
 .header {
   @extend %translate3d;
   @include transition_all(height .3s);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -113,6 +122,7 @@ b {
 }
 
 .top_menu_holder {
+  z-index: 1;
   position: absolute;
   top: 0;
   right: 0;
@@ -224,6 +234,7 @@ b {
 
   @include respond-to-min($desktop) {
     top: 50px;
+    z-index: 1;
 
     .header_fixed & {
       .nav_holder,
@@ -251,7 +262,7 @@ b {
     .header_fixed & {
       display: none;
     }
-    
+
     > .fl,
     > .fr {
       float: none;
@@ -2040,6 +2051,12 @@ $rectWidth: 1140px;
 
 .dt_hidden {
   @include respond-to-min($desktop) {
+    display: none !important;
+  }
+}
+
+.dt_only {
+  @include respond-to-max($desktop) {
     display: none !important;
   }
 }
