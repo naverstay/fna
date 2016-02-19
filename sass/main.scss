@@ -2049,6 +2049,7 @@ $rectWidth: 1140px;
   border: 1px solid red;
   z-index: 10;
   pointer-events: none;
+  display: none;
 
   &::after {
     content: '';

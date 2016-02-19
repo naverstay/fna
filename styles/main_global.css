@@ -3260,13 +3260,18 @@ textarea.input_v1 {
   border-style: solid;
 }
 
+.send_icon {
+  margin-right: 5px;
+  margin-left: -18px;
+}
+
 .btn_v2 {
   height: 50px;
 }
 .btn_v2.order_btn {
-  padding: 15px 40px;
+  padding: 0 40px;
   min-width: 204px;
-  font: 14px/20px "ProximaNovaBold", sans-serif;
+  font: 14px/50px "ProximaNovaBold", sans-serif;
   display: inline-block;
   vertical-align: top;
   border-radius: 3px;
@@ -3400,6 +3405,7 @@ textarea.input_v1 {
   border: 1px solid red;
   z-index: 10;
   pointer-events: none;
+  display: none;
 }
 .rect_1024::after {
   content: '';
