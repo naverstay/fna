@@ -19,6 +19,13 @@
         float: left;
       }
     }
+
+    &.aside_l_mod {
+      .content_block {
+        margin-left: 240px;
+        float: left;
+      }
+    }
   }
 
 }
@@ -31,6 +38,18 @@
     float: right;
     width: 190px;
     margin-left: -100%;
+  }
+
+}
+
+.aside_left {
+  @extend %clearfix;
+  margin-bottom: 20px;
+
+  @include respond-to-min($desktop) {
+    float: left;
+    width: 190px;
+    margin-right: -100%;
   }
 
 }

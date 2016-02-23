@@ -35,6 +35,21 @@
   margin-bottom: 25px;
 }
 
+%li_plus {
+  position: relative;
+  padding-left: 30px;
+  margin-top: 10px;
+
+  &:before {
+    @extend .svg-svg-history--li-point;
+    @extend .svg-svg-history--li-point-dims;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+  }
+}
+
 .review_text {
   font: 18px/28px $ProximaNovaLight;
 
@@ -43,18 +58,7 @@
     margin-bottom: 10px;
 
     > li {
-      position: relative;
-      padding-left: 30px;
-      margin-top: 10px;
-
-      &:before {
-        @extend .svg-svg-history--li-point;
-        @extend .svg-svg-history--li-point-dims;
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: '';
-      }
+      @extend %li_plus;
     }
   }
 

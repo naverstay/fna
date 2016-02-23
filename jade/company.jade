@@ -1,0 +1,345 @@
+include mixins
+doctype html
+html(lang='ru' class='page_slider_mod_')
+    +dev_head('FNA о компании')
+
+    body
+        .wrapper
+            .rect_1024
+            .base
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
+                +header()
+                .header_menu_holder
+                    +header_menu(2, true)
+
+                div.main_slider.pageSlider
+                    .slide_section.section_v1.firstPage
+                        .slide_img: img(src='i/about/about_bg.jpg')
+                        .scroll_down_btn
+                            .scroll-btn
+                                a.learnMoreBtn(href='#secondScreen')
+                                    span.mouse
+                                        span.mouse_wheel
+                                    span.learn_more Узнай больше
+                        
+                        .section_inner.clearfix.first_slide_mod
+                            .text_center
+                                h2.block_title.color_white_2 О компании фна-аудит
+                            .about_block
+                                .article_v1
+                                    p В 2003 году основана группа компаний WiseAdvice Consulting Group (ранее Интелис) для профессиональной поддержки роста бизнеса в России.
+                                    p Сегодня 50+ видов услуг оказываются силами 400+ специалистов на территории РФ и не только.
+                                    p 2005 год стал основанием аудита — ключевого направления деятельности нашей группы компаний (24.03.2005 получена лицензия Минфина России).
+                                    p 40+ аттестованных аудиторов плюс уникальная команда профессионалов: от экспертов и бухгалтеров до оценщиков и юристов, чтобы эффективно решать широкий спектр задач.
+                                    p За 11 лет практики в аудите и консалтинге мы реализовали 4 500+ проектов для российских и иностранных компаний.
+                                    p Среди наших клиентов вы увидите, как лидеров рынка, формирующих развитие своей отрасли в России, так успешные стартапы и мировые бренды.
+                                    p Достижение зримых результатов при оказании услуг по аудиту и консалтингу является нашей главной целью. Истории успеха наших клиентов каждый раз подтверждают это.
+                                    p Исключительный уровень сервиса и эксклюзивное внимание при выполнении каждого проекта отвечают мировым стандартам качества и аттестованы по системе ISO.
+                                    p 25 место в рейтинге из 400 российских аудиторских компаний занимает «Финансовый и налоговый аудит» по версии агентства RAEX.
+                                    p WiseAdvice входит в рейтинг крупнейших аудиторско-консалтинговых групп России, является членом европейских и международных палат и ассоциаций.
+                                    p Мы будем рады нашему знакомству и приглашаем вас в наш офис: посетить Круглый стол или получить консультацию аудиторов, юристов, налоговых консультантов.
+                                    p Мы также можем приехать к вам, чтобы убедительно подтвердить наши обширные возможности и вместе рассмотреть перспективы сотрудничества на благо вашего бизнеса!
+                                    
+                    #secondScreen.slide_section.section_v1.secondPage
+                        .slide_img.slide_bg_v3
+                        .section_inner.clearfix
+                            .text_center
+                                h2.block_title.color_white_2 ФНА-Аудит:  <br>  официальные статусы 
+
+                            .choice_list_holder: ul.color_white_2.status_list
+                                li.choice_col
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-01.svg-svg-why--why-01-dims
+                                        h4.choice_caption ТОП 25 из 400  <br>  российских аудиторов RAEX 
+                                        p Вы получаете аудиторские услуги от компании, занимающей высокие позиции в рейтинге
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-02.svg-svg-why--why-02-dims
+                                        h4.choice_caption Действующее членствов СРО МоАП 
+                                        p ОРНЗ 10503001776 — гарантирует Вам легитимное аудиторское заключение
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-03.svg-svg-why--why-03-dims
+                                        h4.choice_caption ISO 9000:2008 —
+                                        p качество наших услуг сертифицированои соответствует мировые стандартам качества
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-04.svg-svg-why--why-04-dims
+                                        h4.choice_caption Соблюдение всехстандартов аудита, 
+                                        p регулярно подтверждающегося внешним контролем качества услуг
+                                        
+                                li.choice_col.status_mod_1
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-05.svg-svg-why--why-05-dims
+                                        h4.choice_caption Лицензия Министерства финансов России 
+                                        p № 123456 от 24.03.2005 на право аудиторской деятельности
+
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-06.svg-svg-why--why-06-dims
+                                        h4.choice_caption Действующее членствов СРО ТЦА — 
+                                        p Технический и ценовой аудит
+
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-07.svg-svg-why--why-07-dims
+                                        h4.choice_caption 30 000 000 руб. — 
+                                        p сумма страхового покрытия только по оказанию аудиторских услуг
+
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-08.svg-svg-why--why-08-dims
+                                        h4.choice_caption Лицензия ФСБна работу
+                                        p с государственной тайной для обеспечения защиты информации
+                                
+                    .slide_section.section_v1.thirdPage
+                        .slide_img.slide_bg_team
+                        .section_inner.clearfix
+                            .text_center
+                                h2.block_title.color_gray Команда профессионалов
+
+                            .aside_l_mod.content_holder.team_block
+                                .aside_left
+                                    .aside_menu_holder
+                                    .dt_hidden
+                                        select.asideSelect()
+                                            option(value='Лидеры практики') Лидеры практики
+                                            option(value='Кураторы по работе с клиентами') Кураторы по работе с клиентами
+                                            option(value='Аудиторы') Аудиторы
+                                            option(value='Эксперты и юристы') Эксперты и юристы
+                                            
+                                        #aside_menu_dropdown.aside_menu_dropdown
+                                    .dt_only
+                                        ul.aside_menu
+                                            li.aside_m_item.active: a.aside_m_link(href='#'): span Лидеры практики
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Кураторы по работе с клиентами
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Аудиторы
+                                            li.aside_m_item: a.aside_m_link(href='#'): span Эксперты и юристы
+                                            
+                                .content_block
+                                    .team_info
+                                        ul.team_list
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_1.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_2.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_3.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_4.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_5.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_6.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_7.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_8.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_9.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_10.png')
+                                            li.team_item
+                                                a.team_photo(href='#'): img(src='i/about/team_11.png')
+                                            li.team_item
+                                                a.team_photo.see_more(href='#'): span.mb Посмотреть <br>еще
+        
+                                        .team_info_col
+                                            p Над вашими задачами будут работать специалисты, удовлетворяющие самым высоким требованиям к профессиональным и личностным качествам. Ведь именно в этом видим основу нашего успеха и успеха наших клиентов. Специалисты WiseAdvice имеют опыт бухгалтерами и аудиторами 9 до 16 лет, аттестаты аудиторов, ученые степени, аттестации по международным стандартам. Предлагаем познакомиться с некоторыми представителями нашей команды.
+                                        .team_info_col.mod_1
+                                            p: b Какие задачи решают для Вас:
+                                            ul
+                                                li Непосредственное проведение проверки,
+                                                li Анализ бухгалтерских, налоговых регистров и бухгалтерских проводок.
+                                                li Анализ договорной базы и первичной документации.
+                                                li Формирование отчета аудитора.
+                                                li Консультирование Заказчика в ходе аудиторской проверки.
+                                                li Написание отчета и заключения по результатам проведенного аудита.
+
+                    .slide_section.section_v1.forthPage
+                        .slide_img: img(src='i/index/history_section.jpg')
+                        .section_inner.clearfix.color_white
+
+                            .text_center
+                                h2.block_title История успеха
+                                h3.block_subcaption Узнайте, как мы учитываем специфику российского законодательства  <br> и помогаем росту бизнеса в&nbsp;России из&nbsp;историй успеха
+                            
+                            ul.history_list
+                                li.history_item: .history_unit
+                                    .history_img: img(src='i/index/history_1.jpg')
+                                    .history_caption: a.gl_link.link_white(href='#'): span Складской комплекс на&nbsp;территории Москвы (Due Diligence)
+                                    p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
+                                
+                                li.history_item: .history_unit
+                                    .history_img: img(src='i/index/history_2.jpg')
+                                    .history_caption: a.gl_link.link_white(href='#'): span Иностранный импортер кондитерской продукции
+                                    p Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.
+                                
+                                li.history_item: .history_unit
+                                    .history_img: img(src='i/index/history_3.jpg')
+                                    .history_caption: a.gl_link.link_white(href='#'): span Производство в Подмосковье - партнер Самсунг
+                                    p Самсунг  предъявляет к&nbsp;своим поставщикам серьезные требования не&nbsp;только по качеству продукции, но и по&nbsp;финансовой устойчивости компании.
+                                
+                    .slide_section.section_v1.fifthPage
+                        .slide_img.slide_bg_v1
+                        .section_inner.clearfix
+                            .text_center
+                                h2.block_title.color_gray Нам доверяют
+                                h3.block_subcaption.color_gray_2 Нашими клиентами с&nbsp;2005 года стали более 5 450 организаций.  <br> Это средние и крупные российские, иностранные и международные компании
+                                 
+                            .partner_list_holder: ul.partner_list
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_1.png')
+                                    .partenr_name Предприятие <br> по производству сыра
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_2.png')
+                                    .partenr_name Страхование  <br> автомобилей
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_3.png')
+                                    .partenr_name Крупнейшая розничная сеть  <br>  по торговле одеждой
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_4.png')
+                                    .partenr_name Девелопер жилой  <br>  недвижимости
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_5.png')
+                                    .partenr_name Предприятие  <br> по производству сыра
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_6.png')
+                                    .partenr_name Страхование  <br> автомобилей
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_7.png')
+                                    .partenr_name Крупнейшая розничная сеть  <br>  по торговле одеждой
+                                        
+                                li.partner_item
+                                    a.partner_logo(href='#'): img(src='i/index/client_8.png')
+                                    .partenr_name Девелопер жилой  <br>  недвижимости
+                            
+                            .text_center
+                                a.btn_v2.btn_red.get_more_btn(href='#') клиенты
+                                        
+        
+                    .slide_section.section_v1.sixthPage
+                        .slide_img: img(src='i/index/choice_section.jpg')
+                        .section_inner.clearfix.color_white
+
+                            .text_center
+                                h2.block_title Почему нас выбирают?
+
+                            .choice_list_holder: ul.choice_list
+                                li.choice_col
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-01.svg-svg-why--why-01-dims
+                                        p Делаем самое выгодное предложение по соотношению цена-качество
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-02.svg-svg-why--why-02-dims
+                                        p Защищаем перед налоговыми органами, даём финансовые гарантии
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-03.svg-svg-why--why-03-dims
+                                        p Используем дружелюбныйи комфортный подход в&nbsp;работе
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-04.svg-svg-why--why-04-dims
+                                        p Делаем сложное простыми понятным, даем наглядные результаты
+                                        
+                                li.choice_col
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-05.svg-svg-why--why-05-dims
+                                        p Знаем специфику всех отраслей российской экономики и бизнеса
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-06.svg-svg-why--why-06-dims
+                                        p Экономим время: имеем убедительный опыт уникальной команды для быстрого решения
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-07.svg-svg-why--why-07-dims
+                                        p Даём полезные бонусы бесплатно. Для вас доступна обширная программа поддержки
+                                    .choice_item
+                                        .choice_icon
+                                            span.svg-svg-why--why-08.svg-svg-why--why-08-dims
+                                        p Избавляем от лишнего поиска. Более 50 бизнес-услуг в&nbsp;одной ГК WiseAdvice Consulting Group
+
+                            .choice_info
+                                p Лучшие аргументы и факты — это 
+                                    a.gl_link.link_white(href='#'): span истории успеха
+                                    |  и 
+                                    a.gl_link.link_white(href='#'): span отзывы наших клиентов
+                                    |  <br> Посмотрите, как наши отличия могут стать вашими  
+                                    a.gl_link.link_white(href='#'): span преимуществами
+                                    
+                    .slide_section.section_v1.seventhPage
+                        .slide_img.slide_bg_v2
+                        .section_inner.clearfix.color_white
+                            .text_center
+                                h2.block_title Заказать и познакомиться
+                                h3.block_caption Ваша скидка −10% при обращении с&nbsp;сайта.
+                                
+                            .order_form_holder
+                                form(action='#')
+                                    
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_name') Имя и фамилия
+                                        .input_w: input#order_name.f_input.input_v1(placeholder='Имя и фамилия')
+                                    
+                                    .form_row.cell_2
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_phone') Телефон
+                                            .input_w: input#order_phone.f_input.input_v1(placeholder='Телефон')
+                                
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_email') Электронная почта
+                                            .input_w: input#order_email.f_input.input_v1(placeholder='Электронная почта')
+                            
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_comments') Комментарии
+                                        .input_w: textarea#order_comments.f_input.input_v1(placeholder='Комментарии')
+                            
+                                    .form_tip Выберите полезные услуги для знакомства
+
+                                    .form_row.cell_2.service_row
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Консультация аудитора — получить ответ 
+                                                        span.text_underline бесплатно
+                                     
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Посетить Круглый стол — повысить квалификацию 10 час ИПБ
+                                     
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Совет юриста по налогам — как лучше исключить риски
+                                     
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text 
+                                                    span.mb Встретиться с&nbsp;аудиторами — узнать варианты решенияпроблем
+
+                                    .text_center
+                                        button.btn_v2.btn_white_2.order_btn
+                                            span.mb.svg-svg-history--send-dims.svg-svg-history--send.send_icon
+                                            span.mb Отправить
+
+        +popups()
+        
+        +scripts(false, false, false, true)
+        

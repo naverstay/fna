@@ -243,7 +243,7 @@ b {
     .header_fixed & {
       .nav_holder,
       .logo_section {
-        opacity: 0;
+        display: none;
       }
     }
   }
@@ -1044,6 +1044,7 @@ b {
     display: table;
     width: 100%;
     height: 100%;
+    max-width: 100vw;
   }
 
   .gl_table_cell {
@@ -1233,12 +1234,21 @@ b {
 
 }
 
+.slide_bg_team {
+  background: #dee0e7 url(../i/about/about_map.png) no-repeat;
+  background-position: 54.5% 127px;
+}
+
 .slide_bg_v1 {
   background: #dee0e7;
 }
 
 .slide_bg_v2 {
   background: #951a37;
+}
+
+.slide_bg_v3 {
+  background: #153769;
 }
 
 .hero_block {
@@ -1573,10 +1583,31 @@ b {
   }
 }
 
+.status_list {
+  @extend %clearfix;
+  padding-top: 40px;
+  margin-bottom: 20px;
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include respond-to-max($tablet) {
+    margin-bottom: 60px;
+  }
+}
+
 .choice_col {
   @include respond-to-min($tablet) {
     width: 50%;
     float: left;
+
+    .status_list & {
+      &.status_mod_1 {
+        margin-left: -80px;
+      }
+    }
   }
 }
 
@@ -1649,6 +1680,11 @@ b {
       margin-top: -5px;
     }
   }
+}
+
+.choice_caption {
+  font: 24px/28px $ProximaNovaBold;
+  margin-bottom: 5px;
 }
 
 .order_form_holder {
