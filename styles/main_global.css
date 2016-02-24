@@ -2662,7 +2662,12 @@ b {
 
 .slide_bg_team {
   background: #dee0e7 url(../i/about/about_map.png) no-repeat;
-  background-position: 54.5% 127px;
+  background-position: 300px -220px;
+}
+@media only screen and (min-width: 1200px) {
+  .slide_bg_team {
+    background-position: 54.5% 65%;
+  }
 }
 
 .slide_bg_v1 {
@@ -3558,6 +3563,9 @@ textarea.input_v1 {
     float: left;
     width: 190px;
     margin-right: -100%;
+    position: relative;
+    left: 7px;
+    top: -7px;
   }
 }
 
@@ -3603,6 +3611,33 @@ textarea.input_v1 {
   overflow-x: hidden;
 }
 
+.aside_menu.invert_mod .aside_m_link {
+  -webkit-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  display: block;
+  border: 3px solid transparent;
+  color: #951a37;
+  text-decoration: none;
+  padding: 13px 8px 11px;
+}
+.aside_menu.invert_mod .aside_m_link span {
+  -webkit-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  border-bottom: 1px dotted #951a37;
+}
+.aside_menu.invert_mod .aside_m_link:hover span {
+  border-color: transparent;
+}
+.aside_menu.invert_mod .active > .aside_m_link {
+  color: #fff;
+  background: #951a37;
+}
+.aside_menu.invert_mod .active > .aside_m_link span {
+  border-color: transparent;
+}
+
 .aside_m_link {
   -webkit-transition: border-color 0.3s;
   -ms-transition: border-color 0.3s;
@@ -3620,10 +3655,10 @@ textarea.input_v1 {
   transition: border-color 0.3s;
   border-bottom: 1px dotted #fff;
 }
-.aside_m_link:hover span, .active .aside_m_link span {
+.aside_m_link:hover span, .active > .aside_m_link span {
   border-color: transparent;
 }
-.active .aside_m_link {
+.active > .aside_m_link {
   cursor: default;
   border-color: #951a37;
 }
@@ -3800,6 +3835,9 @@ textarea.input_v1 {
   }
 }
 
+.team_block {
+  padding-top: 300px;
+}
 @media only screen and (min-width: 1200px) {
   .team_block {
     padding: 45px 0 0 80px;
@@ -3810,6 +3848,7 @@ textarea.input_v1 {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -.1px;
+  margin-bottom: 30px;
 }
 .team_info_col > ul > li {
   margin-top: 12px;

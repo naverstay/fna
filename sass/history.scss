@@ -50,6 +50,9 @@
     float: left;
     width: 190px;
     margin-right: -100%;
+    position: relative;
+    left: 7px;
+    top: -7px;
   }
 
 }
@@ -105,6 +108,36 @@
 
 .aside_menu {
 
+  &.invert_mod {
+    .aside_m_link {
+      @include transition_all(border-color .3s);
+      display: block;
+      border: 3px solid transparent;
+      color: #951a37;
+      text-decoration: none;
+      padding: 13px 8px 11px;
+
+      span {
+        @include transition_all(border-color .3s);
+        border-bottom: 1px dotted #951a37;
+      }
+
+      &:hover {
+        span {
+          border-color: transparent;
+        }
+      }
+    }
+
+    .active > .aside_m_link {
+      color: #fff;
+      background: #951a37;
+
+      span {
+        border-color: transparent;
+      }
+    }
+  }
 }
 
 .aside_m_item {
@@ -126,13 +159,13 @@
   }
 
   &:hover,
-  .active & {
+  .active > & {
     span {
       border-color: transparent;
     }
   }
 
-  .active & {
+  .active > & {
     cursor: default;
     border-color: #951a37;
   }

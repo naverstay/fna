@@ -1236,7 +1236,12 @@ b {
 
 .slide_bg_team {
   background: #dee0e7 url(../i/about/about_map.png) no-repeat;
-  background-position: 54.5% 127px;
+  background-position: 300px -220px;
+
+  @include respond-to-min($desktop) {
+    //background-position: 54.5% 127px;
+    background-position: 54.5% 65%;
+  }
 }
 
 .slide_bg_v1 {

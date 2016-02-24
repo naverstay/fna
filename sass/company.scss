@@ -80,6 +80,8 @@
 }
 
 .team_block {
+  padding-top: 300px;  
+  
   @include respond-to-min($desktop) {
     padding: 45px 0 0 80px;
   }
@@ -89,6 +91,7 @@
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -.1px;
+  margin-bottom: 30px;
 
   > ul {
 

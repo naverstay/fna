@@ -16,7 +16,7 @@ html(lang='ru' class='page_slider_mod_')
                 div.main_slider.pageSlider
                     .slide_section.section_v1.firstPage
                         .slide_img: img(src='i/about/about_bg.jpg')
-                        .scroll_down_btn
+                        //-.scroll_down_btn
                             .scroll-btn
                                 a.learnMoreBtn(href='#secondScreen')
                                     span.mouse
@@ -104,20 +104,20 @@ html(lang='ru' class='page_slider_mod_')
                             .aside_l_mod.content_holder.team_block
                                 .aside_left
                                     .aside_menu_holder
-                                    .dt_hidden
-                                        select.asideSelect()
-                                            option(value='Лидеры практики') Лидеры практики
-                                            option(value='Кураторы по работе с клиентами') Кураторы по работе с клиентами
-                                            option(value='Аудиторы') Аудиторы
-                                            option(value='Эксперты и юристы') Эксперты и юристы
-                                            
-                                        #aside_menu_dropdown.aside_menu_dropdown
-                                    .dt_only
-                                        ul.aside_menu
-                                            li.aside_m_item.active: a.aside_m_link(href='#'): span Лидеры практики
-                                            li.aside_m_item: a.aside_m_link(href='#'): span Кураторы по работе с клиентами
-                                            li.aside_m_item: a.aside_m_link(href='#'): span Аудиторы
-                                            li.aside_m_item: a.aside_m_link(href='#'): span Эксперты и юристы
+                                        .dt_hidden
+                                            select.asideSelect()
+                                                option(value='Лидеры практики') Лидеры практики
+                                                option(value='Кураторы по работе с клиентами') Кураторы по работе с клиентами
+                                                option(value='Аудиторы') Аудиторы
+                                                option(value='Эксперты и юристы') Эксперты и юристы
+                                                
+                                            #aside_menu_dropdown.aside_menu_dropdown
+                                        .dt_only
+                                            ul.aside_menu.invert_mod
+                                                li.aside_m_item: a.aside_m_link(href='#'): span Лидеры практики
+                                                li.aside_m_item: a.aside_m_link(href='#'): span Кураторы по работе с клиентами
+                                                li.aside_m_item.active: a.aside_m_link(href='#'): span Аудиторы
+                                                li.aside_m_item: a.aside_m_link(href='#'): span Эксперты и юристы
                                             
                                 .content_block
                                     .team_info

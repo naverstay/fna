@@ -101,7 +101,22 @@ $(function ($) {
 
         return false;
     });
+
+
+    init_select();
+
 });
+
+function init_select() {
+    $('.select2.select2-container').remove();
+
+    $('.asideSelect').select2({
+        minimumResultsForSearch: Infinity,
+        dropdownParent: $('#aside_menu_dropdown'),
+        width: '100%'
+    });
+
+}
 
 function docScrollTo(y_pos) {
 
@@ -137,11 +152,12 @@ $(window).on('load', function () {
                 cell.after(cell.html());
                 cell.remove();
             });
+            
+            init_select();
+
         }
     } else {
         if (!pageSliderLoaded) {
-            console.log('init');
-
             init_main_slider();
         }
     }
