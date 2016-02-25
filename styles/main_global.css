@@ -1753,7 +1753,7 @@ b {
 @media only screen and (min-width: 1200px) {
   .header_menu_holder {
     top: 50px;
-    z-index: 1;
+    z-index: 2;
   }
   .header_fixed .header_menu_holder .nav_holder,
   .header_fixed .header_menu_holder .logo_section {
@@ -2096,6 +2096,7 @@ b {
 
 .lang_link {
   display: block;
+  margin-top: -1px;
   color: #fff;
   text-decoration: none;
 }
@@ -2501,6 +2502,7 @@ b {
 }
 
 .hero_slide {
+  position: relative;
   float: left;
   height: 100%;
 }
@@ -2623,7 +2625,6 @@ b {
 }
 .slide_section.section_v1:first-child {
   min-height: 100vh;
-  padding-top: 50px;
 }
 .slide_section.section_v1 .section_inner {
   position: relative;
@@ -2654,7 +2655,7 @@ b {
 .slide_section.section_v1 .slide_img img {
   position: absolute;
   display: block;
-  width: 100%;
+  min-width: 100%;
   min-height: 100%;
 }
 .slide_section.section_v1 .slide_content {
@@ -2891,7 +2892,8 @@ b {
   margin-bottom: 30px;
 }
 .history_item p {
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 24px;
 }
 .col_2_mod .history_item {
   margin-bottom: 23px;
@@ -2932,9 +2934,10 @@ b {
 }
 
 .history_caption {
-  font: 23px "ProximaNovaExtrabold", sans-serif;
-  margin-bottom: 15px;
+  font: 23px/1.33 "ProximaNovaExtrabold", sans-serif;
+  margin-bottom: 6px;
   text-transform: uppercase;
+  letter-spacing: -.25px;
 }
 
 .partner_list_holder {
@@ -3149,7 +3152,7 @@ b {
 }
 .gl_link.link_white span {
   color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.3);
 }
 .gl_link.link_white:hover span {
   border-bottom-color: transparent;
@@ -3407,7 +3410,11 @@ textarea.input_v1 {
 }
 
 .text_underline {
-  text-decoration: underline;
+  border-bottom: 4px solid #fff;
+}
+
+.text_underline_thin {
+  border-bottom: 2px solid #fff;
 }
 
 .text_center {

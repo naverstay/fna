@@ -178,6 +178,8 @@ function initHeroSlider() {
 
     heroSlider = $('.heroSlider').slick({
         infinite: true,
+        fade: true,
+        cssEase: 'linear',
         init: function () {
 
         }

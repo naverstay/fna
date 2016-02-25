@@ -15,7 +15,6 @@ html(lang='ru' class='page_slider_mod_')
 
                 div.main_slider.pageSlider
                     .slide_section.section_v1.firstPage
-                        .slide_img: img(src='i/index/first_screen.jpg')
                         .scroll_down_btn
                             .scroll-btn
                                 a.learnMoreBtn(href='#secondScreen')
@@ -27,9 +26,10 @@ html(lang='ru' class='page_slider_mod_')
                         .slider_holder
                             .heroSlider.hero_slider
                                 .hero_slide
+                                    .slide_img: img(src='i/index/first_screen.jpg')
                                     .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
                                         .hero_block
-                                            h1.block_title Контроль — 
+                                            .block_title Контроль — 
                                                 span.mob_hidden <br>
                                                 span  первый шаг 
                                                 span.mob_hidden <br> 
@@ -38,26 +38,30 @@ html(lang='ru' class='page_slider_mod_')
                                             .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
                                 
                             
-                                .hero_slide: .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
-                                    .hero_block
-                                        h1.block_title Слайд 2  
-                                            span.mob_hidden <br>
-                                            span  первый шаг 
-                                            span.mob_hidden <br> 
-                                            span  к&nbsp;
-                                            span.text_underline доверию
-                                        .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
+                                .hero_slide
+                                    .slide_img: img(src='i/index/choice_section.jpg')
+                                    .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
+                                        .hero_block
+                                            .block_title Слайд 2  
+                                                span.mob_hidden <br>
+                                                span  первый шаг 
+                                                span.mob_hidden <br> 
+                                                span  к&nbsp;
+                                                span.text_underline доверию
+                                            .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
                                 
                             
-                                .hero_slide: .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
-                                    .hero_block
-                                        h1.block_title Слайд 3  
-                                            span.mob_hidden <br>
-                                            span  первый шаг 
-                                            span.mob_hidden <br> 
-                                            span  к&nbsp;
-                                            span.text_underline доверию
-                                        .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
+                                .hero_slide
+                                    .slide_img: img(src='i/index/history_section.jpg')
+                                    .gl_table: .gl_table_cell: .section_inner.clearfix.slide_s_inner
+                                        .hero_block
+                                            .block_title Слайд 3  
+                                                span.mob_hidden <br>
+                                                span  первый шаг 
+                                                span.mob_hidden <br> 
+                                                span  к&nbsp;
+                                                span.text_underline доверию
+                                            .hero_slogan Поможем не&nbsp;терять бизнес и держать руку на&nbsp;пульсе благодаря системному контролю не&nbsp;требующему постоянных действий.
                                             
                             .hero_slider_controls: .section_inner
                                 .slide_prev.heroSlidePrev.icon-go_top(style='display:none;')
@@ -331,7 +335,7 @@ html(lang='ru' class='page_slider_mod_')
                                                 input.hidden_input(type='checkbox')
                                                 span.check_text 
                                                     span.mb Консультация аудитора — получить ответ 
-                                                        span.text_underline бесплатно
+                                                        span.text_underline_thin бесплатно
                                      
                                         .form_cell.cell_v1
                                             label.check_emul
