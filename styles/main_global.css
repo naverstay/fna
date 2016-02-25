@@ -2615,6 +2615,12 @@ b {
 .slide_section.section_v1 {
   position: relative;
 }
+.slide_section.section_v1.section_top .fp-tableCell {
+  vertical-align: top;
+}
+.slide_section.section_v1.section_top .fp-tableCell .block_title {
+  margin-top: 30px;
+}
 .slide_section.section_v1:first-child {
   min-height: 100vh;
   padding-top: 50px;
@@ -2668,6 +2674,13 @@ b {
   .slide_bg_team {
     background-position: 54.5% 65%;
   }
+}
+
+.slide_bg_company {
+  background: #153769;
+}
+.slide_bg_company.slide_section .slide_img img {
+  top: 44.4%;
 }
 
 .slide_bg_v1 {
@@ -3565,7 +3578,6 @@ textarea.input_v1 {
     margin-right: -100%;
     position: relative;
     left: 7px;
-    top: -7px;
   }
 }
 
@@ -3619,7 +3631,7 @@ textarea.input_v1 {
   border: 3px solid transparent;
   color: #951a37;
   text-decoration: none;
-  padding: 13px 8px 11px;
+  padding: 8px;
 }
 .aside_menu.invert_mod .aside_m_link span {
   -webkit-transition: border-color 0.3s;
@@ -3630,12 +3642,18 @@ textarea.input_v1 {
 .aside_menu.invert_mod .aside_m_link:hover span {
   border-color: transparent;
 }
+.aside_menu.invert_mod .ui-state-active > .aside_m_link,
 .aside_menu.invert_mod .active > .aside_m_link {
   color: #fff;
   background: #951a37;
 }
+.aside_menu.invert_mod .ui-state-active > .aside_m_link span,
 .aside_menu.invert_mod .active > .aside_m_link span {
   border-color: transparent;
+}
+
+.invert_mod .aside_m_item {
+  margin-bottom: 8px;
 }
 
 .aside_m_link {
@@ -3766,30 +3784,50 @@ textarea.input_v1 {
 .about_block {
   background: #fff;
   padding: 20px;
-  max-height: 60vh;
   overflow: auto;
+}
+.fp-table .about_block {
+  max-height: 68vh;
 }
 @media only screen and (min-width: 1200px) {
   .about_block {
-    padding: 45px 50px;
+    padding: 60px 50px 10px;
   }
 }
 
 .article_v1 {
   font: 16px/26px "ProximaNovaLight", sans-serif;
-  -webkit-column-count: 3;
-  /* Chrome, Safari, Opera */
-  -moz-column-count: 3;
-  /* Firefox */
-  column-count: 3;
-  -webkit-column-gap: 2em;
-  -moz-column-gap: 2em;
-  column-gap: 2em;
+  letter-spacing: -.5px;
+}
+.article_v1 h3 {
+  color: #9e1b3a;
+  font: 24px "ProximaNovaBold", sans-serif;
+  margin-bottom: 10px;
 }
 .article_v1 p {
   margin-bottom: 20px;
 }
+.article_v1 p + h3 {
+  margin-top: 40px;
+}
+@media only screen and (min-width: 1200px) {
+  .article_v1 {
+    -webkit-column-count: 3;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 3;
+    /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
 
+.slide_section.section_v1 .section_inner.first_slide_mod {
+  padding-top: 80px;
+}
 @media only screen and (min-width: 1200px) {
   .slide_section.section_v1 .section_inner.first_slide_mod {
     padding-top: 180px;
@@ -3847,7 +3885,7 @@ textarea.input_v1 {
 .team_info_col {
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -.1px;
+  font-family: "ProximaNovaLight", sans-serif;
   margin-bottom: 30px;
 }
 .team_info_col > ul > li {
@@ -3858,7 +3896,7 @@ textarea.input_v1 {
   .team_info_col {
     float: left;
     width: 50%;
-    padding-right: 17px;
+    padding-right: 20px;
   }
   .team_info_col.mod_1 {
     padding: 0 0 0 15px;

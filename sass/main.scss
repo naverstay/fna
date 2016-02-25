@@ -1177,6 +1177,16 @@ b {
   &.section_v1 {
     position: relative;
 
+    &.section_top {
+      .fp-tableCell {
+        vertical-align: top;
+
+        .block_title {
+          margin-top: 30px;
+        }
+      }
+    }
+
     &:first-child {
       min-height: 100vh;
       padding-top: 50px;
@@ -1241,6 +1251,18 @@ b {
   @include respond-to-min($desktop) {
     //background-position: 54.5% 127px;
     background-position: 54.5% 65%;
+  }
+}
+
+.slide_bg_company {
+  background: #153769;
+
+  &.slide_section {
+    .slide_img {
+      img {
+        top: 44.4%;
+      }
+    }
   }
 }
 

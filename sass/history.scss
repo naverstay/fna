@@ -52,7 +52,6 @@
     margin-right: -100%;
     position: relative;
     left: 7px;
-    top: -7px;
   }
 
 }
@@ -115,7 +114,7 @@
       border: 3px solid transparent;
       color: #951a37;
       text-decoration: none;
-      padding: 13px 8px 11px;
+      padding: 8px;
 
       span {
         @include transition_all(border-color .3s);
@@ -129,6 +128,7 @@
       }
     }
 
+    .ui-state-active > .aside_m_link,
     .active > .aside_m_link {
       color: #fff;
       background: #951a37;
@@ -142,6 +142,9 @@
 
 .aside_m_item {
 
+  .invert_mod & {
+    margin-bottom: 8px;
+  }
 }
 
 .aside_m_link {

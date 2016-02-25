@@ -1,30 +1,51 @@
 .about_block {
   background: #fff;
   padding: 20px;
-  max-height: 60vh;
   overflow: auto;
 
-  @include respond-to-min($desktop) {
-    padding: 45px 50px;
+  .fp-table & {
+    max-height: 68vh;
   }
 
+  @include respond-to-min($desktop) {
+    padding: 60px 50px 10px;
+  }
 }
 
 .article_v1 {
   font: 16px/26px $ProximaNovaLight;
-  -webkit-column-count: 3; /* Chrome, Safari, Opera */
-  -moz-column-count: 3; /* Firefox */
-  column-count: 3;
-  -webkit-column-gap: 2em;
-  -moz-column-gap: 2em;
-  column-gap: 2em;
+  letter-spacing: -.5px;
+
+  h3 {
+    color: #9e1b3a;
+    font: 24px $ProximaNovaBold;
+    margin-bottom: 10px;
+  }
 
   p {
     margin-bottom: 20px;
+
+    + h3 {
+      margin-top: 40px;
+    }
   }
+
+  @include respond-to-min($desktop) {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 1em;
+    -moz-column-gap: 1em;
+    column-gap: 1em;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+
 }
 
 .slide_section.section_v1 .section_inner.first_slide_mod {
+  padding-top: 80px;
+
   @include respond-to-min($desktop) {
     padding-top: 180px;
   }
@@ -80,8 +101,8 @@
 }
 
 .team_block {
-  padding-top: 300px;  
-  
+  padding-top: 300px;
+
   @include respond-to-min($desktop) {
     padding: 45px 0 0 80px;
   }
@@ -90,7 +111,8 @@
 .team_info_col {
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: -.1px;
+  font-family: $ProximaNovaLight;
+  //letter-spacing: -.1px;
   margin-bottom: 30px;
 
   > ul {
@@ -105,7 +127,7 @@
   @include respond-to-min($desktop) {
     float: left;
     width: 50%;
-    padding-right: 17px;
+    padding-right: 20px;
 
     &.mod_1 {
       padding: 0 0 0 15px;
