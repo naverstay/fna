@@ -238,7 +238,7 @@ b {
 
   @include respond-to-min($desktop) {
     top: 50px;
-    z-index: 1;
+    z-index: 2;
 
     .header_fixed & {
       .nav_holder,
@@ -605,8 +605,7 @@ b {
 
 .lang_link {
   display: block;
-  //margin-top: -4px;
-  //line-height: 24px;
+  margin-top: -1px;
   color: #fff;
   text-decoration: none;
 
@@ -1037,6 +1036,7 @@ b {
 }
 
 .hero_slide {
+  position: relative;
   float: left;
   height: 100%;
 
@@ -1189,7 +1189,7 @@ b {
 
     &:first-child {
       min-height: 100vh;
-      padding-top: 50px;
+      //padding-top: 50px;
     }
 
     .section_inner {
@@ -1225,7 +1225,7 @@ b {
         @extend %hor_vert_centr;
         position: absolute;
         display: block;
-        width: 100%;
+        min-width: 100%;
         min-height: 100%;
       }
 
@@ -1487,7 +1487,8 @@ b {
   margin-bottom: 30px;
 
   p {
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 24px;
   }
 
   .col_2_mod & {
@@ -1530,9 +1531,10 @@ b {
 }
 
 .history_caption {
-  font: 23px $ProximaNovaExtrabold;
-  margin-bottom: 15px;
+  font: 23px/1.33 $ProximaNovaExtrabold;
+  margin-bottom: 6px;
   text-transform: uppercase;
+  letter-spacing: -.25px;
 }
 
 .partner_list_holder {
@@ -1747,7 +1749,7 @@ b {
 
     span {
       color: #fff;
-      border-bottom: 1px solid transparentize(#fff, .7);
+      box-shadow: inset 0 0 0 transparentize(#fff, .7), inset 0 -1px 0 transparentize(#fff, .7);
     }
 
     &:hover {
@@ -2064,7 +2066,13 @@ textarea.input_v1 {
 // **********  text 
 
 .text_underline {
-  text-decoration: underline;
+  border-bottom: 4px solid #fff;
+}
+
+.text_underline_thin {
+  border-bottom: 2px solid #fff;
+
+  //box-shadow: inset 0 0 0 transparentize(#fff, .7), inset 0 -1px 0 transparentize(#fff, .7);
 }
 
 .text_center {
