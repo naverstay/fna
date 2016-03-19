@@ -14,93 +14,143 @@ html(lang='ru' class='page_slider_mod_')
                     +header_menu(3, true)
 
                 div.main_content
-                    
-                    
+                    .section_inner.clearfix
+                        .text_center
+                            h2.block_title Выбор услуг
+                            h3.block_caption.small_mod Выберите, что нужно вашей компании. Мы предложим оптимальное решение.
+                            
+                        .service_tabs_holder
+                            ul#services_list.service_tabs(data-active-tab=0)
+                                li.service_t_item.service_t_red: a.service_t_link(href='#service_tab_1')
+                                    //.solution_icon
+                                        .service_icon.svg-svg-services--services-01-dims.svg-svg-services--services-01
+                                    //.solution_caption: span Все услуги  <br>  для бизнеса
+                                    .service_t_icon.dt_only
+                                    span.service_t_name Все услуги  <br>  для бизнеса
+                                li.service_t_item.service_t_blue: a.service_t_link(href='#service_tab_2')
+                                    //.solution_icon
+                                        .service_icon.svg-svg-services--services-02-dims.svg-svg-services--services-02
+                                    //.solution_caption: span Генеральному <br> директору
+                                    .service_t_icon.dt_only
+                                    span.service_t_name Генеральному <br> директору
+                                li.service_t_item.service_t_green: a.service_t_link(href='#service_tab_3')
+                                    //.solution_icon
+                                        .service_icon.svg-svg-services--services-03-dims.svg-svg-services--services-03
+                                    //.solution_caption: span Фин. директору  <br> Глав. бухгалтеру
+                                    .service_t_icon.dt_only
+                                    span.service_t_name Фин. директору  <br> Глав. бухгалтеру
+                                li.service_t_item.service_t_orange: a.service_t_link(href='#service_tab_4')
+                                    //.solution_icon
+                                        .service_icon.svg-svg-services--services-04-dims.svg-svg-services--services-04
+                                    //.solution_caption: span Собственнику  <br> Иностр. компаниям
+                                    .service_t_icon.dt_only
+                                    span.service_t_name Собственнику  <br> Иностр. компаниям
+                            
+                            .tabBlock(data-tab-context='#services_list')
+                                #service_tab_1.service_tab_inner
+                                    +service_unit('service_u_red')
+                                            
+                                #service_tab_2.service_tab_inner
+                                    +service_unit('service_u_blue')
+                                        
+                                #service_tab_3.service_tab_inner
+                                    +service_unit('service_u_green')
+                                        
+                                #service_tab_4.service_tab_inner
+                                    +service_unit('service_u_orange')
+                                        
+
                     .slide_section.section_v1.service_order_section
                         .slide_img.slide_bg_v2
                         .section_inner.clearfix.color_white_3
                             .text_center
                                 h2.block_title Заказать и получить скидку 10%
                                 h3.block_caption Вы выбрали: обязательный аудит, комплексный аудит
-                                form(action='#')
-                                    
-                                    .order_form_holder.mod_1
-                                        .form_row.cell_3_2
-                                            .form_cell.cell_v1
-                                                label.hidden_input(for='order_activity') Деятельность
-                                                .input_w: input#order_activity.f_input.input_v1(placeholder='Деятельность')
-                                            .form_cell.cell_v1
-                                                label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
-                                                .input_w: input#order_revenues.f_input.input_v1(placeholder='Выручка, тыс. руб./год')
-                                                
-                                        .form_row.cell_float
-                                            .form_cell.cell_v2
-                                                label.hidden_input(for='order_activity') Деятельность
-                                                .input_w.mb: input#order_activity.f_input.input_v1.text_center(value='10')
-                                                span.mb сотрудников
-                                            .form_cell.cell_v2
-                                                label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
-                                                .input_w.mb: input#order_revenues.f_input.input_v1.text_center(value='10')
-                                                span.mb из них бухгалтеров
-
-                                    .bonus_block
-                                        
-                                        .form_tip.form_tip_v2 Отметьте бонусы к аудиту:
+                                
+                            form(action='#')
+                                
+                                .order_form_holder.mod_1
+                                    .form_row.cell_3_2
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_activity') Деятельность
+                                            .input_w: input#order_activity.f_input.input_v1(placeholder='Деятельность')
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
+                                            .input_w: input#order_revenues.f_input.input_v1(placeholder='Выручка, тыс. руб./год')
                                             
-                                        .form_row.cell_3.service_row
-                                            .form_cell.cell_v1
-                                                label.check_emul
-                                                    input.hidden_input(type='checkbox')
-                                                    span.check_text
-                                                        span.mb Часы&nbsp;консультаций с аудиторами
-                                            .form_cell.cell_v1
-                                                label.check_emul
-                                                    input.hidden_input(type='checkbox')
-                                                    span.check_text
-                                                        span.mb Круглые столы&nbsp;—  <br> повышение&nbsp;квалификации  <br> 40 час ИПБ Р
-                                            .form_cell.cell_v1
-                                                label.check_emul
-                                                    input.hidden_input(type='checkbox')
-                                                    span.check_text
-                                                        span.mb Аудит базы&nbsp;1С
-                                                        
-                                            .form_cell.cell_v1
-                                                label.check_emul
-                                                    input.hidden_input(type='checkbox')
-                                                    span.check_text
-                                                        span.mb Помощь налоговых юристов
-                                                        
-                                            .form_cell.cell_v1
-                                                label.check_emul
-                                                    input.hidden_input(type='checkbox')
-                                                    span.check_text
-                                                        span.mb Обзор финансового&nbsp;состояния и налоговых рисков
+                                    .form_row.cell_float
+                                        .form_cell.cell_v2
+                                            label.hidden_input(for='order_activity') Деятельность
+                                            .input_w.mb: input#order_activity.f_input.input_v1.text_center(value='10')
+                                            span.mb сотрудников
+                                        .form_cell.cell_v2
+                                            label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
+                                            .input_w.mb: input#order_revenues.f_input.input_v1.text_center(value='10')
+                                            span.mb из них бухгалтеров
 
-                                    .order_form_holder.mod_2
-
-                                        .form_cell.cell_v1
-                                            label.hidden_input(for='order_name') Имя и фамилия
-                                            .input_w: input#order_name.f_input.input_v1(placeholder='Имя и фамилия')
+                                .bonus_block
+                                    
+                                    .form_tip.form_tip_v2 Отметьте бонусы к аудиту:
                                         
-                                        .form_row.cell_2
-                                            .form_cell.cell_v1
-                                                label.hidden_input(for='order_phone') Телефон
-                                                .input_w: input#order_phone.f_input.input_v1(placeholder='Телефон')
-                                    
-                                            .form_cell.cell_v1
-                                                label.hidden_input(for='order_email') Электронная почта
-                                                .input_w: input#order_email.f_input.input_v1(placeholder='Электронная почта')
-                                    
+                                    .form_row.cell_3.service_row
                                         .form_cell.cell_v1
-                                            label.hidden_input(for='order_comments') Комментарии
-                                            .input_w: textarea#order_comments.f_input.input_v1(placeholder='Комментарии')
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb 
+                                                        span.dt_hidden Часы консультаций с аудиторами
+                                                        span.dt_only Часы&nbsp;консультаций с аудиторами
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Круглые столы&nbsp;—  <br>
+                                                        span.dt_hidden повышение квалификации  
+                                                        span.dt_only повышение&nbsp;квалификации  
+                                                        | <br> 40 час ИПБ Р
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Аудит базы&nbsp;1С
+                                                    
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Помощь налоговых юристов
+                                                    
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Обзор финансового&nbsp;состояния и налоговых рисков
 
-                                        .text_center
-                                            button.btn_v2.btn_white_2.order_btn
-                                                span.mb Заказать
+                                .order_form_holder.mod_2
+
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_name') Имя и фамилия
+                                        .input_w: input#order_name.f_input.input_v1(placeholder='Имя и фамилия')
+                                    
+                                    .form_row.cell_2
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_phone') Телефон
+                                            .input_w: input#order_phone.f_input.input_v1(placeholder='Телефон')
+                                
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_email') Электронная почта
+                                            .input_w: input#order_email.f_input.input_v1(placeholder='Электронная почта')
+                                
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_comments') Комментарии
+                                        .input_w: textarea#order_comments.f_input.input_v1(placeholder='Комментарии')
+
+                                    .text_center
+                                        button.btn_v2.btn_white_2.order_btn
+                                            span.mb Заказать
 
 
         +popups()
         
-        +scripts(false, true)
+        +scripts(false, false, false, false, true)
         

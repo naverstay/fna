@@ -108,13 +108,7 @@
   }
 }
 
-.team_info_col {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: $ProximaNovaLight;
-  //letter-spacing: -.1px;
-  margin-bottom: 30px;
-
+%list_v1 {
   > ul {
 
     > li {
@@ -123,6 +117,15 @@
       padding-left: 40px;
     }
   }
+}
+
+.team_info_col {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $ProximaNovaLight;
+  //letter-spacing: -.1px;
+  margin-bottom: 30px;
+  @extend %list_v1;
 
   @include respond-to-min($desktop) {
     float: left;

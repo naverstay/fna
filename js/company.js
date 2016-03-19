@@ -143,8 +143,6 @@ function init_tabs() {
                 tabContext: tabBlock.data('tab-context'),
                 activate: function (e, ui) {
                     active_tab = ui.newPanel.index();
-                    console.log(active_tab, ui.newPanel.attr('id'));
-                    //$('.asideSelect option[value=#' + ui.newPanel.attr('id') + ']').attr('selected', 'selected');
                     $('.asideSelect').val('#' + ui.newPanel.attr('id')).trigger('change');
                 }
             });

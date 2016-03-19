@@ -12,6 +12,15 @@
 }
 
 @font-face {
+  font-family: 'rouble';
+  src: url(../fonts/rouble.eot);
+  src: url(../fonts/rouble.eot?#iefix) format("embedded-opentype"),
+  url(../fonts/rouble.woff) format("woff"),
+  url(../fonts/rouble.ttf) format("truetype"),
+  url(../fonts/rouble.svg) format("svg");
+}
+
+@font-face {
   font-family: 'ProximaNovaBold';
   src: url(../fonts/ProximaNovaBold.eot);
   src: url(../fonts/ProximaNovaBold.eot?#iefix) format("embedded-opentype"),

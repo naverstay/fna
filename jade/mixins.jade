@@ -63,6 +63,110 @@ mixin order_form(id_mod)
             span.mb.svg-svg-history--send-dims.svg-svg-history--send.send_icon
             span.mb Отправить
             
+mixin service_unit(cls)
+    .service_unit(class=cls)
+        ul.service_list
+            li.service_block
+                .service_info
+                    .service_switch
+                        label.service_check
+                            input.hidden_input(type='checkbox')
+                            span.check_text
+
+                    .service_switch_caption Получить аудиторское заключение
+                    p Исполнить тредования законов РФ: 302-ФЗ, 208-ФЗ и другие
+
+                .service_options
+                    label.service_check_v2
+                        input.hidden_input(type='checkbox')
+                        span.check_text Обязательный (финансовый) аудит
+
+                    p Это минимальная проверка  бухгалтерской отчетности.РФ: 302-ФЗ, 208-ФЗ и другие. 
+                        a.link_red.gl_link.service_option_link(href='#'): span Подробнее
+
+                    .service_option_price от 95 000
+                        span.rub a
+
+                .service_description
+                    p Результатом аудита по РСБУ (российским стандартам бухгалтерсокго учета) является аудиторское заключение —  документ, подтверждающий регулятору исполнение закона и подтверждение достоверности бухгалтерской (финансовой) отчетности организации.
+                    p Для  руководителей иностранных компаний услуги по  МСФО (международным стандартам финансовой отчетности) и МСА (международным стандартам аудита) позволяют подтвердить финансовые показатели и предоставить в штаб-квартиру или глобальным аудиторам отчетность, подтвержденную заключением независимых аудиторов или формы по МСА.
+
+            li.service_block
+                .service_info
+                    .service_switch
+                        label.service_check
+                            input.hidden_input(type='checkbox')
+                            span.check_text
+
+                    .service_switch_caption Снизить риски 
+                    p и личную ответственность, избежать штрафов.
+
+                .service_description
+                    p Независимая аудиторская проверка позволяет регулярно отслеживать финансовые показатели и основные риски, причины возникновения и их динамику, видеть полную картину деятельности компании для принятия взвешенных решений.
+                    p Проведение аудита обеспечивает исполнение требований законов, в том числе НК РФ, а значит отсутствие штрафов и оснований для привлечения к ответственности.
+                    p Кроме того, заранее найти несоответствия и ошибки в бухгалтерском и налоговом учете позволяет организации самостоятельно их исправить и, следовательно, своевременно исключить возможные риски.
+
+            li.service_block
+                .service_info
+                    .service_switch
+                        label.service_check
+                            input.hidden_input(type='checkbox')
+                            span.check_text
+
+                    .service_switch_caption Проконтроли-ровать и опти- мизировать
+                    p финансовые показатели, затраты, налоги и др. Снизить  налоговые риски и ответственность, избежать штрафов и пеней.
+
+                .service_options
+                    label.service_check_v2
+                        input.hidden_input(type='checkbox')
+                        span.check_text Комплексный аудит
+
+                    p Обязательный аудит + налоговый аудит. 
+                        a.link_red.gl_link.service_option_link(href='#'): span Подробнее
+
+                    .service_option_price от 150 000
+                        span.rub a
+
+                .service_description
+                    p По итогам аудита наша компания предоставляет отдельный отчет для руководства — «Обзор финансового состояния и рисков», где в наглядном, лаконичном виде вы увидите:
+
+                    ul
+                        li показатели отчетности и финансового состояния компании;
+                        li уровень организации бухгалтерского учета; 
+                        li добросовестность сотрудников и возможности для снижения необязательных расходов;
+                        li вероятность выездной налоговой проверки по методологии ИФНС; 
+                        li заранее выявленные и расчитанные налоговые риски;
+                        li зоны возможной экономии на налогах и объемы такой экономии.
+
+                    p Это позволит снизить риски и личную ответственность генерального директора, избежать штрафов и претензий, одновременно уменьшив налоговое бремя компании.
+
+            li.service_block
+                .service_info
+                    .service_switch
+                        label.service_check
+                            input.hidden_input(type='checkbox')
+                            span.check_text
+
+                    .service_switch_caption Получить кредит
+                    p Получить кредит, повысить доверие учредителей.
+
+                .service_options
+                    label.service_check_v2
+                        input.hidden_input(type='checkbox')
+                        span.check_text Инициативный аудит
+
+                    p Самая гибкая форма аудита. Спросите — мы сделаем. 
+                        a.link_red.gl_link.service_option_link(href='#'): span Подробнее
+
+                    .service_option_price от 55 000
+                        span.rub a
+
+                .service_description
+                    p Независимое мнение аудиторской компании, входящей в ТОП-25 российского аудита, в форме аудиторского заключения повышает доверие партнеров.
+                    p Учредителям, банкам, инвесторам будет проще принять решение в вашу пользу и предоставить средства быстрее  и на более выгодных условиях.
+
+    .text_center
+        a.btn_v2.order_btn.btn_red(href='#') Заказать 
 mixin popups()
     .gl_overlay.closeMenu
     
@@ -99,7 +203,7 @@ mixin popups()
             +order_form('popup_')
                 
 
-mixin scripts(index, history, reviews, company)
+mixin scripts(index, history, reviews, company, services)
     //-script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
     script(src='js/device.min.js?no_cache')
     script(src='js/jquery1.10.js?no_cache')
@@ -119,6 +223,9 @@ mixin scripts(index, history, reviews, company)
         script(src='js/jquery-ui.js?no_cache')
         script(src='js/jquery.fullPage.js?no_cache')
         script(src='js/company.js?no_cache')
+    - if (services)
+        script(src='js/jquery-ui.js?no_cache')
+        script(src='js/services.js?no_cache')
 
 
 mixin loop_while(counter)
