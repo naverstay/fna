@@ -12,7 +12,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="wrapper history_bg inner_page">
+    <div class="wrapper inner_page logo_section_black">
       <div class="rect_1024"></div>
       <div class="base"><a href="#" class="go_top_btn goTopBtn"><span class="svg-svg-home--fna-svg--up-icon-dims svg-svg-home--fna-svg--up-icon"></span></a>
         <div class="header">
@@ -73,9 +73,9 @@
                     </li>
                     <li class="menu_item"><a href="company.html" class="menu_link"><span class="mb">О компании</span></a>
                     </li>
-                    <li class="menu_item"><a href="services.html" class="menu_link"><span class="mb">Выбор услуг</span></a>
+                    <li class="menu_item active"><span class="menu_link"><span class="mb">Выбор услуг</span></span>
                     </li>
-                    <li class="menu_item active"><span class="menu_link"><span class="mb">Истории успеха</span></span>
+                    <li class="menu_item"><a href="history.html" class="menu_link"><span class="mb">Истории успеха</span></a>
                     </li>
                     <li class="menu_item"><a href="reviews.html" class="menu_link"><span class="mb">Отзывы клиентов</span></a>
                     </li>
@@ -90,84 +90,105 @@
           </div>
         </div>
         <div class="main_content">
-          <div class="section_inner">
-            <h1 class="page_title color_white_2">Истории успеха</h1>
-            <div class="content_holder aside_r_mod">
-              <div class="aside_right">
-                <div class="aside_menu_holder">
-                  <div class="dt_hidden">
-                    <select class="asideSelect">
-                      <option value="Все услуги">Все услуги</option>
-                      <option value="Обязательный аудит">Обязательный аудит</option>
-                      <option value="Услуги МФСО и МСА">Услуги МФСО и МСА</option>
-                      <option value="Налоговый аудит">Налоговый аудит</option>
-                      <option value="Комплексный аудит">Комплексный аудит</option>
-                      <option value="Due Diligence">Due Diligence</option>
-                      <option value="Инициативный аудит">Инициативный аудит</option>
-                      <option value="Форензик">Форензик</option>
-                    </select>
-                    <div id="aside_menu_dropdown" class="aside_menu_dropdown"></div>
+          <div class="slide_section section_v1 service_order_section">
+            <div class="slide_img slide_bg_v2"></div>
+            <div class="section_inner clearfix color_white_3">
+              <div class="text_center">
+                <h2 class="block_title">Заказать и получить скидку 10%</h2>
+                <h3 class="block_caption">Вы выбрали: обязательный аудит, комплексный аудит</h3>
+                <form action="#">
+                  <div class="order_form_holder mod_1">
+                    <div class="form_row cell_3_2">
+                      <div class="form_cell cell_v1">
+                        <label for="order_activity" class="hidden_input">Деятельность</label>
+                        <div class="input_w">
+                          <input id="order_activity" placeholder="Деятельность" class="f_input input_v1">
+                        </div>
+                      </div>
+                      <div class="form_cell cell_v1">
+                        <label for="order_revenues" class="hidden_input">Выручка, тыс. руб./год</label>
+                        <div class="input_w">
+                          <input id="order_revenues" placeholder="Выручка, тыс. руб./год" class="f_input input_v1">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form_row cell_float">
+                      <div class="form_cell cell_v2">
+                        <label for="order_activity" class="hidden_input">Деятельность</label>
+                        <div class="input_w mb">
+                          <input id="order_activity" value="10" class="f_input input_v1 text_center">
+                        </div><span class="mb">сотрудников</span>
+                      </div>
+                      <div class="form_cell cell_v2">
+                        <label for="order_revenues" class="hidden_input">Выручка, тыс. руб./год</label>
+                        <div class="input_w mb">
+                          <input id="order_revenues" value="10" class="f_input input_v1 text_center">
+                        </div><span class="mb">из них бухгалтеров</span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="dt_only">
-                    <ul class="aside_menu">
-                      <li class="aside_m_item active"><a href="#" class="aside_m_link"><span>Все услуги</span></a></li>
-                      <li class="aside_m_item"><a href="#" class="aside_m_link"><span>Обязательный аудит</span></a></li>
-                      <li class="aside_m_item"><a href="#" class="aside_m_link"><span>Услуги МФСО и&nbsp;МСА</span></a></li>
-                      <li class="aside_m_item"><a href="#" class="aside_m_link"><span>Налоговый аудит</span></a></li>
-                      <li class="aside_m_item"><a href="#" class="aside_m_link"><span>Комплексный аудит</span></a></li>
-                      <li class="aside_m_item"><a href="#" class="aside_m_link"><span>Due Diligence</span></a></li>
-                      <li class="aside_m_item"><a href="#" class="aside_m_link"><span>Инициативный аудит</span></a></li>
-                      <li class="aside_m_item"><a href="#" class="aside_m_link"><span>Форензик</span></a></li>
-                    </ul>
+                  <div class="bonus_block">
+                    <div class="form_tip form_tip_v2">Отметьте бонусы к аудиту:</div>
+                    <div class="form_row cell_3 service_row">
+                      <div class="form_cell cell_v1">
+                        <label class="check_emul">
+                          <input type="checkbox" class="hidden_input"><span class="check_text"><span class="mb">Часы&nbsp;консультаций с аудиторами</span></span>
+                        </label>
+                      </div>
+                      <div class="form_cell cell_v1">
+                        <label class="check_emul">
+                          <input type="checkbox" class="hidden_input"><span class="check_text"><span class="mb">Круглые столы&nbsp;—  <br> повышение&nbsp;квалификации  <br> 40 час ИПБ Р</span></span>
+                        </label>
+                      </div>
+                      <div class="form_cell cell_v1">
+                        <label class="check_emul">
+                          <input type="checkbox" class="hidden_input"><span class="check_text"><span class="mb">Аудит базы&nbsp;1С</span></span>
+                        </label>
+                      </div>
+                      <div class="form_cell cell_v1">
+                        <label class="check_emul">
+                          <input type="checkbox" class="hidden_input"><span class="check_text"><span class="mb">Помощь налоговых юристов</span></span>
+                        </label>
+                      </div>
+                      <div class="form_cell cell_v1">
+                        <label class="check_emul">
+                          <input type="checkbox" class="hidden_input"><span class="check_text"><span class="mb">Обзор финансового&nbsp;состояния и налоговых рисков</span></span>
+                        </label>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="content_block">
-                <ul class="history_list col_2_mod history_item_v2">
-                  <li class="history_item">
-                    <div class="history_unit">
-                      <div class="history_img"><img src="i/index/history_1.jpg"></div>
-                      <div class="history_caption"><a href="#" class="gl_link link_red"><span>Складской комплекс на&nbsp;территории Москвы (Due Diligence)</span></a></div>
-                      <p>Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.</p>
+                  <div class="order_form_holder mod_2">
+                    <div class="form_cell cell_v1">
+                      <label for="order_name" class="hidden_input">Имя и фамилия</label>
+                      <div class="input_w">
+                        <input id="order_name" placeholder="Имя и фамилия" class="f_input input_v1">
+                      </div>
                     </div>
-                  </li>
-                  <li class="history_item">
-                    <div class="history_unit">
-                      <div class="history_img"><img src="i/index/history_2.jpg"></div>
-                      <div class="history_caption"><a href="#" class="gl_link link_red"><span>Иностранный импортер кондитерской продукции</span></a></div>
-                      <p>Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.</p>
+                    <div class="form_row cell_2">
+                      <div class="form_cell cell_v1">
+                        <label for="order_phone" class="hidden_input">Телефон</label>
+                        <div class="input_w">
+                          <input id="order_phone" placeholder="Телефон" class="f_input input_v1">
+                        </div>
+                      </div>
+                      <div class="form_cell cell_v1">
+                        <label for="order_email" class="hidden_input">Электронная почта</label>
+                        <div class="input_w">
+                          <input id="order_email" placeholder="Электронная почта" class="f_input input_v1">
+                        </div>
+                      </div>
                     </div>
-                  </li>
-                  <li class="history_item">
-                    <div class="history_unit">
-                      <div class="history_img"><img src="i/index/history_3.jpg"></div>
-                      <div class="history_caption"><a href="#" class="gl_link link_red"><span>Производство в&nbsp;Подмосковье - партнер Самсунг</span></a></div>
-                      <p>Самсунг  предъявляет к&nbsp;своим поставщикам серьезные требования не&nbsp;только по качеству продукции, но и по&nbsp;финансовой устойчивости компании.</p>
+                    <div class="form_cell cell_v1">
+                      <label for="order_comments" class="hidden_input">Комментарии</label>
+                      <div class="input_w">
+                        <textarea id="order_comments" placeholder="Комментарии" class="f_input input_v1"></textarea>
+                      </div>
                     </div>
-                  </li>
-                  <li class="history_item">
-                    <div class="history_unit">
-                      <div class="history_img"><img src="i/index/history_1.jpg"></div>
-                      <div class="history_caption"><a href="#" class="gl_link link_red"><span>Складской комплекс на&nbsp;территории Москвы (Due Diligence)</span></a></div>
-                      <p>Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.</p>
+                    <div class="text_center">
+                      <button class="btn_v2 btn_white_2 order_btn"><span class="mb">Заказать</span></button>
                     </div>
-                  </li>
-                  <li class="history_item">
-                    <div class="history_unit">
-                      <div class="history_img"><img src="i/index/history_2.jpg"></div>
-                      <div class="history_caption"><a href="#" class="gl_link link_red"><span>Иностранный импортер кондитерской продукции</span></a></div>
-                      <p>Проведение независимого расширенного аудита на&nbsp;предмет выявление скрытых обязательств организации, владеющей активами.</p>
-                    </div>
-                  </li>
-                  <li class="history_item">
-                    <div class="history_unit">
-                      <div class="history_img"><img src="i/index/history_3.jpg"></div>
-                      <div class="history_caption"><a href="#" class="gl_link link_red"><span>Производство в&nbsp;Подмосковье - партнер Самсунг</span></a></div>
-                      <p>Самсунг  предъявляет к&nbsp;своим поставщикам серьезные требования не&nbsp;только по качеству продукции, но и по&nbsp;финансовой устойчивости компании.</p>
-                    </div>
-                  </li>
-                </ul>
-                <div class="load_more_block"><a href="#" class="btn_v1 load_more_btn btn_white"><span class="mb svg-svg-history--refresh svg-svg-history--refresh-dims btn_icon"></span><span class="mb">Показать еще успешные истории</span></a></div>
+                  </div>
+                </form>
               </div>
             </div>
           </div>

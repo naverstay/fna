@@ -304,35 +304,35 @@ html(lang='ru' class='page_slider_mod_')
                             .partner_list_holder: ul.partner_list
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_1.png')
-                                    .partenr_name Предприятие <br> по&nbsp;производству сыра
+                                    .partner_name Предприятие <br> по&nbsp;производству сыра
                                         
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_2.png')
-                                    .partenr_name Страхование  <br> автомобилей
+                                    .partner_name Страхование  <br> автомобилей
                                         
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_3.png')
-                                    .partenr_name Крупнейшая розничная сеть  <br>  по&nbsp;торговле одеждой
+                                    .partner_name Крупнейшая розничная сеть  <br>  по&nbsp;торговле одеждой
                                         
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_4.png')
-                                    .partenr_name Девелопер жилой  <br>  недвижимости
+                                    .partner_name Девелопер жилой  <br>  недвижимости
                                         
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_5.png')
-                                    .partenr_name Предприятие  <br> по&nbsp;производству сыра
+                                    .partner_name Предприятие  <br> по&nbsp;производству сыра
                                         
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_6.png')
-                                    .partenr_name Страхование  <br> автомобилей
+                                    .partner_name Страхование  <br> автомобилей
                                         
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_7.png')
-                                    .partenr_name Крупнейшая розничная сеть  <br>  по&nbsp;торговле одеждой
+                                    .partner_name Крупнейшая розничная сеть  <br>  по&nbsp;торговле одеждой
                                         
                                 li.partner_item
                                     a.partner_logo(href='#'): img(src='i/index/client_8.png')
-                                    .partenr_name Девелопер жилой  <br>  недвижимости
+                                    .partner_name Девелопер жилой  <br>  недвижимости
                             
                             .text_center
                                 a.btn_v2.btn_red.get_more_btn(href='#') клиенты
@@ -399,56 +399,7 @@ html(lang='ru' class='page_slider_mod_')
                                 
                             .order_form_holder
                                 form(action='#')
-                                    
-                                    .form_cell.cell_v1
-                                        label.hidden_input(for='order_name') Имя и фамилия
-                                        .input_w: input#order_name.f_input.input_v1(placeholder='Имя и фамилия')
-                                    
-                                    .form_row.cell_2
-                                        .form_cell.cell_v1
-                                            label.hidden_input(for='order_phone') Телефон
-                                            .input_w: input#order_phone.f_input.input_v1(placeholder='Телефон')
-                                
-                                        .form_cell.cell_v1
-                                            label.hidden_input(for='order_email') Электронная почта
-                                            .input_w: input#order_email.f_input.input_v1(placeholder='Электронная почта')
-                            
-                                    .form_cell.cell_v1
-                                        label.hidden_input(for='order_comments') Комментарии
-                                        .input_w: textarea#order_comments.f_input.input_v1(placeholder='Комментарии')
-                            
-                                    .form_tip Выберите полезные услуги для знакомства
-
-                                    .form_row.cell_2.service_row
-                                        .form_cell.cell_v1
-                                            label.check_emul
-                                                input.hidden_input(type='checkbox')
-                                                span.check_text 
-                                                    span.mb Консультация аудитора — получить ответ 
-                                                        span.text_underline_thin бесплатно
-                                     
-                                        .form_cell.cell_v1
-                                            label.check_emul
-                                                input.hidden_input(type='checkbox')
-                                                span.check_text 
-                                                    span.mb Посетить Круглый стол — повысить квалификацию 10 час ИПБ
-                                     
-                                        .form_cell.cell_v1
-                                            label.check_emul
-                                                input.hidden_input(type='checkbox')
-                                                span.check_text 
-                                                    span.mb Совет юриста по&nbsp;налогам — как лучше исключить риски
-                                     
-                                        .form_cell.cell_v1
-                                            label.check_emul
-                                                input.hidden_input(type='checkbox')
-                                                span.check_text 
-                                                    span.mb Встретиться с&nbsp;аудиторами — узнать варианты решенияпроблем
-
-                                    .text_center
-                                        button.btn_v2.btn_white_2.order_btn
-                                            span.mb.svg-svg-history--send-dims.svg-svg-history--send.send_icon
-                                            span.mb Отправить
+                                    +order_form('company_')
 
         +popups()
         

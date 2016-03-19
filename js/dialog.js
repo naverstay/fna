@@ -1,4 +1,7 @@
-function dialog(dialog_id, dialog_class, dialog_trigger_id, dialog_active_class, dialog_width, dialog_wrap, modal, modal_height) {
+function dialog(dialog_id, dialog_class,
+				dialog_trigger_id, dialog_active_class,
+				dialog_width, dialog_wrap, 
+				modal, modal_height) {
 	if (modal == null) modal = true;
 	if (dialog_wrap == null) dialog_wrap = '.wrapper';
 	var $drag = true;

@@ -131,7 +131,7 @@ function init_select() {
 }
 
 function init_tabs() {
-    console.log(about_tabs);
+
     if (about_tabs != void 0) {
         about_tabs.tabs("destroy");
     }

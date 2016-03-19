@@ -12,15 +12,100 @@ mixin dev_head(page_title)
         | <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         | <![endif]-->
 
+mixin order_form(id_mod)
+    .form_cell.cell_v1
+        label.hidden_input(for= id_mod + 'order_name') Имя и фамилия
+        .input_w: input.f_input.input_v1(placeholder='Имя и фамилия', id = id_mod + 'order_name')
+    
+    .form_row.cell_2
+        .form_cell.cell_v1
+            label.hidden_input(for= id_mod + 'order_phone') Телефон
+            .input_w: input.f_input.input_v1(placeholder='Телефон', id = id_mod + 'order_phone')
+
+        .form_cell.cell_v1
+            label.hidden_input(for= id_mod + 'order_email') Электронная почта
+            .input_w: input.f_input.input_v1(placeholder='Электронная почта', id = id_mod + 'order_email')
+
+    .form_cell.cell_v1
+        label.hidden_input(for='order_comments') Комментарии
+        .input_w: textarea.f_input.input_v1(placeholder='Комментарии', id = id_mod + 'order_comments')
+
+    .form_tip Выберите полезные услуги для знакомства
+
+    .form_row.cell_2.service_row
+        .form_cell.cell_v1
+            label.check_emul
+                input.hidden_input(type='checkbox')
+                span.check_text 
+                    span.mb Консультация аудитора — получить ответ 
+                        span.text_underline_thin бесплатно
+     
+        .form_cell.cell_v1
+            label.check_emul
+                input.hidden_input(type='checkbox')
+                span.check_text 
+                    span.mb Посетить Круглый стол — повысить квалификацию 10 час ИПБ
+     
+        .form_cell.cell_v1
+            label.check_emul
+                input.hidden_input(type='checkbox')
+                span.check_text 
+                    span.mb Совет юриста по налогам — как лучше исключить риски
+     
+        .form_cell.cell_v1
+            label.check_emul
+                input.hidden_input(type='checkbox')
+                span.check_text 
+                    span.mb Встретиться с&nbsp;аудиторами — узнать варианты решенияпроблем
+
+    .text_center
+        button.btn_v2.btn_white_2.order_btn
+            span.mb.svg-svg-history--send-dims.svg-svg-history--send.send_icon
+            span.mb Отправить
+            
 mixin popups()
     .gl_overlay.closeMenu
-        
+    
+    #callback_form.popup_form.popup_form_v1( style='display:none;'): form(action='#')
+        .form_title Заказать звонок
+        .form_inner
+            .form_cell.cell_v1
+                label.hidden_input(for='callback_order_name') Имя и фамилия
+                .input_w: input#callback_order_name.f_input.input_v1(placeholder='Имя и фамилия')
+    
+            .form_row.cell_2
+                .form_cell.cell_v1
+                    label.hidden_input(for='callback_order_phone') Телефон
+                    .input_w: input#callback_order_phone.f_input.input_v1(placeholder='Телефон')
+    
+                .form_cell.cell_v1
+                    label.hidden_input(for='callback_order_email') Электронная почта
+                    .input_w: input#callback_order_email.f_input.input_v1(placeholder='Электронная почта')
+    
+            .form_cell.cell_v1
+                label.hidden_input(for='callback_order_comments') Вопрос
+                .input_w: textarea#callback_order_comments.f_input.input_v1(placeholder='Вопрос')
+    
+            .text_center
+                button.btn_v2.btn_white_2.order_btn
+                    span.mb.svg-svg-history--send-dims.svg-svg-history--send.send_icon
+                    span.mb Отправить
+                    
+    #order_form.popup_form.popup_form_v1.popup_form_v1_mod_1.color_white_3( style='display:none;'): form(action='#')
+        .text_center
+            .form_title Заказать и познакомиться
+            .block_caption Ваша скидка −10% при обращении с&nbsp;сайта.
+        .form_inner
+            +order_form('popup_')
+                
+
 mixin scripts(index, history, reviews, company)
     //-script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
     script(src='js/device.min.js?no_cache')
     script(src='js/jquery1.10.js?no_cache')
     script(src='js/select2.js?no_cache')
-    //script(src='js/chosen.jquery.js?no_cache')
+    script(src='js/jquery-ui-1.10.2.custom.min.js?no_cache')
+    //script(src='js/dialog.js?no_cache')
     script(src='js/script.js?no_cache')
     - if (index)
         script(src='js/jquery.fullPage.js?no_cache')
@@ -116,14 +201,14 @@ mixin header_menu(active_menu, index_link)
                         
             .fr.mob_hidden
                 .mb
-                    a.callback_phone(href='#')
+                    a.callback_phone.orderOpenBtn(href='#')
                         span.callback_icon
                             span.svg-svg-home--fna-svg--phone-icon
                         span +7 495 134-32-23
     
             .fr.mob_hidden
                 .mb
-                    a.callback_btn.btn_v1.btn_white(href='#') Заказать звонок
+                    a.callback_btn.btn_v1.btn_white.callbackOpenBtn(href='#') Заказать звонок
     
         .nav_holder
             .open_menu_btn.openMenu
@@ -157,7 +242,7 @@ mixin header_menu(active_menu, index_link)
                             +link_o_span(!(active_menu == 2), 'company.html', 'menu_link', '')
                                 span.mb О компании
                         li.menu_item(class = active_menu == 3 ? 'active' : '')
-                            +link_o_span(!(active_menu == 3), 'history.html', 'menu_link', '')
+                            +link_o_span(!(active_menu == 3), 'services.html', 'menu_link', '')
                                 span.mb Выбор услуг
                         li.menu_item(class = active_menu == 4 ? 'active' : '')
                             +link_o_span(!(active_menu == 4), 'history.html', 'menu_link', '')

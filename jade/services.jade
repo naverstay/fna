@@ -1,0 +1,106 @@
+include mixins
+doctype html
+html(lang='ru' class='page_slider_mod_')
+    +dev_head('FNA истории')
+
+    body
+        .wrapper.inner_page.logo_section_black
+            .rect_1024
+            .base
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
+                +header()
+                .header_menu_holder
+                    +header_menu(3, true)
+
+                div.main_content
+                    
+                    
+                    .slide_section.section_v1.service_order_section
+                        .slide_img.slide_bg_v2
+                        .section_inner.clearfix.color_white_3
+                            .text_center
+                                h2.block_title Заказать и получить скидку 10%
+                                h3.block_caption Вы выбрали: обязательный аудит, комплексный аудит
+                                form(action='#')
+                                    
+                                    .order_form_holder.mod_1
+                                        .form_row.cell_3_2
+                                            .form_cell.cell_v1
+                                                label.hidden_input(for='order_activity') Деятельность
+                                                .input_w: input#order_activity.f_input.input_v1(placeholder='Деятельность')
+                                            .form_cell.cell_v1
+                                                label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
+                                                .input_w: input#order_revenues.f_input.input_v1(placeholder='Выручка, тыс. руб./год')
+                                                
+                                        .form_row.cell_float
+                                            .form_cell.cell_v2
+                                                label.hidden_input(for='order_activity') Деятельность
+                                                .input_w.mb: input#order_activity.f_input.input_v1.text_center(value='10')
+                                                span.mb сотрудников
+                                            .form_cell.cell_v2
+                                                label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
+                                                .input_w.mb: input#order_revenues.f_input.input_v1.text_center(value='10')
+                                                span.mb из них бухгалтеров
+
+                                    .bonus_block
+                                        
+                                        .form_tip.form_tip_v2 Отметьте бонусы к аудиту:
+                                            
+                                        .form_row.cell_3.service_row
+                                            .form_cell.cell_v1
+                                                label.check_emul
+                                                    input.hidden_input(type='checkbox')
+                                                    span.check_text
+                                                        span.mb Часы&nbsp;консультаций с аудиторами
+                                            .form_cell.cell_v1
+                                                label.check_emul
+                                                    input.hidden_input(type='checkbox')
+                                                    span.check_text
+                                                        span.mb Круглые столы&nbsp;—  <br> повышение&nbsp;квалификации  <br> 40 час ИПБ Р
+                                            .form_cell.cell_v1
+                                                label.check_emul
+                                                    input.hidden_input(type='checkbox')
+                                                    span.check_text
+                                                        span.mb Аудит базы&nbsp;1С
+                                                        
+                                            .form_cell.cell_v1
+                                                label.check_emul
+                                                    input.hidden_input(type='checkbox')
+                                                    span.check_text
+                                                        span.mb Помощь налоговых юристов
+                                                        
+                                            .form_cell.cell_v1
+                                                label.check_emul
+                                                    input.hidden_input(type='checkbox')
+                                                    span.check_text
+                                                        span.mb Обзор финансового&nbsp;состояния и налоговых рисков
+
+                                    .order_form_holder.mod_2
+
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_name') Имя и фамилия
+                                            .input_w: input#order_name.f_input.input_v1(placeholder='Имя и фамилия')
+                                        
+                                        .form_row.cell_2
+                                            .form_cell.cell_v1
+                                                label.hidden_input(for='order_phone') Телефон
+                                                .input_w: input#order_phone.f_input.input_v1(placeholder='Телефон')
+                                    
+                                            .form_cell.cell_v1
+                                                label.hidden_input(for='order_email') Электронная почта
+                                                .input_w: input#order_email.f_input.input_v1(placeholder='Электронная почта')
+                                    
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_comments') Комментарии
+                                            .input_w: textarea#order_comments.f_input.input_v1(placeholder='Комментарии')
+
+                                        .text_center
+                                            button.btn_v2.btn_white_2.order_btn
+                                                span.mb Заказать
+
+
+        +popups()
+        
+        +scripts(false, true)
+        

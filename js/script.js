@@ -2,6 +2,8 @@ var html_var,
     body_var,
     win,
     doc,
+    $callback_form,
+    $order_form,
     global_window_Height;
 
 $(function ($) {
@@ -22,6 +24,59 @@ $(function ($) {
      header.css('marginLeft', (scrollLeft > 0 ? -scrollLeft : 0));
      });*/
 
+    if ($("#callback_form").length) {
+   
+        $callback_form = $("#callback_form").dialog({
+            autoOpen: false,
+            modal: true,
+            closeOnEscape: true,
+            closeText: '',
+            show: "fade",
+            position: {my: "center center", at: "center center", of: window},
+            draggable: true,
+            dialogClass: 'dialog_global dialog_g_size_1 dialog_close_butt_mod_1 title_center_mod dialog_butt_v1',
+            width: 754,
+            open: function (event, ui) {
+                body_var.addClass('dialog_regular_open');
+            },
+            close: function (event, ui) {
+                body_var.removeClass('dialog_regular_open');
+            }
+        });
+    }
+
+    if ($("#order_form").length) {
+       
+        $order_form = $("#order_form").dialog({
+            autoOpen: false,
+            modal: true,
+            closeOnEscape: true,
+            closeText: '',
+            show: "fade",
+            position: {my: "center center", at: "center center", of: window},
+            draggable: true,
+            dialogClass: 'dialog_global dialog_g_size_1 dialog_close_butt_mod_1 title_center_mod dialog_butt_v1',
+            width: 910,
+            open: function (event, ui) {
+                body_var.addClass('dialog_regular_open');
+            },
+            close: function (event, ui) {
+                body_var.removeClass('dialog_regular_open');
+            }
+        });
+    }
+
+    $('.callbackOpenBtn').on('click', function () {
+        $callback_form.dialog('open');
+
+        return false;
+    });
+
+    $('.orderOpenBtn').on('click', function () {
+        $order_form.dialog('open');
+
+        return false;
+    });
 
     $('.goTopBtn').on('click', function () {
         var page_link = $('a[href="#firstPage"]');
