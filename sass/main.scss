@@ -286,7 +286,12 @@ b {
 
   .logo_section_black & {
 
-    .callback_icon,
+    .callback_icon {
+      span {
+        background-image: url(svg/home-sprite.view-black.svg);
+      }
+    }
+
     .callback_phone,
     .company_slogan,
     .company_name {
@@ -297,7 +302,10 @@ b {
       color: #000;
       border-color: #000;
     }
-    
+
+    .logo_icon {
+      background: url(svg/wiseadvice-logo-black.svg) no-repeat 0 0;
+    }
   }
 }
 
@@ -364,7 +372,6 @@ b {
   @include respond-to-min($tablet) {
     margin-right: 35px;
   }
-
 }
 
 .company_slogan {
@@ -390,7 +397,6 @@ b {
     left: -10px;
     top: -10px;
   }
-
 }
 
 .callback_phone {
@@ -581,7 +587,6 @@ b {
   &:hover {
     background: #7d0f29;
   }
-
 }
 
 .soc_icon {
@@ -634,7 +639,6 @@ b {
     display: inline-block;
     vertical-align: middle;
   }
-
 }
 
 .user_menu {

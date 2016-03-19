@@ -1862,7 +1862,9 @@ b {
     margin: 0 5px;
   }
 }
-.logo_section_black .logo_section .callback_icon,
+.logo_section_black .logo_section .callback_icon span {
+  background-image: url(svg/home-sprite.view-black.svg);
+}
 .logo_section_black .logo_section .callback_phone,
 .logo_section_black .logo_section .company_slogan,
 .logo_section_black .logo_section .company_name {
@@ -1871,6 +1873,9 @@ b {
 .logo_section_black .logo_section .btn_white {
   color: #000;
   border-color: #000;
+}
+.logo_section_black .logo_section .logo_icon {
+  background: url(svg/wiseadvice-logo-black.svg) no-repeat 0 0;
 }
 
 .partner_logo_holder {
