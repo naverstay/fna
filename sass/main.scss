@@ -100,7 +100,7 @@ b {
 
   .logo_section_w & {
     margin-bottom: 300px;
-    
+
     &:before {
       content: '';
       position: absolute;
@@ -1241,6 +1241,24 @@ b {
   &.service_order_section {
     //padding-top: 40px;
 
+    &.mod_1 {
+      .section_inner {
+        padding-top: 50px;
+      }
+    }
+
+    &.mod_2 {
+      padding-bottom: 60px;
+    }
+
+    &.mod_3 {
+      padding-top: 40px;
+    }
+
+    &.mod_4 {
+      padding-top: 25px;
+    }
+
     .block_title {
       margin-bottom: 2.5%;
     }
@@ -1381,6 +1399,10 @@ b {
   margin-bottom: 2.1%;
   letter-spacing: .65px;
 
+  &.block_title_v2 {
+    letter-spacing: .45px;
+  }
+
   @include respond-to-max($tablet) {
     font-size: 32px;
   }
@@ -1421,6 +1443,23 @@ b {
     padding-top: 2%;
     margin-left: -44px;
   }
+
+  @include respond-to-min-h($tablet-h) {
+    &.col_mod_3 {
+      margin-left: -50px;
+    }
+  }
+
+  &.solution_list_v2 {
+    @include respond-to-min($desktop) {
+      margin-bottom: 85px;
+    }
+
+    .solution_item {
+      margin-bottom: 20px;
+      font: 18px/26px $ProximaNovaLight;
+    }
+  }
 }
 
 .solution_col {
@@ -1442,6 +1481,22 @@ b {
   @include respond-to-min-h($tablet-h) {
     padding-left: 55px;
     margin-bottom: 25px;
+  }
+
+  .col_mod_3 & {
+    float: none !important;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+
+    @include respond-to-min-h($tablet-h) {
+      padding-left: 50px;
+    }
+
+    @include respond-to-min($desktop) {
+      width: 32.5%;
+    }
   }
 }
 
@@ -1929,6 +1984,23 @@ b {
       }
     }
   }
+
+  &.link_gray {
+    text-decoration: none;
+
+    span {
+      color: #000;
+      //border-bottom: 1px solid #dfcdbb;
+      border-bottom: 1px solid #bfbfbf;
+
+    }
+
+    &:hover {
+      span {
+        border-bottom-color: transparent;
+      }
+    }
+  }
 }
 
 //************  forms
@@ -2172,6 +2244,17 @@ textarea.input_v1 {
     padding: 0 25px;
     border-width: 2px;
     border-style: solid;
+  }
+
+  &.order_service_btn {
+    letter-spacing: 1px;
+    cursor: pointer;
+    float: left;
+    font-size: 13px;
+    line-height: 40px;
+    text-decoration: none;
+    padding: 0 32px;
+    text-transform: uppercase;
   }
 
   &.load_more_btn {

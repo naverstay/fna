@@ -1,0 +1,276 @@
+include mixins
+doctype html
+html(lang='ru' class='page_slider_mod_')
+    +dev_head('FNA услуга детально')
+
+    body
+        .wrapper.inner_page.logo_section_black
+            .rect_1024
+            .base
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
+                +header()
+                .header_menu_holder
+                    +header_menu(3, true)
+
+                div.main_content
+                    .section_inner.clearfix
+                        .pagination_holder
+                            ul.pagination_list
+                                li: a.gl_link.link_gray(href='#'): span Главная
+                                li: a.gl_link.link_gray(href='#'): span Выбор услуг
+                        
+                        h2.block_title.block_title_v2 Обязательный (финансовый) аудит 
+                            
+                        .service_detail_block
+                            
+                            .detail_criteria
+                                .detail_criteria_caption Основные критерии в 2016 году: 
+                                p выручка 400 млн. руб. за 2015 год или валюта баланса 60 млн. руб. на конец предыдущего года
+                                p Аудиторское заключение за 2015 год нужно сдать в органы статистикидо 31 декабря 2016 г.                                
+                                .service_option_price от 55 000
+                                    span.rub a
+                                
+                                    
+                                .detail_criteria_order
+                                    a.btn_v1.order_service_btn.btn_red(href='#') Заказать
+
+                            .service_detail_info
+                                p Это независимая обязательная аудиторская проверка бухгалтерской отчетности и учета, необходимая в силу закона 307-ФЗ «Об аудиторской деятельности», 208-ФЗ «О консолидированной финансовой отчетности» либо других законов. 
+                                p Результатом проведения обязательного (финансового) аудита является аудиторское заключение, которое нужно для соответствия требованиям Росстата РФ, банков, инвесторов, ЦБ РФ, тендеров, а зачастую — поставщиков и заказчиков. 
+                                p В рамках финансового аудита подтверждается достоверность в первую очередь бухгалтерской отчетности, в том числе правильность расчета прибыли и дивидендов.
+                                p В зависимости от выбираемой стоимости обязательного аудита по итогам может быть подготовлен либо краткий обзор выявленных нарушений, либо детальный письменный отчет по всем разделам учета, включая налоги, с подробными рекомендациями аудиторов.
+                                    
+                            .service_differences
+                                .service_diff_caption Наши отличия
+                                .solution_item Эксклюзивн  ые гарантии — защита при налоговом контроле
+                                .solution_item Наглядные отчеты сразу, понятные рекомендации
+                                .solution_item Обзор финансового состояния и налоговых рисков
+                                .solution_item Прямое консультирование в ходе аудита + БОНУСЫ
+                        
+                        .service_interesting
+                            .service_interesting_box
+                                .service_interesting_caption Возможно, вас  <br>  заинтересует:
+                            .service_interesting_box
+                                ul
+                                    li: a.gl_link.link_red(href='#'): span Комплексный аудит
+                                    li: a.gl_link.link_red(href='#'): span Налоговый аудит
+                            .service_interesting_box
+                                ul
+                                    li: a.gl_link.link_red(href='#'): span Аудит при покупке бизнеса
+                                    li: a.gl_link.link_red(href='#'): span Услуги по МСФО и МСА
+                            .service_interesting_box
+                                ul
+                                    li: a.gl_link.link_red(href='#'): span Возврат налогов
+                                    li: a.gl_link.link_red(href='#'): span Сопровождение налоговой проверки
+                                    
+                    .slide_section.section_v1.service_order_section.mod_3.mod_2.mod_1
+                        .slide_img.slide_bg_v1
+                        .section_inner.clearfix
+                            .text_center
+                                h2.block_title.color_gray 3 шага к результатам
+                                
+                            ul.solution_list.col_mod_3
+                                li.solution_col
+                                    .step_icon
+                                    .step_caption
+                                        .step_index 1
+                                        span Познакомиться  <br>и определить цену
+                                
+                                    .step_info
+                                        p Короткая встреча с лидером практики и аудиторами до начала проекта позволяет более четко определить, что вы хотите видеть от аудита: ваши цели, задачи, предпочтения, пожелания, ожидаемые результаты.
+                                        p На основании этого и нашего опыта мы составляем программу аудита, необходимую трудоемкость, сроки и стоимость проверки, наиболее уместные и подходящие для вас и вашей компании.
+                                        p Согласовав цену, условия договора и состав БОНУСОВ мы готовы сразу начать проведение обязательного аудита.
+                                        
+                                li.solution_col
+                                    .step_icon
+                                    .step_caption
+                                        .step_index 2
+                                        span Принять аудиторов, предоставить информацию
+                                
+                                    .step_info
+                                        p Аудиторы проводят проверку в вашем офисе или удаленно (у нас в офисе), с учетом поставленных целей и задач.
+                                        p Вы получаете полный контроль над процессом — аудиторы будут отчитываться о результатах ежедневно или в установленном вами порядке.
+                                        p Вы консультируетесь в ходе аудита, сразу вносите необходимые исправления и пользуетесь бонусами.
+                                        p По окончании аудита проводится отчетная встреча с вами, аудитором и лидером практики. На ней обсуждается краткий обзор замечаний, вопросы и перспективы улучшения ситуации.
+                                        
+                                li.solution_col
+                                    .step_icon
+                                    .step_caption
+                                        .step_index 3
+                                        span Получить результаты обязательного аудита
+                                
+                                    .step_info
+                                        p 
+                                            b Аудиторское заключение — 
+                                            |  официальный документ для предоставления регуляторам и публикаций.
+                                        p 
+                                            b Письменную информацию — 
+                                            |  отчет для бухгалтерии для служебного пользования, содержащий изложение замечаний, их нормативное обоснование, рекомендации и влияние на отчетность.
+                                        p 
+                                            b Обзор финансового состояния и рисков — 
+                                            |  для руководства компании, где в краткой и наглядной форме показана информация о наиболее важных замечаниях, рисках и их возможных последствиях.
+                                        
+
+                    .slide_section.section_v1.service_order_section.mod_1.mod_4
+                        .section_inner.clearfix
+                            .text_center
+                                h2.block_title.color_gray ПОЛЬЗА ОТ АУДИТА
+                                    
+                            ul.solution_list.col_mod_3.solution_list_v2
+                                li.solution_col
+                                    a.solution_header.header_yellow.gl_link.link_yellow(href='#')
+                                        .solution_icon
+                                            .service_icon.svg-svg-services--services-04-dims.svg-svg-services--services-04
+                                        .solution_caption: span Собственнику Иностр. компаниям
+                                    
+                                    .solution_item
+                                        p Проконтролируете величину прибыли, дивидендов и других финансовых показателей.
+                                    .solution_item
+                                        p Избежите потери прибыли от штрафов и претензий, благодаря проведению обязательного аудита.
+
+                                    .solution_item
+                                        p Повысите доверие партнеров / инвесторов.
+
+                                    .solution_item
+                                        p Аудиторское заключение укрепит кредитную привлекательность и доверие к бизнесу.
+                                        
+                                    .solution_item
+                                        p Увидите мнение независимых аудиторов о состоянии учета и отчетности, а также размеры возможных рисков.
+
+                                li.solution_col
+                                    a.solution_header.header_blue.gl_link.link_blue(href='#')
+                                        .solution_icon
+                                            .service_icon.svg-svg-services--services-02-dims.svg-svg-services--services-02
+                                        .solution_caption: span Генеральному директору
+                                    
+                                    .solution_item
+                                        p Исполните требование закона по обязательному аудиту — исключите личную ответственность от штрафов, дисквалификации и претензий.
+                                    .solution_item
+                                        p Получите возможность получить кредит.
+
+                                    .solution_item
+                                        p Повысите доверие учредителей.
+
+                                    .solution_item
+                                        p Возьмете под контроль расчет финансовых показателей и оцените размер рисков, вероятность налоговой проверки и т.п.
+
+                                    .solution_item
+                                        p Узнаете мнение независимых аудиторов по оптимизации процессов и снижению издержек.
+
+                                li.solution_col
+                                    a.solution_header.header_green.gl_link.link_green(href='#')
+                                        .solution_icon
+                                            .service_icon.svg-svg-services--services-03-dims.svg-svg-services--services-03
+                                        .solution_caption: span Фин. директору Глав. бухгалтеру
+                                    
+                                    .solution_item
+                                        p Подтвердите отчетность, получите поддержку аудиторов и внесете правки до выдачи аудиторского заключения.
+
+                                    .solution_item
+                                        p Выявите заранее налоговые риски, подготовитесь к выездной проверке, исключите штрафы и претензии.
+
+                                    .solution_item
+                                        p Донесете руководству меры по укреплению финансового положения.
+
+                                    .solution_item
+                                        p Получите рекомендации и опыт, посетите Круглые столы, повысите квалификацию.
+
+                                    .solution_item
+                                        p Увидите пути оптимизации работы бухгалтерии, возможности автоматизации.
+                                    
+                                
+                    .slide_section.section_v1.service_order_section.mod_1
+                        .slide_img.slide_bg_v2
+                        .section_inner.clearfix.color_white_3
+                            .text_center
+                                h2.block_title Заказать и получить скидку 10%
+                                h3.block_caption Вы выбрали: обязательный аудит, комплексный аудит
+                                
+                            form(action='#')
+                                
+                                .order_form_holder.mod_1
+                                    .form_row.cell_3_2
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_activity') Деятельность
+                                            .input_w: input#order_activity.f_input.input_v1(placeholder='Деятельность')
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
+                                            .input_w: input#order_revenues.f_input.input_v1(placeholder='Выручка, тыс. руб./год')
+                                            
+                                    .form_row.cell_float
+                                        .form_cell.cell_v2
+                                            label.hidden_input(for='order_activity') Деятельность
+                                            .input_w.mb: input#order_activity.f_input.input_v1.text_center(value='10')
+                                            span.mb сотрудников
+                                        .form_cell.cell_v2
+                                            label.hidden_input(for='order_revenues') Выручка, тыс. руб./год
+                                            .input_w.mb: input#order_revenues.f_input.input_v1.text_center(value='10')
+                                            span.mb из них бухгалтеров
+
+                                .bonus_block
+                                    
+                                    .form_tip.form_tip_v2 Отметьте бонусы к аудиту:
+                                        
+                                    .form_row.cell_3.service_row
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb 
+                                                        span.dt_hidden Часы консультаций с аудиторами
+                                                        span.dt_only Часы&nbsp;консультаций с аудиторами
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Круглые столы&nbsp;—  <br>
+                                                        span.dt_hidden повышение квалификации  
+                                                        span.dt_only повышение&nbsp;квалификации  
+                                                        | <br> 40 час ИПБ Р
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Аудит базы&nbsp;1С
+                                                    
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Помощь налоговых юристов
+                                                    
+                                        .form_cell.cell_v1
+                                            label.check_emul
+                                                input.hidden_input(type='checkbox')
+                                                span.check_text
+                                                    span.mb Обзор финансового&nbsp;состояния и налоговых рисков
+
+                                .order_form_holder.mod_2
+
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_name') Имя и фамилия
+                                        .input_w: input#order_name.f_input.input_v1(placeholder='Имя и фамилия')
+                                    
+                                    .form_row.cell_2
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_phone') Телефон
+                                            .input_w: input#order_phone.f_input.input_v1(placeholder='Телефон')
+                                
+                                        .form_cell.cell_v1
+                                            label.hidden_input(for='order_email') Электронная почта
+                                            .input_w: input#order_email.f_input.input_v1(placeholder='Электронная почта')
+                                
+                                    .form_cell.cell_v1
+                                        label.hidden_input(for='order_comments') Комментарии
+                                        .input_w: textarea#order_comments.f_input.input_v1(placeholder='Комментарии')
+
+                                    .text_center
+                                        button.btn_v2.btn_white_2.order_btn
+                                            span.mb Заказать
+
+
+        +popups()
+        
+        +scripts(false, false, false, false, true)
+        
