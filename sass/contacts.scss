@@ -1,0 +1,238 @@
+.map_holder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(../i/contacts/map.jpg) no-repeat 50% 100%;
+}
+
+.contact_city_filter {
+  @extend %clearfix;
+  margin-bottom: 33px;
+
+  li {
+    float: left;
+    margin-right: -1.5px;
+    margin-bottom: 10px;
+  }
+
+}
+
+.radio_emul {
+
+  .check_text {
+    display: block;
+    position: relative;
+    border: 2px solid transparent;
+    color: #951a37;
+    padding: 10px 14px;
+    height: 42px;
+    font: 17px/18px $ProximaNovaLight;
+    cursor: pointer;
+    @include transition_all(border-color .3s, color .3s);
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      border-bottom: 1px dotted #dfbac3;
+      @include transition_all(border-color .3s, color .3s);
+    }
+
+    &:hover {
+      border-color: #dfbac3;
+
+      span {
+        border-color: transparent;
+      }
+    }
+  }
+
+  .hidden_input:checked + .check_text {
+    border-radius: 2px;
+    border-color: #951a37;
+    cursor: default;
+    color: #000;
+
+    span {
+      border-bottom-color: transparent !important;
+    }
+
+  }
+}
+
+.contacts_phone {
+  position: relative;
+  display: block;
+  padding-left: 44px;
+  font: 24px/1 $ProximaNovaBold;
+  color: #000;
+  text-decoration: none;
+  margin-right: 38px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    margin-top: -18px;
+    background: #951a37;
+  }
+
+  @include respond-to-min($desktop) {
+    font-size: 36px;
+  }
+}
+
+.contacts_email {
+  position: relative;
+  display: block;
+  padding-left: 44px;
+  font-size: 24px;
+  //line-height: 36px;
+  color: #951a37;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    margin-top: -18px;
+    background: #951a37;
+  }
+}
+
+.contacts_list {
+  @extend %clearfix;
+  line-height: 42px;
+  margin-bottom: 35px;
+  text-align: center;
+
+  .mb {
+    margin-bottom: 15px;
+  }
+
+  @include respond-to-min($desktop) {
+
+    .contacts_list_links {
+      float: left;
+    }
+
+    .contacts_list_btns {
+      float: right;
+      clear: none;
+    }
+  }
+}
+
+.contacts_list_btns {
+  text-align: center;
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.contacts_list_links {
+  margin-bottom: 20px;
+}
+
+.contacts_office_switch {
+  @extend %clearfix;
+  position: relative;
+  margin-left: -45px;
+  min-height: 50px;
+  line-height: 22px;
+  font-size: 18px;
+
+  .contacts_office_item {
+    padding-left: 45px;
+    margin-top: 15px;
+  }
+
+  @include respond-to-min($desktop) {
+    padding-right: 265px;
+
+    .contacts_office_time {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 260px;
+      margin: 0;
+    }
+
+    .contacts_office_item {
+      float: left;
+      width: 50%;
+      margin-top: 0;
+    }
+  }
+
+}
+
+.contacts_office_btn {
+  display: block;
+  position: relative;
+  min-height: 85px;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  @include transition_all(border-color .3s);
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    bottom: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    @include transition_all(border-color .3s);
+  }
+
+  &:hover {
+    border-color: #951a37;
+  }
+
+  .active & {
+    border-color: #951a37;
+    cursor: default;
+
+    &:before {
+      border-bottom: 8px solid #951a37;
+    }
+  }
+}
+
+.contacts_office_name {
+  font-family: $ProximaNovaSemibold;
+  margin-bottom: 3px;
+}
+
+.contacts_office_addr {
+  letter-spacing: -.15px;
+}
+
+.office_time_block {
+  display: none;
+}
+
+.contacts_office_time {
+  position: relative;
+  padding-left: 45px;
+  margin: 20px 0 20px 45px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    background: #951a37;
+  }
+
+}

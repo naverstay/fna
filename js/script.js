@@ -25,7 +25,7 @@ $(function ($) {
      });*/
 
     if ($("#callback_form").length) {
-   
+
         $callback_form = $("#callback_form").dialog({
             autoOpen: false,
             modal: true,
@@ -46,7 +46,7 @@ $(function ($) {
     }
 
     if ($("#order_form").length) {
-       
+
         $order_form = $("#order_form").dialog({
             autoOpen: false,
             modal: true,

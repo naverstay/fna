@@ -93,7 +93,29 @@ b {
       padding: 25px 10px 5px;
     }
   }
+}
 
+.main_content {
+  position: relative;
+
+  .logo_section_w & {
+    margin-bottom: 300px;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 10000px;
+      top: -1000px;
+      margin-left: -5000px;
+      background: rgba(255, 255, 255, .8);
+    }
+
+    .section_inner {
+      position: relative;
+    }
+  }
 }
 
 //*************************** header
@@ -105,7 +127,7 @@ b {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   padding-top: 50px;
 
   @include respond-to-max($desktop) {
@@ -282,6 +304,28 @@ b {
     //> .fr {
     //  display: none;
     //}
+  }
+
+  .logo_section_w & {
+    background: #fff;
+
+    > .fl,
+    > .fr {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 10000px;
+      margin-left: -5000px;
+      background: #fff;
+    }
+
   }
 
   .logo_section_black & {
@@ -2031,7 +2075,7 @@ b {
     max-width: 556px;
     margin: 0 auto;
 
-    .form_cell {   
+    .form_cell {
       padding: 0 15px 0 0;
 
       @include respond-to-min($mobile) {
@@ -2149,6 +2193,35 @@ textarea.input_v1 {
   }
 }
 
+.btn_v3 {
+  height: 42px;
+
+  &.contact_btn {
+    display: block;
+    padding: 10px 32px;
+    margin-left: 8px;
+    font: 14px/18px $ProximaNovaBold;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    span {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 20px;
+        background: #000;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
 .send_icon {
   margin-right: 5px;
   margin-left: -18px;
@@ -2207,6 +2280,17 @@ textarea.input_v1 {
 
   &:hover {
     background: #7d0f29;
+  }
+}
+
+.btn_red_black {
+  @include transition_all(background .3s);
+  border: 2px solid #951a37;
+  border-radius: 2px;
+  color: #282828;
+
+  &:hover {
+    color: #7d0f29;
   }
 }
 

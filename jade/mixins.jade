@@ -203,12 +203,12 @@ mixin popups()
             +order_form('popup_')
                 
 
-mixin scripts(index, history, reviews, company, services)
+mixin scripts(index, history, reviews, company, services, contacts)
     //-script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true')
     script(src='js/device.min.js?no_cache')
     script(src='js/jquery1.10.js?no_cache')
     script(src='js/select2.js?no_cache')
-    script(src='js/jquery-ui-1.10.2.custom.min.js?no_cache')
+    script(src='js/jquery-ui.js?no_cache')
     //script(src='js/dialog.js?no_cache')
     script(src='js/script.js?no_cache')
     - if (index)
@@ -220,12 +220,13 @@ mixin scripts(index, history, reviews, company, services)
     - if (reviews)
         script(src='js/reviews.js?no_cache')
     - if (company)
-        script(src='js/jquery-ui.js?no_cache')
         script(src='js/jquery.fullPage.js?no_cache')
         script(src='js/company.js?no_cache')
     - if (services)
         script(src='js/jquery-ui.js?no_cache')
         script(src='js/services.js?no_cache')
+    - if (contacts)
+        script(src='js/contacts.js?no_cache')
 
 
 mixin loop_while(counter)
@@ -361,7 +362,7 @@ mixin header_menu(active_menu, index_link)
                             +link_o_span(!(active_menu == 6), 'history.html', 'menu_link', '')
                                 span.mb Цены
                         li.menu_item(class = active_menu == 7 ? 'active' : '')
-                            +link_o_span(!(active_menu == 7), 'history.html', 'menu_link', '')
+                            +link_o_span(!(active_menu == 7), 'contacts.html', 'menu_link', '')
                                 span.mb Контакты
             
 

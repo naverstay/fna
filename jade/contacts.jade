@@ -1,0 +1,99 @@
+include mixins
+doctype html
+html(lang='ru' class='page_slider_mod_')
+    +dev_head('FNA контакты')
+
+    body
+        .wrapper.inner_page.logo_section_black.logo_section_w
+            .rect_1024
+            .base
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
+                +header()
+                .header_menu_holder
+                    +header_menu(7, true)
+
+                .map_holder
+
+                div.main_content
+                    .section_inner.clearfix
+                        ul.contact_city_filter
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter' checked)
+                                    span.check_text: span Москва
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Санкт-Петербург
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Киров
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Волгоград
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Екатеринбург
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Краснодар
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Новосибирск
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Симферополь
+                                    
+                            li
+                                label.radio_emul
+                                    input.hidden_input(type='radio' name='city_filter')
+                                    span.check_text: span Алматы
+                                    
+                        .contacts_list
+                            .contacts_list_links
+                                .mb
+                                    a.contacts_phone(href='#') +7 495 134-32-23
+                                .mb
+                                    a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                        
+                            .contacts_list_btns
+                                .mb
+                                    a.btn_v3.btn_red_black.contact_btn(href='#')
+                                        span Реквизиты
+                                .mb
+                                    a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                        span Распечатать
+                                    
+                        .contacts_office_switch
+                            .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                .contacts_office_name Центральный офис: 
+                                .contacts_office_addr 109456, Москва, Рязанский проспект, д. 75, корп. 4
+                                
+                            .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                .contacts_office_name Дополнительный офис:  
+                                .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                    
+                            .contacts_office_time
+                                .office_time_block.contact_office_1.officeTime
+                                    p Время работы:   <br> в раб. дни с 9:00 до 18:00
+                                .office_time_block.contact_office_2.officeTime
+                                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+        +popups()
+        
+        +scripts(false, false, false, false, false, true)
+        
