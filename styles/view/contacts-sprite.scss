@@ -1,54 +1,64 @@
-%svg-common {
-	background: url("svg/sprite.view.svg") no-repeat;
+%svg-common-contacts {
+  background: url("svg/contacts-sprite.view.svg") no-repeat;
 }
 
 .svg-svg-contacts--contacts-mail {
-	@extend %svg-common;
-	background-position: 0 0;
+  @extend %svg-common-contacts;
+  background-position: 0 0;
 }
 
 .svg-svg-contacts--contacts-mail-dims {
-	width: 42px;
-	height: 36px;
+  width: 42px;
+  height: 36px;
 }
 
 .svg-svg-contacts--contacts-phone {
-	@extend %svg-common;
-	background-position: 0 100%;
+  @extend %svg-common-contacts;
+  background-position: 0 100%;
 }
 
 .svg-svg-contacts--contacts-phone-dims {
-	width: 42px;
-	height: 42px;
+  width: 42px;
+  height: 42px;
+}
+
+.svg-svg-contacts--contacts-phone-icon {
+  @extend %svg-common-contacts;
+  background-position: 50.602409638554214% 0;
+}
+
+.svg-svg-contacts--contacts-phone-icon-dims {
+  width: 42px;
+  height: 42px;
 }
 
 .svg-svg-contacts--contacts-print {
-	@extend %svg-common;
-	background-position: 53.164556962025316% 82%;
+  @extend %svg-common-contacts;
+  background-position: 86.5979381443299% 82%;
 }
 
 .svg-svg-contacts--contacts-print-dims {
-	width: 28px;
-	height: 28px;
+  width: 28px;
+  height: 28px;
 }
 
 .svg-svg-contacts--contacts-rekviziti {
-	@extend %svg-common;
-	background-position: 100% 0;
+  @extend %svg-common-contacts;
+  background-position: 41.584158415841586% 84%;
 }
 
 .svg-svg-contacts--contacts-rekviziti-dims {
-	width: 24px;
-	height: 28px;
+  width: 24px;
+  height: 28px;
 }
 
 .svg-svg-contacts--contacts-time {
-	@extend %svg-common;
-	background-position: 63.63636363636363% 0;
+  @extend %svg-common-contacts;
+  background-position: 100% 0;
 }
 
 .svg-svg-contacts--contacts-time-dims {
-	width: 41px;
-	height: 41px;
+  width: 41px;
+  height: 41px;
 }
 

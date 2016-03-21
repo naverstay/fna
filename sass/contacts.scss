@@ -71,14 +71,15 @@
   margin-right: 38px;
 
   &:before {
+    @extend %svg-common-contacts;
     content: '';
     position: absolute;
     top: 50%;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    margin-top: -18px;
-    background: #951a37;
+    left: -5px;
+    margin-top: -21px;
+    background-position: 0 100%;
+    width: 42px;
+    height: 42px;
   }
 
   @include respond-to-min($desktop) {
@@ -89,20 +90,21 @@
 .contacts_email {
   position: relative;
   display: block;
-  padding-left: 44px;
+  padding-left: 50px;
   font-size: 24px;
   //line-height: 36px;
   color: #951a37;
 
   &:before {
+    @extend %svg-common-contacts;
     content: '';
     position: absolute;
     top: 50%;
     left: 0;
-    width: 36px;
-    height: 36px;
     margin-top: -18px;
-    background: #951a37;
+    background-position: 0 0;
+    width: 42px;
+    height: 36px;
   }
 }
 
@@ -117,6 +119,7 @@
   }
 
   @include respond-to-min($desktop) {
+    margin-bottom: 0;
 
     .contacts_list_links {
       float: left;
@@ -226,13 +229,14 @@
   margin: 20px 0 20px 45px;
 
   &:before {
+    @extend %svg-common-contacts;
     content: '';
     position: absolute;
     top: 5px;
-    left: 5px;
-    width: 32px;
-    height: 32px;
-    background: #951a37;
+    left: 0;
+    background-position: 100% 0;
+    width: 41px;
+    height: 41px;
   }
-
 }
+

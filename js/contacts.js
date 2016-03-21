@@ -43,12 +43,12 @@ function initialize() {
         mapOptions);
 
     var image1 = {
-        url: 'i/contacts/office_1.png',
+        url: 'i/contacts/contacts-baloon.svg',
         size: new google.maps.Size(223, 98)
     };
 
     var image2 = {
-        url: 'i/contacts/office_2.png',
+        url: 'i/contacts/contacts-baloon-2.svg',
         size: new google.maps.Size(223, 98)
     };
 
@@ -65,6 +65,5 @@ function initialize() {
         icon: image2,
         title: 'Дополнительный офис'
     });
-
-
+    
 }

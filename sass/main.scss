@@ -438,12 +438,21 @@ b {
   margin-top: -17px;
   color: #fff;
 
-  span {
+  .svg-svg-home--fna-svg--phone-icon {
     position: absolute;
     width: 50px;
     height: 50px;
     left: -10px;
     top: -10px;
+  }
+
+  .svg-svg-contacts--contacts-phone-icon {
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 36px;
+    height: 58px;
+    @include transform_scale(1.6);
   }
 }
 
@@ -2328,18 +2337,14 @@ textarea.input_v2 {
       position: relative;
       display: inline-block;
       vertical-align: middle;
-
-      &:before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        width: 18px;
-        height: 20px;
-        background: #000;
-        margin-right: 5px;
-      }
     }
   }
+}
+
+.contact_icon {
+  display: inline-block;
+  vertical-align: top;
+  margin: -6px 5px 0 -11px;
 }
 
 .send_icon {

@@ -1,0 +1,94 @@
+%svg-common-service {
+  background: url("svg/service-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-service--services-all {
+  @extend %svg-common-service;
+  background-position: 0 99.8796992481203%;
+}
+
+.svg-svg-service--services-all-dims {
+  width: 60px;
+  height: 60px;
+}
+
+.svg-svg-service--services-all-white {
+  @extend %svg-common-service;
+  background-position: 41.37931034482759% 99.8796992481203%;
+}
+
+.svg-svg-service--services-all-white-dims {
+  width: 60px;
+  height: 60px;
+}
+
+.svg-svg-service--services-checkbox {
+  @extend %svg-common-service;
+  background-position: 66.37902422834384% 76.88389859937493%;
+}
+
+.svg-svg-service--services-checkbox-dims {
+  width: 24.22px;
+  height: 20.22px;
+}
+
+.svg-svg-service--services-findir {
+  @extend %svg-common-service;
+  background-position: 0 52.59632810653219%;
+}
+
+.svg-svg-service--services-findir-dims {
+  width: 67.34px;
+  height: 66.09px;
+}
+
+.svg-svg-service--services-findir-white {
+  @extend %svg-common-service;
+  background-position: 48.91762312944937% 52.59632810653219%;
+}
+
+.svg-svg-service--services-findir-white-dims {
+  width: 67.34px;
+  height: 66.09px;
+}
+
+.svg-svg-service--services-gendir {
+  @extend %svg-common-service;
+  background-position: 99.91304347826087% 0;
+}
+
+.svg-svg-service--services-gendir-dims {
+  width: 67px;
+  height: 65.84px;
+}
+
+.svg-svg-service--services-gendir-white {
+  @extend %svg-common-service;
+  background-position: 99.91304347826087% 51.77728845548915%;
+}
+
+.svg-svg-service--services-gendir-white-dims {
+  width: 67px;
+  height: 65.84px;
+}
+
+.svg-svg-service--services-sobstv {
+  @extend %svg-common-service;
+  background-position: 0 0;
+}
+
+.svg-svg-service--services-sobstv-dims {
+  width: 68.94px;
+  height: 66.75px;
+}
+
+.svg-svg-service--services-sobstv-white {
+  @extend %svg-common-service;
+  background-position: 50.66882257827429% 0;
+}
+
+.svg-svg-service--services-sobstv-white-dims {
+  width: 68.94px;
+  height: 66.75px;
+}
+
