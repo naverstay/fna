@@ -55,6 +55,10 @@ body {
     }
   }
 
+  &.price_bg {
+    background: #153769 url(../i/price/price_bg.jpg) no-repeat 50% 0;
+  }
+
   &.history_bg {
     background: #0b274f url(../i/history/fna-bg-img1.jpg) no-repeat 50% 0;
   }
@@ -461,6 +465,12 @@ b {
     margin-top: -17px;
     color: #fff;
   }
+
+  &.black_mod {
+    color: #000;
+
+  }
+
 }
 
 .main_menu_holder {
@@ -2190,6 +2200,16 @@ b {
       font-size: 18px;
     }
 
+    .form_label {
+      width: auto;
+      padding-right: 5px;
+
+      @include respond-to-max($tablet) {
+        label {
+          font-size: 15px;
+        }
+      }
+    }
   }
 }
 
@@ -2204,9 +2224,26 @@ b {
     color: #000;
     font: 16px/20px $ProximaNovaRegular;
   }
+
+  &.input_v2 {
+    border-radius: 2px;
+    background: #f7f9fb;
+    border: 1px solid #d8dcde;
+    padding: 15px 20px;
+    color: #000;
+    font: 16px/18px $ProximaNovaLight;
+
+    &:focus {
+      border-color: #b11c3f;
+    }
+  }
 }
 
 textarea.input_v1 {
+  height: 120px;
+}
+
+textarea.input_v2 {
   height: 120px;
 }
 
@@ -2336,7 +2373,30 @@ textarea.input_v1 {
     @include respond-to-min-h($tablet_h) {
       margin-bottom: 20px;
     }
+  }
 
+  &.price_order_btn {
+    padding: 0 33px;
+    font: 14px/50px $ProximaNovaBold;
+    letter-spacing: .25px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+  }
+
+  &.send_order_btn {
+    padding: 0 30px;
+    font: 14px/50px $ProximaNovaBold;
+    letter-spacing: .25px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
   }
 
   &.get_more_btn {

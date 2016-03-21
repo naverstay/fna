@@ -1,0 +1,171 @@
+include mixins
+doctype html
+html(lang='ru' class='page_slider_mod_')
+    +dev_head('FNA цены')
+
+    body
+        .wrapper.price_bg.inner_page
+            .rect_1024
+            .base
+                a.go_top_btn.goTopBtn(href='#')
+                    span.svg-svg-home--fna-svg--up-icon-dims.svg-svg-home--fna-svg--up-icon
+                +header()
+                .header_menu_holder
+                    +header_menu(6, true)
+
+                div.main_content
+                    .section_inner
+                        .text_center: h1.page_title.color_white_2.mod_1 Стоимость услуг
+                        
+                        .content_holder
+                            .price_block
+                                ul.contact_city_filter
+                                    li
+                                        label.radio_emul
+                                            input.hidden_input(type='radio' name='city_filter' checked)
+                                            span.check_text: span Обязательный аудит 
+        
+                                    li
+                                        label.radio_emul
+                                            input.hidden_input(type='radio' name='city_filter')
+                                            span.check_text: span Комплексный аудит
+                                            
+                                    li
+                                        label.radio_emul
+                                            input.hidden_input(type='radio' name='city_filter')
+                                            span.check_text: span Налоговый аудит 
+        
+                                    li
+                                        label.radio_emul
+                                            input.hidden_input(type='radio' name='city_filter')
+                                            span.check_text: span Инициативный аудит 
+        
+                                    li
+                                        label.radio_emul
+                                            input.hidden_input(type='radio' name='city_filter')
+                                            span.check_text: span Due Diligence
+                                
+                                .service_effect_info
+                                    .price_ranges
+                                        table.price_range_table
+                                            tr  
+                                                td.col_1: b Диапазон цен:
+                                                td.col_2 150-650 тыс. руб.
+                                            tr
+                                                td.col_1: b Средняя цена по 2015 году:
+                                                td.col_2 320 тыс. руб.
+                                        
+                                        .price_caption: b Ваши бонусы:
+                                        
+                                        ul.bonus_list
+                                            li.bonus_item.bonus_audit_1c: .mb Аудит 1С
+                                            li.bonus_item.bonus_round_table
+                                                .mb Участие в нескольких круглых столах
+                                            li.bonus_item.bonus_consult: .mb Бонусные консультации
+                                                
+                                        a.btn_v2.btn_red.price_order_btn(href='#') ЗАКАЗАТЬ со скидкой 10% 
+                                                
+                                    .service_effect
+                                        .effect_caption Эффективность аудита
+                                                
+                                        table.effect_table
+                                            tr
+                                                td.col_1: b Стоимость аудита
+                                                td.col_2 250 000  руб.
+                                            tr
+                                                td.col_1: b Выявлены налоговые резервы на сумму
+                                                td.col_2 2 500 000 руб.
+                                            tr
+                                                td.col_1: b Обнаружены налоговые риски на сумму
+                                                td.col_2 8 500 000 руб.
+                                            tr
+                                                td.col_1: b Прочие результаты
+                                                td.col_2 получены рекомендации и гарантии от налоговых юристов
+                                            tr
+                                                td.col_1: b Коэффициент эффективности
+                                                td.col_2: span.color_red 4 400%
+                                                
+                                        a.gl_link.link_red.effect_link(href='#'): span Как была достигнута такая эффективность
+        
+                                p
+                                    a.gl_link.link_red(href='#'): span Отзывы клиентов
+                                    |  подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.
+                                
+                    .price_order_section
+                        .section_inner
+                            .price_order_block
+                                .price_order_info
+                                    .price_order_caption Каждый проект по аудиту — уникален 
+                                    p Среди клиентов нет двух одинаковых компаний. Поэтому стоимость наших услуг определяется индивидуально, исходя из ваших целей и объема работ. 
+                                    p Посмотрите примерный диапазон цен, среднюю стоимость и результаты эффективности по каждой услуге. Наша гибкость направлена на поиск наиболее оптимального и выгодного решения.
+                                    .price_order_caption Узнать стоимость 
+                                        span.dt_only <br>
+                                        |  аудиторских услуг
+                                    p Мы ответим вам быстро. 
+                                        span.dt_only <br> 
+                                        |  Проверьте нашу оперативность!
+
+                                    .text_center
+                                        .price_order_controls: a.callback_phone.black_mod(href='#')
+                                            span.callback_icon
+                                                span.svg-svg-home--fna-svg--phone-icon
+                                            span +7 495 134-32-23
+                                            
+                                        .price_order_controls
+                                            a.callback_btn.btn_v1.btn_red_black(href='#') Заказать звонок
+
+                                .price_order_form: form(action='#')
+                                    .price_order_row
+                                        .form_label: label.mb(for='order_service') Услуга
+                                        .input_w.select_v1
+                                            select#order_service.select2
+                                                option(value=1) Комплексный аудит
+                                                option(value=2) Комплексный аудит 2
+                                                option(value=3) Комплексный аудит 3
+                                                
+                                    .price_order_row
+                                        .form_label: label.mb(for='order_activity') Деятельность
+                                        .input_w.select_v1
+                                            input#order_activity.f_input.input_v2()
+                                            
+                                    .price_order_row.toddler_holder
+                                        .form_label: label.mb(for='order_service') Годовая выручка
+                                        .input_w.select_v1
+                                            .toddler_v1
+                                                #annual_revenu.toddler
+                                    .price_order_row
+                                        .form_label: label.mb(for='order_employees') Сотрудников
+                                        .input_w
+                                            .fl
+                                                .form_cell.cell_v2
+                                                    .input_w.mb: input#order_employees.f_input.input_v2.text_center(value='10')
+                                            
+                                            .fr
+                                                .form_cell.cell_v2
+                                                    .form_label: label.mb(for='order_accountants') из них бухгалтеров
+                                                    .input_w.mb: input#order_accountants.f_input.input_v2.text_center(value='2')
+
+                                    .price_order_row
+                                        .form_label: label.mb(for='order_email') Эл. почта
+                                        .input_w.select_v1
+                                            input#order_email.f_input.input_v2()
+
+                                    .price_order_row
+                                        .form_label: label.mb(for='order_phone') Телефон
+                                        .input_w.select_v1
+                                            input#order_phone.f_input.input_v2()
+                                                
+                                    .price_order_row
+                                        .form_label: label.mb(for='order_comment') Комментарий
+                                        .input_w.select_v1
+                                            textarea#order_comment.f_input.input_v2()
+                                    .price_order_row
+                                        .form_label &nbsp;
+                                        .input_w.select_v1
+                                            button.btn_v2.send_order_btn.btn_red Отправить заявку
+                                                
+
+        +popups()
+        
+        +scripts(false,false,false,false,false,false, true)
+        

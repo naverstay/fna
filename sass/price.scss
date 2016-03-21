@@ -1,0 +1,437 @@
+.price_block {
+  background: #fff;
+  padding: 25px;
+  margin-bottom: 70px;
+  @extend %clearfix;
+
+  > p {
+    font: 18px $ProximaNovaLight;
+    margin-top: 10px;
+    letter-spacing: .07px;
+  }
+
+  b {
+    font-family: $ProximaNovaSemibold;
+  }
+
+  .contact_city_filter {
+    margin-left: -16px;
+  }
+
+  @include respond-to-min($desktop) {
+    padding: 52px 95px;
+  }
+
+}
+
+.price_ranges {
+  margin-bottom: 20px;
+
+  @include respond-to-min($desktop) {
+    float: left;
+    width: 390px;
+    padding-right: 20px;
+    padding-top: 5px;
+  }
+
+}
+
+.service_effect {
+
+  @include respond-to-min($desktop) {
+    float: left;
+    width: 560px;
+    padding-top: 5px;
+  }
+}
+
+.effect_caption {
+  font: 17px/26px $ProximaNovaBold;
+  color: #951a37;
+  letter-spacing: .8px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.price_range_table {
+  display: table;
+  width: 100%;
+  font: 17px/26px $ProximaNovaLight;
+  margin-bottom: 20px;
+
+  td {
+    vertical-align: bottom;
+    padding-bottom: 15px;
+  }
+
+  .col_1 {
+    width: 40%;
+  }
+
+  .col_2 {
+    padding-left: 10px;
+  }
+
+}
+
+.price_caption {
+  font-size: 17px;
+}
+
+.price_range_list {
+
+}
+
+.bonus_list {
+  @extend %clearfix;
+  margin: 20px 0 40px;
+}
+
+.bonus_item {
+  position: relative;
+  font: 16px/44px $ProximaNovaLight;
+  padding-left: 47px;
+  padding-right: 15px;
+  margin-bottom: 16px;
+  float: left;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+
+  @include respond-to-min($desktop) {
+    float: none;
+    padding-right: 0;
+
+    .mb {
+      max-width: 200px;
+    }
+  }
+
+  &.bonus_audit_1c {
+    &:before {
+      @extend %svg-common-price;
+      background-position: 55.09352711613511% 0;
+      width: 40.69px;
+      height: 40.75px;
+      margin-top: -19px;
+    }
+  }
+
+  &.bonus_round_table {
+    &:before {
+      @extend %svg-common-price;
+      background-position: 0 99.25748502994011%;
+      width: 40.75px;
+      height: 38.25px;
+      margin-top: -17px;
+    }
+  }
+
+  &.bonus_consult {
+    &:before {
+      @extend %svg-common-price;
+      width: 40.94px;
+      height: 41.44px;
+      margin-top: -20px;
+    }
+
+  }
+
+}
+
+.page_title {
+  &.mod_1 {
+    margin: -20px 0 20px;
+  }
+}
+
+.effect_table {
+  width: 100%;
+  border-collapse: collapse;
+  font: 17px/24px $ProximaNovaLight;
+  margin-bottom: 15px;
+
+  td {
+    padding: 5px;
+    border: 1px solid #e3e4e7;
+    vertical-align: top;
+
+    @include respond-to-min($tablet) {
+      padding: 16px 20px;
+    }
+  }
+
+  .col_1 {
+    width: 44%;
+  }
+
+  .col_2 {
+
+  }
+}
+
+.effect_link {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 33px;
+  position: relative;
+  font: 16px $ProximaNovaLight;
+
+  &:before {
+    @extend %svg-common-price;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    background-position: 99.3186519041246% 0;
+    width: 32.81px;
+    height: 32.81px;
+    margin-top: -16px;
+  }
+}
+
+.service_effect_info {
+  @extend %clearfix;
+  margin-bottom: 20px;
+
+  @include respond-to-min($desktop) {
+    margin-bottom: 45px;
+  }
+}
+
+.price_order_section {
+  background: #fff;
+  padding: 65px 0;
+
+  .section_inner {
+    max-width: 1000px;
+  }
+}
+
+.price_order_block {
+  @extend %clearfix;
+  position: relative;
+
+  @include respond-to-min($desktop) {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 400px;
+      width: 1px;
+      background: #d8dcde;
+    }
+  }
+}
+
+.price_order_info {
+  font: 16px/26px $ProximaNovaLight;
+
+  p {
+    margin-bottom: 20px;
+
+    + .price_order_caption {
+      margin-top: 40px;
+    }
+
+  }
+
+  @include respond-to-min($desktop) {
+    float: left;
+    width: 400px;
+    padding-right: 40px;
+  }
+}
+
+.price_order_form {
+  max-width: 600px;
+  margin: 30px auto 0;
+
+  @include respond-to-min($desktop) {
+    float: left;
+    margin-top: 0;
+    padding-left: 50px;
+  }
+}
+
+.price_order_caption {
+  font: 24px/30px $ProximaNovaBold;
+  color: #951a37;
+  margin-bottom: 20px;
+}
+
+.price_order_row {
+  @extend %clearfix;
+  line-height: 50px;
+  margin-bottom: 20px;
+
+  .form_label {
+    float: left;
+    width: 180px;
+
+    label {
+      font: 18px $ProximaNovaSemibold;
+    }
+  }
+
+  .input_w {
+    float: left;
+    width: 365px;
+    max-width: 100%;
+  }
+
+}
+
+.select_v1 {
+
+  .select2-container--default .select2-selection--single {
+    border: 1px solid #d8dcde;
+    background: #f7f9fb;
+    border-radius: 2px;
+    height: 50px;
+
+    .select2-selection__rendered {
+      padding: 15px 20px;
+      color: #000;
+      font: 16px/18px "ProximaNovaLight", sans-serif;
+    }
+
+    .select2-selection__arrow {
+      height: auto;
+      bottom: 1px;
+
+      &:before {
+        @extend %svg-common-price;
+        content: '';
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        background-position: 89.48695461521596% 52.732240437158474%;
+        width: 23.78px;
+        height: 17.78px;
+        margin-top: -8px;
+      }
+
+      b {
+        display: none;
+      }
+    }
+  }
+}
+
+.toddler_holder {
+  padding: 37px 0 5px;
+}
+
+.toddler {
+
+  .toddler_v1 & {
+    position: relative;
+    height: 50px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      height: 5px;
+      right: 0;
+      left: 0;
+      border-radius: 2px;
+      background: #951a37;
+    }
+
+    .ui-slider-handle {
+      position: absolute;
+      border-radius: 100%;
+      background: #fff;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      top: 50%;
+      margin: -10px 0 0 -12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+
+      &:active,
+      &:hover {
+        .toddler_val {
+          opacity: 1;
+        }
+      }
+    }
+
+    .toddler_val {
+      @extend %hor_centr;
+      position: absolute;
+      pointer-events: none;
+      white-space: nowrap;
+      opacity: 0;
+      bottom: 100%;
+      margin-bottom: 14px;
+      padding: 10px 14px;
+      text-align: center;
+      background: #f7f9fb;
+      border: 1px solid #d8dcde;
+      border-radius: 2px;
+      z-index: 2;
+      font: 16px/1 $ProximaNovaLight;
+
+      &:after,
+      &:before {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -8px;
+        content: '';
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+      }
+
+      &:before {
+        z-index: 2;
+        border-top: 6px solid #f7f9fb;
+      }
+
+      &:after {
+        z-index: 1;
+        margin-top: 1px;
+        border-top: 6px solid #d8dcde;
+      }
+
+      &:empty {
+        display: none !important;
+      }
+    }
+
+  }
+
+}
+
+.price_order_controls {
+  @extend %clearfix;
+  margin: 10px 0 0;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 40px;
+
+  @include respond-to-min($desktop) {
+    text-align: left;
+    display: block;
+    margin: 28px 0;
+  }
+
+  .btn_v1 {
+    float: left;
+  }
+
+  .callback_phone {
+    margin: 0 15px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+}

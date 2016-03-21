@@ -20,32 +20,37 @@ html(lang='ru' class='page_slider_mod_')
                             h3.block_caption.small_mod Выберите, что нужно вашей компании. Мы предложим оптимальное решение.
                             
                         .service_tabs_holder
-                            ul#services_list.service_tabs(data-active-tab=0)
-                                li.service_t_item.service_t_red: a.service_t_link(href='#service_tab_1')
-                                    //.solution_icon
-                                        .service_icon.svg-svg-services--services-01-dims.svg-svg-services--services-01
-                                    //.solution_caption: span Все услуги  <br>  для бизнеса
-                                    .service_t_icon.dt_only
-                                    span.service_t_name Все услуги  <br>  для бизнеса
-                                li.service_t_item.service_t_blue: a.service_t_link(href='#service_tab_2')
-                                    //.solution_icon
-                                        .service_icon.svg-svg-services--services-02-dims.svg-svg-services--services-02
-                                    //.solution_caption: span Генеральному <br> директору
-                                    .service_t_icon.dt_only
-                                    span.service_t_name Генеральному <br> директору
-                                li.service_t_item.service_t_green: a.service_t_link(href='#service_tab_3')
-                                    //.solution_icon
-                                        .service_icon.svg-svg-services--services-03-dims.svg-svg-services--services-03
-                                    //.solution_caption: span Фин. директору  <br> Глав. бухгалтеру
-                                    .service_t_icon.dt_only
-                                    span.service_t_name Фин. директору  <br> Глав. бухгалтеру
-                                li.service_t_item.service_t_orange: a.service_t_link(href='#service_tab_4')
-                                    //.solution_icon
-                                        .service_icon.svg-svg-services--services-04-dims.svg-svg-services--services-04
-                                    //.solution_caption: span Собственнику  <br> Иностр. компаниям
-                                    .service_t_icon.dt_only
-                                    span.service_t_name Собственнику  <br> Иностр. компаниям
-                            
+                            .dt_hidden
+                                select.serviceSelect()
+                                    option(value='#service_tab_1') Все услуги для бизнеса
+                                    option(value='#service_tab_2') Генеральному директору
+                                    option(value='#service_tab_3') Фин. директору Глав. бухгалтеру
+                                    option(value='#service_tab_4') Собственнику Иностр. компаниям
+
+                                #aside_menu_dropdown.aside_menu_dropdown
+                            .dt_only
+                                ul#services_list.service_tabs(data-active-tab=0)
+                                    li.service_t_item.service_t_red: a.service_t_link(href='#service_tab_1')
+                                        .service_t_icon.service_t_all.dt_only
+                                            //-svg(viewbox='0 0 50 50', width='50', height='50')
+                                                use(xlink:href='#svg-price--services-gendir')
+                                        span.service_t_name Все услуги  <br>  для бизнеса
+                                    li.service_t_item.service_t_blue: a.service_t_link(href='#service_tab_2')
+                                        .service_t_icon.service_t_gen_director.dt_only
+                                            //-svg(viewbox='0 0 50 50', width='50', height='50')
+                                                use(xlink:href='#ei-archive')
+                                        span.service_t_name Генеральному <br> директору
+                                    li.service_t_item.service_t_green: a.service_t_link(href='#service_tab_3')
+                                        .service_t_icon.service_t_director.dt_only
+                                            //-svg(viewbox='0 0 50 50', width='50', height='50')
+                                                use(xlink:href='#ei-archive')
+                                        span.service_t_name Фин. директору  <br> Глав. бухгалтеру
+                                    li.service_t_item.service_t_orange: a.service_t_link(href='#service_tab_4')
+                                        .service_t_icon.service_t_foreign.dt_only
+                                            //-svg(viewbox='0 0 50 50', width='50', height='50')
+                                                use(xlink:href='#ei-archive')
+                                        span.service_t_name Собственнику  <br> Иностр. компаниям
+
                             .tabBlock(data-tab-context='#services_list')
                                 #service_tab_1.service_tab_inner
                                     +service_unit('service_u_red')

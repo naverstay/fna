@@ -1,0 +1,64 @@
+%svg-common-price {
+  background: url("svg/price-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-price--price-arrow {
+  @extend %svg-common-price;
+  background-position: 99.3186519041246% 0;
+}
+
+.svg-svg-price--price-arrow-dims {
+  width: 32.81px;
+  height: 32.81px;
+}
+
+.svg-svg-price--price-audit {
+  @extend %svg-common-price;
+  background-position: 55.09352711613511% 0;
+}
+
+.svg-svg-price--price-audit-dims {
+  width: 40.69px;
+  height: 40.75px;
+}
+
+.svg-svg-price--price-bonus {
+  @extend %svg-common-price;
+  background-position: 0 0;
+}
+
+.svg-svg-price--price-bonus-dims {
+  width: 40.94px;
+  height: 41.44px;
+}
+
+.svg-svg-price--price-close {
+  @extend %svg-common-price;
+  background-position: 51.219205630970336% 92.99820466786355%;
+}
+
+.svg-svg-price--price-close-dims {
+  width: 35.44px;
+  height: 35.44px;
+}
+
+.svg-svg-price--price-dropdown {
+  @extend %svg-common-price;
+  background-position: 89.48695461521596% 52.732240437158474%;
+}
+
+.svg-svg-price--price-dropdown-dims {
+  width: 23.78px;
+  height: 17.78px;
+}
+
+.svg-svg-price--price-tables {
+  @extend %svg-common-price;
+  background-position: 0 99.25748502994011%;
+}
+
+.svg-svg-price--price-tables-dims {
+  width: 40.75px;
+  height: 38.25px;
+}
+

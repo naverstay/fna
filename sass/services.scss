@@ -21,6 +21,12 @@
       color: #fff;
       background: #961a32;
       border-color: #961a32;
+
+      .service_t_all {
+        &:before {
+          background-position: 75.44910179640719% 0;
+        }
+      }
     }
   }
 
@@ -31,6 +37,12 @@
       color: #fff;
       background: #07336c;
       border-color: #07336c;
+
+      .service_t_gen_director {
+        &:before {
+          background-position: 50.29940119760479% 0;
+        }
+      }
     }
   }
 
@@ -41,6 +53,12 @@
       color: #fff;
       background: #1a9551;
       border-color: #1a9551;
+
+      .service_t_director {
+        &:before {
+          background-position: 25.149700598802394% 49.40856970428486%;
+        }
+      }
     }
   }
 
@@ -51,9 +69,14 @@
       color: #fff;
       background: #e18309;
       border-color: #e18309;
+
+      .service_t_foreign {
+        &:before {
+          background-position: 50.29940119760479% 74.14405198868765%;
+        }
+      }
     }
   }
-
 }
 
 .service_tab_inner {
@@ -123,8 +146,55 @@
 .service_t_icon {
   width: 65px;
   height: 64px;
-  background: #000;
   margin-right: 3px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+
+  &.service_t_all {
+    &:before {
+      @extend %svg-common-price;
+      background-position: 75.44910179640719% 25.454545454545453%;
+      width: 42px;
+      height: 42px;
+      margin-top: -21px;
+    }
+  }
+
+  &.service_t_gen_director {
+    &:before {
+      @extend %svg-common-price;
+      background-position: 0 49.423483247811646%;
+      width: 42px;
+      height: 41.35px;
+      margin-top: -20px;
+    }
+  }
+
+  &.service_t_director {
+    &:before {
+      @extend %svg-common-price;
+      background-position: 50.29940119760479% 49.40856970428486%;
+      width: 42px;
+      height: 41.3px;
+      margin-top: -20px;
+    }
+  }
+
+  &.service_t_foreign {
+    &:before {
+      @extend %svg-common-price;
+      background-position: 25.149700598802394% 23.99061315361935%;
+      margin-top: -20px;
+      width: 42px;
+      height: 40.81px;
+    }
+  }
 
 }
 
@@ -313,10 +383,10 @@
 
   .hidden_input:checked + .check_text {
     &:before {
-      background: green;
+      @extend %svg-common-price;
+      background-position: 37.34170364758091% 88.45700824499411%;
     }
   }
-
 }
 
 .service_check_v2 {
@@ -358,7 +428,8 @@
 
   .hidden_input:checked + .check_text {
     &:before {
-      background: green;
+      @extend %svg-common-price;
+      background-position: 37.34170364758091% 88.45700824499411%;
     }
 
     &:after {

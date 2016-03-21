@@ -4,7 +4,6 @@
 @import "font_icons";
 //@import "jquery.ui.all";
 //@import "datapicker";
-@import "dialog_global";
 @import "slick";
 @import "jquery.fullPage";
 @import "../styles/view/menu-sprite";
@@ -12,6 +11,9 @@
 @import "../styles/view/home-sprite";
 @import "../styles/view/services-sprite";
 @import "../styles/view/history-sprite";
+@import "../styles/view/price-sprite";
+@import "../styles/view/contacts-sprite";
+@import "dialog_global";
 //@import "icons.data.svg";
 @import "select2";
 @import "main";
@@ -20,3 +22,4 @@
 @import "company";
 @import "services";
 @import "contacts";
+@import "price";

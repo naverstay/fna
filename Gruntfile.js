@@ -47,7 +47,7 @@ module.exports = function (grunt) {
 
                 // Target basics 
                 expand: true,
-                src: ['svg-home/*.svg'],
+                src: ['svg-contacts/*.svg'],
                 dest: 'styles/',
 
                 // Target options 
