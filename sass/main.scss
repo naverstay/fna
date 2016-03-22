@@ -2100,13 +2100,10 @@ b {
     //@extend .icon-checkmark2;
     content: '';
     position: absolute;
-    top: 6px;
-    left: 16px;
-    width: 21px;
-    height: 21px;
-    @include transform_scale(2);
-    @extend %svg-common-price;
-    background-position: 90% 61%;
+    top: 5px;
+    left: 4px;
+    @extend .svg-svg-price--price-form-galka;
+    @extend .svg-svg-price--price-form-galka-dims;
   }
 
   .check_text {

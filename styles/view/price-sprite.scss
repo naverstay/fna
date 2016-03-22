@@ -4,7 +4,7 @@
 
 .svg-svg-price--price-arrow {
   @extend %svg-common-price;
-  background-position: 0 99.37648085796235%;
+  background-position: 99.89760218448673% 0;
 }
 
 .svg-svg-price--price-arrow-dims {
@@ -14,7 +14,7 @@
 
 .svg-svg-price--price-audit {
   @extend %svg-common-price;
-  background-position: 54.36197052184305% 0;
+  background-position: 37.45311499405361% 0;
 }
 
 .svg-svg-price--price-audit-dims {
@@ -34,7 +34,7 @@
 
 .svg-svg-price--price-close {
   @extend %svg-common-price;
-  background-position: 50.58341608738828% 53.42960288808664%;
+  background-position: 71.2552374301676% 0;
 }
 
 .svg-svg-price--price-close-dims {
@@ -44,7 +44,7 @@
 
 .svg-svg-price--price-dropdown {
   @extend %svg-common-price;
-  background-position: 88.51659076122316% 63.47406007141357%;
+  background-position: 92.75075265409602% 35.57796573411407%;
 }
 
 .svg-svg-price--price-dropdown-dims {
@@ -52,9 +52,19 @@
   height: 17.78px;
 }
 
+.svg-svg-price--price-form-galka {
+  @extend %svg-common-price;
+  background-position: 35.68613713985463% 50.88408644400786%;
+}
+
+.svg-svg-price--price-form-galka-dims {
+  width: 35.81px;
+  height: 28.56px;
+}
+
 .svg-svg-price--price-tables {
   @extend %svg-common-price;
-  background-position: 0 55.438127090301%;
+  background-position: 0 57.75609756097561%;
 }
 
 .svg-svg-price--price-tables-dims {
@@ -64,7 +74,7 @@
 
 .svg-svg-price--price-wcheckbox-galka {
   @extend %svg-common-price;
-  background-position: 99.81658107116654% 0;
+  background-position: 70.50440490585594% 44.42216094259213%;
 }
 
 .svg-svg-price--price-wcheckbox-galka-dims {
@@ -74,7 +84,7 @@
 
 .svg-svg-price--price-whcheckbox-galka {
   @extend %svg-common-price;
-  background-position: 99.81658107116654% 36.506402512684225%;
+  background-position: 0 99.88718977187264%;
 }
 
 .svg-svg-price--price-whcheckbox-galka-dims {

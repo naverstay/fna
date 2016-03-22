@@ -848,12 +848,12 @@ html.fp-enabled,
   height: 29.69px;
 }
 
-.svg-svg-price--price-arrow, .effect_link:before, .svg-svg-price--price-audit, .bonus_item.bonus_audit_1c:before, .svg-svg-price--price-bonus, .bonus_item.bonus_consult:before, .svg-svg-price--price-close, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close, .svg-svg-price--price-dropdown, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before, .svg-svg-price--price-tables, .bonus_item.bonus_round_table:before, .svg-svg-price--price-wcheckbox-galka, .svg-svg-price--price-whcheckbox-galka, .check_emul .hidden_input:checked + .check_text:after, .service_check .hidden_input:checked + .check_text:before, .service_check_v2 .hidden_input:checked + .check_text:before {
+.svg-svg-price--price-arrow, .effect_link:before, .svg-svg-price--price-audit, .bonus_item.bonus_audit_1c:before, .svg-svg-price--price-bonus, .bonus_item.bonus_consult:before, .svg-svg-price--price-close, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close, .svg-svg-price--price-dropdown, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before, .svg-svg-price--price-form-galka, .check_emul .hidden_input:checked + .check_text:after, .svg-svg-price--price-tables, .bonus_item.bonus_round_table:before, .svg-svg-price--price-wcheckbox-galka, .svg-svg-price--price-whcheckbox-galka, .service_check .hidden_input:checked + .check_text:before, .service_check_v2 .hidden_input:checked + .check_text:before {
   background: url("svg/price-sprite.view.svg") no-repeat;
 }
 
 .svg-svg-price--price-arrow, .effect_link:before {
-  background-position: 0 99.37648085796235%;
+  background-position: 99.89760218448673% 0;
 }
 
 .svg-svg-price--price-arrow-dims, .effect_link:before {
@@ -862,7 +862,7 @@ html.fp-enabled,
 }
 
 .svg-svg-price--price-audit, .bonus_item.bonus_audit_1c:before {
-  background-position: 54.36197052184305% 0;
+  background-position: 37.45311499405361% 0;
 }
 
 .svg-svg-price--price-audit-dims, .bonus_item.bonus_audit_1c:before {
@@ -880,7 +880,7 @@ html.fp-enabled,
 }
 
 .svg-svg-price--price-close, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close {
-  background-position: 50.58341608738828% 53.42960288808664%;
+  background-position: 71.2552374301676% 0;
 }
 
 .svg-svg-price--price-close-dims, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close {
@@ -889,7 +889,7 @@ html.fp-enabled,
 }
 
 .svg-svg-price--price-dropdown, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before {
-  background-position: 88.51659076122316% 63.47406007141357%;
+  background-position: 92.75075265409602% 35.57796573411407%;
 }
 
 .svg-svg-price--price-dropdown-dims, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before {
@@ -897,8 +897,17 @@ html.fp-enabled,
   height: 17.78px;
 }
 
+.svg-svg-price--price-form-galka, .check_emul .hidden_input:checked + .check_text:after {
+  background-position: 35.68613713985463% 50.88408644400786%;
+}
+
+.svg-svg-price--price-form-galka-dims, .check_emul .hidden_input:checked + .check_text:after {
+  width: 35.81px;
+  height: 28.56px;
+}
+
 .svg-svg-price--price-tables, .bonus_item.bonus_round_table:before {
-  background-position: 0 55.438127090301%;
+  background-position: 0 57.75609756097561%;
 }
 
 .svg-svg-price--price-tables-dims, .bonus_item.bonus_round_table:before {
@@ -907,7 +916,7 @@ html.fp-enabled,
 }
 
 .svg-svg-price--price-wcheckbox-galka {
-  background-position: 99.81658107116654% 0;
+  background-position: 70.50440490585594% 44.42216094259213%;
 }
 
 .svg-svg-price--price-wcheckbox-galka-dims {
@@ -916,7 +925,7 @@ html.fp-enabled,
 }
 
 .svg-svg-price--price-whcheckbox-galka {
-  background-position: 99.81658107116654% 36.506402512684225%;
+  background-position: 0 99.88718977187264%;
 }
 
 .svg-svg-price--price-whcheckbox-galka-dims {
@@ -3644,14 +3653,8 @@ b {
 .check_emul .hidden_input:checked + .check_text:after {
   content: '';
   position: absolute;
-  top: 6px;
-  left: 16px;
-  width: 21px;
-  height: 21px;
-  -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
-  background-position: 90% 61%;
+  top: 5px;
+  left: 4px;
 }
 .check_emul .check_text {
   content: '';
