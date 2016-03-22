@@ -219,6 +219,23 @@ mixin price_tab(ind)
         a.gl_link.link_red(href='reviews.html'): span Отзывы клиентов
         |  подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.
     
+mixin city_tab()
+    .contacts_list
+        .contacts_list_links
+            .mb
+                a.contacts_phone(href='tel:+74951343223') +7 495 134-32-23
+            .mb
+                a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+
+        .contacts_list_btns
+            .mb
+                a.btn_v3.btn_red_black.contact_btn(href='#')
+                    span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                    span Реквизиты
+            .mb
+                a.btn_v3.btn_red_black.contact_btn(href='#')
+                    span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                    span Распечатать
 mixin popups()
     .gl_overlay.closeMenu
     

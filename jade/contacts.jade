@@ -17,83 +17,354 @@ html(lang='ru' class='page_slider_mod_')
 
                 div.main_content
                     .section_inner.clearfix
-                        ul.contact_city_filter
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter' checked)
-                                    span.check_text: span Москва
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Санкт-Петербург
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Киров
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Волгоград
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Екатеринбург
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Краснодар
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Новосибирск
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Симферополь
-                                    
-                            li
-                                label.radio_emul
-                                    input.hidden_input(type='radio' name='city_filter')
-                                    span.check_text: span Алматы
-                                    
-                        .contacts_list
-                            .contacts_list_links
-                                .mb
-                                    a.contacts_phone(href='tel:+74951343223') +7 495 134-32-23
-                                .mb
-                                    a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
-                        
-                            .contacts_list_btns
-                                .mb
-                                    a.btn_v3.btn_red_black.contact_btn(href='#')
-                                        span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
-                                        span Реквизиты
-                                .mb
-                                    a.btn_v3.btn_red_black.contact_btn(href='#') 
-                                        span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
-                                        span Распечатать
-                                    
-                        .contacts_office_switch
-                            .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
-                                .contacts_office_name Центральный офис: 
-                                .contacts_office_addr 109456, Москва, Рязанский проспект, д. 75, корп. 4
+                        .dt_hidden
+                            select.citySelect()
+                                option(value='#city_tab_1') Москва
+                                option(value='#city_tab_2') Санкт-Петербург
+                                option(value='#city_tab_3') Киров
+                                option(value='#city_tab_4') Волгоград
+                                option(value='#city_tab_5') Екатеринбург
+                                option(value='#city_tab_6') Краснодар
+                                option(value='#city_tab_7') Новосибирск
+                                option(value='#city_tab_8') Симферополь
+                                option(value='#city_tab_9') Алматы
+
+                            #city_menu_dropdown.aside_menu_dropdown
+                        .dt_only
+                            ul#city_list.contact_city_filter(data-active-tab=0)
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_1')
+                                        span Москва
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_2')
+                                        span Санкт-Петербург
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_3')
+                                        span Киров
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_4')
+                                        span Волгоград
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_5')
+                                        span Екатеринбург
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_6')
+                                        span Краснодар
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_7')
+                                        span Новосибирск
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_8')
+                                        span Симферополь
+                                        
+                                li.radio_emul
+                                    a.check_text(href='#city_tab_9')
+                                        span Алматы
+                                        
+                        .tabBlock(data-tab-context='#city_list')
+                            #city_tab_1
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+74951343223') +7 495 134-32-23
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
                                 
-                            .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
-                                .contacts_office_name Дополнительный офис:  
-                                .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr 109456, Москва, Рязанский проспект, д. 75, корп. 4
+                                        
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 18:00
+                                        .office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_2
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+78123097193') +7 812 309-71-93
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr Санкт-Петербург, Синопская набережная 22, 4 этаж 
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_3
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+78332680369') +7 8332 68-03-69
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr Киров, ул. Московская, д.107 Б, бизнес-центр "Московский"
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_4
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+78442780163') +7 8442 78-01-63
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr г. Волжский, ул. Логинова, д.23в
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_5
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+73433182439') +7 343 318-24-39
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr Екатиринбург, ул.Хохрякова, д.10
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_6
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+78612034668') +7 861 203-46-68
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr Краснодар, ул.Северная, 319
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_7
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+73832278651 ') +7 (383) 227-86-51 
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr Новосибирск, ул. Писарева, 102
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_8
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+78003338256') +7 (800) 333-82-56
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
+                                                                    
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr Симферополь, пр. Победы, 28А
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                        
+                            #city_tab_9
+                                .contacts_list
+                                    .contacts_list_links
+                                        .mb
+                                            a.contacts_phone(href='tel:+77273495214') +7 (727) 349-52-14
+                                        .mb
+                                            a.contacts_email.gl_link.link_red( href='mailto:audit@wiseadvice.ru'): span audit@wiseadvice.ru
+                                
+                                    .contacts_list_btns
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#')
+                                                span.svg-svg-contacts--contacts-rekviziti.svg-svg-contacts--contacts-rekviziti-dims.contact_icon
+                                                span Реквизиты
+                                        .mb
+                                            a.btn_v3.btn_red_black.contact_btn(href='#') 
+                                                span.svg-svg-contacts--contacts-print.svg-svg-contacts--contacts-print-dims.contact_icon
+                                                span Распечатать
                                     
-                            .contacts_office_time
-                                .office_time_block.contact_office_1.officeTime
-                                    p Время работы:   <br> в раб. дни с 9:00 до 18:00
-                                .office_time_block.contact_office_2.officeTime
-                                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                                .contactsOfficeSwitcher.contacts_office_switch
+                                    .contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_1')
+                                        .contacts_office_name Центральный офис: 
+                                        .contacts_office_addr Алматы, проспект Аль-Фараби, д.7
+                                        
+                                    //.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                                        .contacts_office_name Дополнительный офис:  
+                                        .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                                            
+                                    .contacts_office_time
+                                        .office_time_block.contact_office_1.officeTime
+                                            p Время работы:   <br> в раб. дни с 9:00 до 19:00
+                                        //.office_time_block.contact_office_2.officeTime
+                                            p Время работы:   <br> в раб. дни с 10:00 до 19:00
                         
         +popups()
         

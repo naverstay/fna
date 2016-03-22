@@ -92,82 +92,338 @@
         <div id="g_map" class="map_holder"></div>
         <div class="main_content">
           <div class="section_inner clearfix">
-            <ul class="contact_city_filter">
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" checked class="hidden_input"><span class="check_text"><span>Москва</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Санкт-Петербург</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Киров</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Волгоград</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Екатеринбург</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Краснодар</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Новосибирск</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Симферополь</span></span>
-                </label>
-              </li>
-              <li>
-                <label class="radio_emul">
-                  <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Алматы</span></span>
-                </label>
-              </li>
-            </ul>
-            <div class="contacts_list">
-              <div class="contacts_list_links">
-                <div class="mb"><a href="tel:+74951343223" class="contacts_phone">+7 495 134-32-23</a></div>
-                <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
-              </div>
-              <div class="contacts_list_btns">
-                <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
-                <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
-              </div>
+            <div class="dt_hidden">
+              <select class="citySelect">
+                <option value="#city_tab_1">Москва</option>
+                <option value="#city_tab_2">Санкт-Петербург</option>
+                <option value="#city_tab_3">Киров</option>
+                <option value="#city_tab_4">Волгоград</option>
+                <option value="#city_tab_5">Екатеринбург</option>
+                <option value="#city_tab_6">Краснодар</option>
+                <option value="#city_tab_7">Новосибирск</option>
+                <option value="#city_tab_8">Симферополь</option>
+                <option value="#city_tab_9">Алматы</option>
+              </select>
+              <div id="city_menu_dropdown" class="aside_menu_dropdown"></div>
             </div>
-            <div class="contacts_office_switch">
-              <div class="contacts_office_item">
-                <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
-                  <div class="contacts_office_name">Центральный офис: </div>
-                  <div class="contacts_office_addr">109456, Москва, Рязанский проспект, д. 75, корп. 4</div>
+            <div class="dt_only">
+              <ul id="city_list" data-active-tab='0' class="contact_city_filter">
+                <li class="radio_emul"><a href="#city_tab_1" class="check_text"><span>Москва</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_2" class="check_text"><span>Санкт-Петербург</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_3" class="check_text"><span>Киров</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_4" class="check_text"><span>Волгоград</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_5" class="check_text"><span>Екатеринбург</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_6" class="check_text"><span>Краснодар</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_7" class="check_text"><span>Новосибирск</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_8" class="check_text"><span>Симферополь</span></a></li>
+                <li class="radio_emul"><a href="#city_tab_9" class="check_text"><span>Алматы</span></a></li>
+              </ul>
+            </div>
+            <div data-tab-context="#city_list" class="tabBlock">
+              <div id="city_tab_1">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+74951343223" class="contacts_phone">+7 495 134-32-23</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">109456, Москва, Рязанский проспект, д. 75, корп. 4</div>
+                    </div>
+                  </div>
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_2" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Дополнительный офис:  </div>
+                      <div class="contacts_office_addr">115093, Москва, 1-й Щипковский пер., д. 20</div>
+                    </div>
+                  </div>
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 18:00</p>
+                    </div>
+                    <div class="office_time_block contact_office_2 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 10:00 до 19:00</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="contacts_office_item">
-                <div data-href="contact_office_2" class="contacts_office_btn contactOfficeBtn">
-                  <div class="contacts_office_name">Дополнительный офис:  </div>
-                  <div class="contacts_office_addr">115093, Москва, 1-й Щипковский пер., д. 20</div>
+              <div id="city_tab_2">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+78123097193" class="contacts_phone">+7 812 309-71-93</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">Санкт-Петербург, Синопская набережная 22, 4 этаж </div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
                 </div>
               </div>
-              <div class="contacts_office_time">
-                <div class="office_time_block contact_office_1 officeTime">
-                  <p>Время работы:   <br> в раб. дни с 9:00 до 18:00</p>
+              <div id="city_tab_3">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+78332680369" class="contacts_phone">+7 8332 68-03-69</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
                 </div>
-                <div class="office_time_block contact_office_2 officeTime">
-                  <p>Время работы:   <br> в раб. дни с 10:00 до 19:00</p>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">Киров, ул. Московская, д.107 Б, бизнес-центр "Московский"</div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
+                </div>
+              </div>
+              <div id="city_tab_4">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+78442780163" class="contacts_phone">+7 8442 78-01-63</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">г. Волжский, ул. Логинова, д.23в</div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
+                </div>
+              </div>
+              <div id="city_tab_5">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+73433182439" class="contacts_phone">+7 343 318-24-39</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">Екатиринбург, ул.Хохрякова, д.10</div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
+                </div>
+              </div>
+              <div id="city_tab_6">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+78612034668" class="contacts_phone">+7 861 203-46-68</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">Краснодар, ул.Северная, 319</div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
+                </div>
+              </div>
+              <div id="city_tab_7">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+73832278651 " class="contacts_phone">+7 (383) 227-86-51 </a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">Новосибирск, ул. Писарева, 102</div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
+                </div>
+              </div>
+              <div id="city_tab_8">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+78003338256" class="contacts_phone">+7 (800) 333-82-56</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">Симферополь, пр. Победы, 28А</div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
+                </div>
+              </div>
+              <div id="city_tab_9">
+                <div class="contacts_list">
+                  <div class="contacts_list_links">
+                    <div class="mb"><a href="tel:+77273495214" class="contacts_phone">+7 (727) 349-52-14</a></div>
+                    <div class="mb"><a href="mailto:audit@wiseadvice.ru" class="contacts_email gl_link link_red"><span>audit@wiseadvice.ru</span></a></div>
+                  </div>
+                  <div class="contacts_list_btns">
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"><span class="svg-svg-contacts--contacts-rekviziti svg-svg-contacts--contacts-rekviziti-dims contact_icon"></span><span>Реквизиты</span></a></div>
+                    <div class="mb"><a href="#" class="btn_v3 btn_red_black contact_btn"> <span class="svg-svg-contacts--contacts-print svg-svg-contacts--contacts-print-dims contact_icon"></span><span>Распечатать</span></a></div>
+                  </div>
+                </div>
+                <div class="contactsOfficeSwitcher contacts_office_switch">
+                  <div class="contacts_office_item">
+                    <div data-href="contact_office_1" class="contacts_office_btn contactOfficeBtn">
+                      <div class="contacts_office_name">Центральный офис: </div>
+                      <div class="contacts_office_addr">Алматы, проспект Аль-Фараби, д.7</div>
+                    </div>
+                  </div>
+                  <!--.contacts_office_item: .contacts_office_btn.contactOfficeBtn(data-href='contact_office_2')
+                  .contacts_office_name Дополнительный офис:  
+                  .contacts_office_addr 115093, Москва, 1-й Щипковский пер., д. 20
+                      
+                  -->
+                  <div class="contacts_office_time">
+                    <div class="office_time_block contact_office_1 officeTime">
+                      <p>Время работы:   <br> в раб. дни с 9:00 до 19:00</p>
+                    </div>
+                    <!--.office_time_block.contact_office_2.officeTime
+                    p Время работы:   <br> в раб. дни с 10:00 до 19:00
+                    
+                    -->
+                  </div>
                 </div>
               </div>
             </div>
