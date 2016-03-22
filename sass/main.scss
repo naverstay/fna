@@ -1477,6 +1477,15 @@ b {
     .solution_item {
       margin-bottom: 20px;
       font: 18px/26px $ProximaNovaLight;
+
+      &:before {
+        border: none;
+        content: '';
+        top: -3px;
+        left: -10px;
+        @extend .svg-svg-servicefull--servicefull-check;
+        @extend .svg-svg-servicefull--servicefull-check-dims;
+      }
     }
   }
 }
@@ -1520,8 +1529,8 @@ b {
 }
 
 .solution_item {
-  @extend .icon-before;
-  @extend .icon-checkmark3;
+  //@extend .icon-before;
+  //@extend .icon-checkmark3;
   position: relative;
   padding-left: 25px;
   margin-bottom: 14px;
@@ -1531,16 +1540,20 @@ b {
 
   &::before {
     position: absolute;
-    top: 0;
-    left: -4px;
-    font-size: 12px;
-    line-height: 16px;
-    border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    color: #91969c;
-    border: 2px solid #91969c;
-    text-align: center;
+    top: -6px;
+    left: -11px;
+    content: '';
+    @include transform_scale(.85);
+    //font-size: 12px;
+    //line-height: 16px;
+    //border-radius: 100%;
+    //width: 20px;
+    //height: 20px;
+    //color: #91969c;
+    //border: 2px solid #91969c;
+    //text-align: center;
+    @extend .svg-svg-servicefull--servicefull-check-gray;
+    @extend .svg-svg-servicefull--servicefull-check-gray-dims;
   }
 }
 
@@ -2083,12 +2096,22 @@ b {
   vertical-align: top;
   margin-bottom: 7px;
 
-  .hidden_input:checked + .check_text {
-    @extend .icon-checkmark2;
+  .hidden_input:checked + .check_text:after {
+    //@extend .icon-checkmark2;
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    width: 21px;
+    height: 21px;
+    @include transform_scale(2);
+    @extend %svg-common-price;
+    background-position: 90% 61%;
   }
 
   .check_text {
-    @extend .icon-before;
+    //@extend .icon-before;
+    content: '';
     display: block;
     position: relative;
     padding-left: 62px;

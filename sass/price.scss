@@ -113,34 +113,39 @@
 
   &.bonus_audit_1c {
     &:before {
-      @extend %svg-common-price;
-      background-position: 55.09352711613511% 0;
-      width: 40.69px;
-      height: 40.75px;
+      @extend .svg-svg-price--price-audit;
+      @extend .svg-svg-price--price-audit-dims;
+      //@extend %svg-common-price;
+      //background-position: 55.09352711613511% 0;
+      //width: 40.69px;
+      //height: 40.75px;
       margin-top: -19px;
     }
   }
 
   &.bonus_round_table {
     &:before {
-      @extend %svg-common-price;
-      background-position: 0 99.25748502994011%;
-      width: 40.75px;
-      height: 38.25px;
+      @extend .svg-svg-price--price-tables;
+      @extend .svg-svg-price--price-tables-dims;
+      //@extend %svg-common-price;
+      //background-position: 0 99.25748502994011%;
+      //width: 40.75px;
+      //height: 38.25px;
       margin-top: -17px;
     }
   }
 
   &.bonus_consult {
     &:before {
-      @extend %svg-common-price;
-      width: 40.94px;
-      height: 41.44px;
+      @extend .svg-svg-price--price-bonus;
+      @extend .svg-svg-price--price-bonus-dims;
+
+      //@extend %svg-common-price;
+      //width: 40.94px;
+      //height: 41.44px;
       margin-top: -20px;
     }
-
   }
-
 }
 
 .page_title {
@@ -182,14 +187,15 @@
   font: 16px $ProximaNovaLight;
 
   &:before {
-    @extend %svg-common-price;
+    @extend .svg-svg-price--price-arrow;
+    @extend .svg-svg-price--price-arrow-dims;
     content: '';
     position: absolute;
     top: 50%;
     left: -3px;
-    background-position: 99.3186519041246% 0;
-    width: 32.81px;
-    height: 32.81px;
+    //background-position: 99.3186519041246% 0;
+    //width: 32.81px;
+    //height: 32.81px;
     margin-top: -16px;
   }
 }
@@ -288,7 +294,6 @@
 }
 
 .select_v1 {
-
   .select2-container--default .select2-selection--single {
     border: 1px solid #d8dcde;
     background: #f7f9fb;
@@ -306,14 +311,15 @@
       bottom: 1px;
 
       &:before {
-        @extend %svg-common-price;
+        @extend .svg-svg-price--price-dropdown;
+        @extend .svg-svg-price--price-dropdown-dims;
         content: '';
         position: absolute;
         right: 5px;
         top: 50%;
-        background-position: 89.48695461521596% 52.732240437158474%;
-        width: 23.78px;
-        height: 17.78px;
+        //background-position: 89.48695461521596% 52.732240437158474%;
+        //width: 23.78px;
+        //height: 17.78px;
         margin-top: -8px;
       }
 
@@ -433,5 +439,4 @@
     display: inline-block;
     vertical-align: middle;
   }
-
 }

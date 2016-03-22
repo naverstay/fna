@@ -176,8 +176,8 @@
 
   &.service_t_director {
     &:before {
-    @extend .svg-svg-service--services-findir;
-    @extend .svg-svg-service--services-findir-dims;
+      @extend .svg-svg-service--services-findir;
+      @extend .svg-svg-service--services-findir-dims;
       top: -5px;
       left: -7px;
     }
@@ -379,7 +379,7 @@
   .hidden_input:checked + .check_text {
     &:before {
       @extend %svg-common-price;
-      background-position: 37.34170364758091% 88.45700824499411%;
+      background-position: 94.5% -3px;
     }
   }
 }
@@ -424,7 +424,7 @@
   .hidden_input:checked + .check_text {
     &:before {
       @extend %svg-common-price;
-      background-position: 37.34170364758091% 88.45700824499411%;
+      background-position: 94.5% -3px;
     }
 
     &:after {
@@ -520,9 +520,18 @@
   .solution_item {
     font-size: 18px;
     line-height: 26px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     margin-left: -30px;
     padding-left: 35px;
+
+    &:before {
+      border: none;
+      content: '';
+      top: -3px;
+      left: -10px;
+      @extend .svg-svg-servicefull--servicefull-check;
+      @extend .svg-svg-servicefull--servicefull-check-dims;
+    }
   }
 
   @include respond-to-min($desktop) {
@@ -603,11 +612,25 @@
   &:before {
     position: absolute;
     content: '';
-    width: 64px;
-    height: 64px;
+    //width: 64px;
+    //height: 64px;
     top: 0;
     left: 0;
-    background: #000;
+  }
+
+  &.step_1:before {
+    @extend .svg-svg-servicefull--servicefull-step1;
+    @extend .svg-svg-servicefull--servicefull-step1-dims;
+  }
+
+  &.step_2:before {
+    @extend .svg-svg-servicefull--servicefull-step2;
+    @extend .svg-svg-servicefull--servicefull-step2-dims;
+  }
+
+  &.step_3:before {
+    @extend .svg-svg-servicefull--servicefull-step3;
+    @extend .svg-svg-servicefull--servicefull-step3-dims;
   }
 
   @include respond-to-min($desktop) {

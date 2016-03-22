@@ -60,13 +60,11 @@
   .ui-dialog-titlebar-close {
     .dialog_close_butt_mod_1 & {
       // виды крестиков закрытия
-      @extend %svg-common-price;
+      @extend .svg-svg-price--price-close;
+      @extend .svg-svg-price--price-close-dims;
       position: absolute;
       top: 26px;
       right: 26px;
-      background-position: 51.219205630970336% 92.99820466786355%;
-      width: 35.44px;
-      height: 35.44px;
       z-index: 1;
     }
 

@@ -1,0 +1,54 @@
+%svg-common-servicefull {
+  background: url("svg/servicefull-sprite.view.svg") no-repeat;
+}
+
+.svg-svg-servicefull--servicefull-check-gray {
+  @extend %svg-common-servicefull;
+  background-position: 98.11320754716981% 64.07766990291262%;
+}
+
+.svg-svg-servicefull--servicefull-check-gray-dims {
+  width: 30px;
+  height: 30px;
+}
+
+.svg-svg-servicefull--servicefull-check {
+  @extend %svg-common-servicefull;
+  background-position: 68.62745098039215% 66.66666666666667%;
+}
+
+.svg-svg-servicefull--servicefull-check-dims {
+  width: 34px;
+  height: 34px;
+}
+
+.svg-svg-servicefull--servicefull-step1 {
+  @extend %svg-common-servicefull;
+  background-position: 0 0;
+}
+
+.svg-svg-servicefull--servicefull-step1-dims {
+  width: 70px;
+  height: 66px;
+}
+
+.svg-svg-servicefull--servicefull-step2 {
+  @extend %svg-common-servicefull;
+  background-position: 0 100%;
+}
+
+.svg-svg-servicefull--servicefull-step2-dims {
+  width: 68px;
+  height: 67px;
+}
+
+.svg-svg-servicefull--servicefull-step3 {
+  @extend %svg-common-servicefull;
+  background-position: 100% 0;
+}
+
+.svg-svg-servicefull--servicefull-step3-dims {
+  width: 66px;
+  height: 66px;
+}
+
