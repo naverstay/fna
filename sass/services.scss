@@ -379,7 +379,7 @@
   .hidden_input:checked + .check_text {
     &:before {
       @extend %svg-common-price;
-      background-position: 94.5% -3px;
+      background-position: 68.5% 45%;
     }
   }
 }
@@ -409,16 +409,6 @@
       border: 2px solid #961a32;
     }
 
-    &:after {
-      content: '';
-      background: #fecb00;
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 100%;
-      margin-left: 5px;
-      @include transition_all(background .3s);
-    }
   }
 
   .hidden_input:checked + .check_text {
@@ -428,9 +418,31 @@
     }
 
     &:after {
-      background: #1a9551;
+      //background: #1a9551;
     }
   }
+}
+
+.check_yellow {
+  content: '';
+  background: #fecb00;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-left: 5px;
+  @include transition_all(background .3s);
+}
+
+.check_green {
+  content: '';
+  background: #1a9551;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-left: 5px;
+  @include transition_all(background .3s);
 }
 
 .pagination_holder {

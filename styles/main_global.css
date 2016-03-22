@@ -3842,6 +3842,7 @@ textarea.input_v2 {
   font-size: 13px;
   line-height: 40px;
   text-decoration: none;
+  border-radius: 2px;
   padding: 0 32px;
   text-transform: uppercase;
 }
@@ -4824,7 +4825,7 @@ textarea.input_v2 {
   border: 2px solid #961a32;
 }
 .service_check .hidden_input:checked + .check_text:before {
-  background-position: 94.5% -3px;
+  background-position: 68.5% 45%;
 }
 
 .service_check_v2 {
@@ -4851,7 +4852,11 @@ textarea.input_v2 {
   border-radius: 2px;
   border: 2px solid #961a32;
 }
-.service_check_v2 .check_text:after {
+.service_check_v2 .hidden_input:checked + .check_text:before {
+  background-position: 68.5% 45%;
+}
+
+.check_yellow {
   content: '';
   background: #fecb00;
   display: inline-block;
@@ -4863,11 +4868,18 @@ textarea.input_v2 {
   -ms-transition: background 0.3s;
   transition: background 0.3s;
 }
-.service_check_v2 .hidden_input:checked + .check_text:before {
-  background-position: 94.5% -3px;
-}
-.service_check_v2 .hidden_input:checked + .check_text:after {
+
+.check_green {
+  content: '';
   background: #1a9551;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-left: 5px;
+  -webkit-transition: background 0.3s;
+  -ms-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
 .pagination_holder {
@@ -4883,7 +4895,6 @@ textarea.input_v2 {
 }
 .pagination_list li .gl_link {
   font-family: "ProximaNovaLight", sans-serif;
-  text-shadow: 0 -1px 1px #bbb;
 }
 .pagination_list li.active .gl_link {
   cursor: default;
@@ -4948,7 +4959,7 @@ textarea.input_v2 {
   line-height: 26px;
   margin-bottom: 20px;
   margin-left: -30px;
-  padding-left: 35px;
+  padding-left: 30px;
 }
 .service_differences .solution_item:before {
   border: none;

@@ -24,6 +24,7 @@ $(function ($) {
         value_box: '<span class="toddler_val"></span>',
         slide: function (event, ui) {
             $(ui.handle).find('.toddler_val').text(ui.value + ' тыс. руб.');
+            $('#annual_revenu_val').val(ui.value);
         },
         load: function (event, ui) {
             console.log(event, ui);
