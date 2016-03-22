@@ -118,7 +118,9 @@ $(window).on('load', function () {
 
 }).on('scroll', function () {
 
-    body_var.toggleClass('show_go_top header_fixed', body_var.scrollTop() >= win.height());
+    if (body_var) {
+        body_var.toggleClass('show_go_top header_fixed', body_var.scrollTop() >= win.height());
+    }
 
 }).on('resize', function () {
 
