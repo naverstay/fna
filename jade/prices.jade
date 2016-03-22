@@ -19,77 +19,48 @@ html(lang='ru' class='page_slider_mod_')
                         
                         .content_holder
                             .price_block
-                                ul.contact_city_filter
-                                    li
-                                        label.radio_emul
-                                            input.hidden_input(type='radio' name='city_filter' checked)
-                                            span.check_text: span Обязательный аудит 
-        
-                                    li
-                                        label.radio_emul
-                                            input.hidden_input(type='radio' name='city_filter')
-                                            span.check_text: span Комплексный аудит
-                                            
-                                    li
-                                        label.radio_emul
-                                            input.hidden_input(type='radio' name='city_filter')
-                                            span.check_text: span Налоговый аудит 
-        
-                                    li
-                                        label.radio_emul
-                                            input.hidden_input(type='radio' name='city_filter')
-                                            span.check_text: span Инициативный аудит 
-        
-                                    li
-                                        label.radio_emul
-                                            input.hidden_input(type='radio' name='city_filter')
-                                            span.check_text: span Due Diligence
+                                .dt_hidden
+                                    select.priceSelect()
+                                        option(value='#price_tab_1') Обязательный аудит
+                                        option(value='#price_tab_2') Комплексный аудит
+                                        option(value='#price_tab_3') Налоговый аудит
+                                        option(value='#price_tab_4') Инициативный аудит
+                                        option(value='#price_tab_5') Due Diligence
+    
+                                    #aside_menu_dropdown.aside_menu_dropdown
+                                .dt_only
+                                    ul#price_list.contact_city_filter(data-active-tab=0)
+                                        li.radio_emul
+                                            a.check_text(href='#price_tab_1')
+                                                span Обязательный аудит 
+            
+                                        li.radio_emul
+                                            a.check_text(href='#price_tab_2')
+                                                span Комплексный аудит
+                                                
+                                        li.radio_emul
+                                            a.check_text(href='#price_tab_3')
+                                                span Налоговый аудит 
+            
+                                        li.radio_emul
+                                            a.check_text(href='#price_tab_4')
+                                                span Инициативный аудит 
+            
+                                        li.radio_emul
+                                            a.check_text(href='#price_tab_5')
+                                                span Due Diligence
                                 
-                                .service_effect_info
-                                    .price_ranges
-                                        table.price_range_table
-                                            tr  
-                                                td.col_1: b Диапазон цен:
-                                                td.col_2 150-650 тыс. руб.
-                                            tr
-                                                td.col_1: b Средняя цена по 2015 году:
-                                                td.col_2 320 тыс. руб.
-                                        
-                                        .price_caption: b Ваши бонусы:
-                                        
-                                        ul.bonus_list
-                                            li.bonus_item.bonus_audit_1c: .mb Аудит 1С
-                                            li.bonus_item.bonus_round_table
-                                                .mb Участие в нескольких круглых столах
-                                            li.bonus_item.bonus_consult: .mb Бонусные консультации
-                                                
-                                        a.btn_v2.btn_red.price_order_btn(href='#') ЗАКАЗАТЬ со скидкой 10% 
-                                                
-                                    .service_effect
-                                        .effect_caption Эффективность аудита
-                                                
-                                        table.effect_table
-                                            tr
-                                                td.col_1: b Стоимость аудита
-                                                td.col_2 250 000  руб.
-                                            tr
-                                                td.col_1: b Выявлены налоговые резервы на сумму
-                                                td.col_2 2 500 000 руб.
-                                            tr
-                                                td.col_1: b Обнаружены налоговые риски на сумму
-                                                td.col_2 8 500 000 руб.
-                                            tr
-                                                td.col_1: b Прочие результаты
-                                                td.col_2 получены рекомендации и гарантии от налоговых юристов
-                                            tr
-                                                td.col_1: b Коэффициент эффективности
-                                                td.col_2: span.color_red 4 400%
-                                                
-                                        a.gl_link.link_red.effect_link(href='#'): span Как была достигнута такая эффективность
-        
-                                p
-                                    a.gl_link.link_red(href='#'): span Отзывы клиентов
-                                    |  подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.
+                                .tabBlock(data-tab-context='#price_list')
+                                    #price_tab_1
+                                        +price_tab()
+                                    #price_tab_2
+                                        +price_tab(2)
+                                    #price_tab_3
+                                        +price_tab(3)
+                                    #price_tab_4
+                                        +price_tab(4)
+                                    #price_tab_5
+                                        +price_tab(5)
                                 
                     .price_order_section
                         .section_inner
@@ -112,7 +83,7 @@ html(lang='ru' class='page_slider_mod_')
                                             span +7 495 134-32-23
                                             
                                         .price_order_controls
-                                            a.callback_btn.btn_v1.btn_red_black(href='#') Заказать звонок
+                                            a.callback_btn.btn_v1.btn_red_black.callbackOpenBtn(href='#') Заказать звонок
 
                                 .price_order_form: form(action='#')
                                     .price_order_row

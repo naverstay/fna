@@ -169,6 +169,56 @@ mixin service_unit(cls, ind)
 
     .text_center
         a.btn_v2.order_btn.btn_red(href='#') Заказать 
+        
+        
+        
+mixin price_tab(ind)
+    .service_effect_info
+        .price_ranges
+            table.price_range_table
+                tr  
+                    td.col_1: b Диапазон цен:
+                    td.col_2 150-650 тыс. руб.
+                tr
+                    td.col_1: b Средняя цена по 2015 году:
+                    td.col_2 320 тыс. руб.
+            
+            .price_caption: b Ваши бонусы: #{ind}
+            
+            ul.bonus_list
+                li.bonus_item.bonus_audit_1c: .mb Аудит 1С
+                li.bonus_item.bonus_round_table
+                    .mb Участие в нескольких круглых столах
+                li.bonus_item.bonus_consult: .mb Бонусные консультации
+                    
+            a.btn_v2.btn_red.price_order_btn(href='#') ЗАКАЗАТЬ со скидкой 10% 
+                    
+        .service_effect
+            .effect_caption Эффективность аудита
+                    
+            table.effect_table
+                tr
+                    td.col_1: b Стоимость аудита
+                    td.col_2 250 000  руб.
+                tr
+                    td.col_1: b Выявлены налоговые резервы на сумму
+                    td.col_2 2 500 000 руб.
+                tr
+                    td.col_1: b Обнаружены налоговые риски на сумму
+                    td.col_2 8 500 000 руб.
+                tr
+                    td.col_1: b Прочие результаты
+                    td.col_2 получены рекомендации и гарантии от налоговых юристов
+                tr
+                    td.col_1: b Коэффициент эффективности
+                    td.col_2: span.color_red 4 400%
+                    
+            a.gl_link.link_red.effect_link(href='#'): span Как была достигнута такая эффективность
+
+    p
+        a.gl_link.link_red(href='reviews.html'): span Отзывы клиентов
+        |  подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.
+    
 mixin popups()
     .gl_overlay.closeMenu
     

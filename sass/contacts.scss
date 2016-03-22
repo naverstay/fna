@@ -48,6 +48,7 @@
     }
   }
 
+  &.ui-tabs-active .check_text,
   .hidden_input:checked + .check_text {
     border-radius: 2px;
     border-color: #951a37;

@@ -96,85 +96,297 @@
             </div>
             <div class="content_holder">
               <div class="price_block">
-                <ul class="contact_city_filter">
-                  <li>
-                    <label class="radio_emul">
-                      <input type="radio" name="city_filter" checked class="hidden_input"><span class="check_text"><span>Обязательный аудит </span></span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="radio_emul">
-                      <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Комплексный аудит</span></span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="radio_emul">
-                      <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Налоговый аудит </span></span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="radio_emul">
-                      <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Инициативный аудит </span></span>
-                    </label>
-                  </li>
-                  <li>
-                    <label class="radio_emul">
-                      <input type="radio" name="city_filter" class="hidden_input"><span class="check_text"><span>Due Diligence</span></span>
-                    </label>
-                  </li>
-                </ul>
-                <div class="service_effect_info">
-                  <div class="price_ranges">
-                    <table class="price_range_table">
-                      <tr> 
-                        <td class="col_1"><b>Диапазон цен:</b></td>
-                        <td class="col_2">150-650 тыс. руб.</td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><b>Средняя цена по 2015 году:</b></td>
-                        <td class="col_2">320 тыс. руб.</td>
-                      </tr>
-                    </table>
-                    <div class="price_caption"><b>Ваши бонусы:</b></div>
-                    <ul class="bonus_list">
-                      <li class="bonus_item bonus_audit_1c">
-                        <div class="mb">Аудит 1С</div>
-                      </li>
-                      <li class="bonus_item bonus_round_table">
-                        <div class="mb">Участие в нескольких круглых столах</div>
-                      </li>
-                      <li class="bonus_item bonus_consult">
-                        <div class="mb">Бонусные консультации</div>
-                      </li>
-                    </ul><a href="#" class="btn_v2 btn_red price_order_btn">ЗАКАЗАТЬ со скидкой 10% </a>
+                <div class="dt_hidden">
+                  <select class="priceSelect">
+                    <option value="#price_tab_1">Обязательный аудит</option>
+                    <option value="#price_tab_2">Комплексный аудит</option>
+                    <option value="#price_tab_3">Налоговый аудит</option>
+                    <option value="#price_tab_4">Инициативный аудит</option>
+                    <option value="#price_tab_5">Due Diligence</option>
+                  </select>
+                  <div id="aside_menu_dropdown" class="aside_menu_dropdown"></div>
+                </div>
+                <div class="dt_only">
+                  <ul id="price_list" data-active-tab='0' class="contact_city_filter">
+                    <li class="radio_emul"><a href="#price_tab_1" class="check_text"><span>Обязательный аудит </span></a></li>
+                    <li class="radio_emul"><a href="#price_tab_2" class="check_text"><span>Комплексный аудит</span></a></li>
+                    <li class="radio_emul"><a href="#price_tab_3" class="check_text"><span>Налоговый аудит </span></a></li>
+                    <li class="radio_emul"><a href="#price_tab_4" class="check_text"><span>Инициативный аудит </span></a></li>
+                    <li class="radio_emul"><a href="#price_tab_5" class="check_text"><span>Due Diligence</span></a></li>
+                  </ul>
+                </div>
+                <div data-tab-context="#price_list" class="tabBlock">
+                  <div id="price_tab_1">
+                    <div class="service_effect_info">
+                      <div class="price_ranges">
+                        <table class="price_range_table">
+                          <tr> 
+                            <td class="col_1"><b>Диапазон цен:</b></td>
+                            <td class="col_2">150-650 тыс. руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Средняя цена по 2015 году:</b></td>
+                            <td class="col_2">320 тыс. руб.</td>
+                          </tr>
+                        </table>
+                        <div class="price_caption"><b>Ваши бонусы: </b></div>
+                        <ul class="bonus_list">
+                          <li class="bonus_item bonus_audit_1c">
+                            <div class="mb">Аудит 1С</div>
+                          </li>
+                          <li class="bonus_item bonus_round_table">
+                            <div class="mb">Участие в нескольких круглых столах</div>
+                          </li>
+                          <li class="bonus_item bonus_consult">
+                            <div class="mb">Бонусные консультации</div>
+                          </li>
+                        </ul><a href="#" class="btn_v2 btn_red price_order_btn">ЗАКАЗАТЬ со скидкой 10% </a>
+                      </div>
+                      <div class="service_effect">
+                        <div class="effect_caption">Эффективность аудита</div>
+                        <table class="effect_table">
+                          <tr>
+                            <td class="col_1"><b>Стоимость аудита</b></td>
+                            <td class="col_2">250 000  руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Выявлены налоговые резервы на сумму</b></td>
+                            <td class="col_2">2 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Обнаружены налоговые риски на сумму</b></td>
+                            <td class="col_2">8 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Прочие результаты</b></td>
+                            <td class="col_2">получены рекомендации и гарантии от налоговых юристов</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Коэффициент эффективности</b></td>
+                            <td class="col_2"><span class="color_red">4 400%</span></td>
+                          </tr>
+                        </table><a href="#" class="gl_link link_red effect_link"><span>Как была достигнута такая эффективность</span></a>
+                      </div>
+                    </div>
+                    <p><a href="reviews.html" class="gl_link link_red"><span>Отзывы клиентов</span></a> подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.</p>
                   </div>
-                  <div class="service_effect">
-                    <div class="effect_caption">Эффективность аудита</div>
-                    <table class="effect_table">
-                      <tr>
-                        <td class="col_1"><b>Стоимость аудита</b></td>
-                        <td class="col_2">250 000  руб.</td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><b>Выявлены налоговые резервы на сумму</b></td>
-                        <td class="col_2">2 500 000 руб.</td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><b>Обнаружены налоговые риски на сумму</b></td>
-                        <td class="col_2">8 500 000 руб.</td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><b>Прочие результаты</b></td>
-                        <td class="col_2">получены рекомендации и гарантии от налоговых юристов</td>
-                      </tr>
-                      <tr>
-                        <td class="col_1"><b>Коэффициент эффективности</b></td>
-                        <td class="col_2"><span class="color_red">4 400%</span></td>
-                      </tr>
-                    </table><a href="#" class="gl_link link_red effect_link"><span>Как была достигнута такая эффективность</span></a>
+                  <div id="price_tab_2">
+                    <div class="service_effect_info">
+                      <div class="price_ranges">
+                        <table class="price_range_table">
+                          <tr> 
+                            <td class="col_1"><b>Диапазон цен:</b></td>
+                            <td class="col_2">150-650 тыс. руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Средняя цена по 2015 году:</b></td>
+                            <td class="col_2">320 тыс. руб.</td>
+                          </tr>
+                        </table>
+                        <div class="price_caption"><b>Ваши бонусы: 2</b></div>
+                        <ul class="bonus_list">
+                          <li class="bonus_item bonus_audit_1c">
+                            <div class="mb">Аудит 1С</div>
+                          </li>
+                          <li class="bonus_item bonus_round_table">
+                            <div class="mb">Участие в нескольких круглых столах</div>
+                          </li>
+                          <li class="bonus_item bonus_consult">
+                            <div class="mb">Бонусные консультации</div>
+                          </li>
+                        </ul><a href="#" class="btn_v2 btn_red price_order_btn">ЗАКАЗАТЬ со скидкой 10% </a>
+                      </div>
+                      <div class="service_effect">
+                        <div class="effect_caption">Эффективность аудита</div>
+                        <table class="effect_table">
+                          <tr>
+                            <td class="col_1"><b>Стоимость аудита</b></td>
+                            <td class="col_2">250 000  руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Выявлены налоговые резервы на сумму</b></td>
+                            <td class="col_2">2 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Обнаружены налоговые риски на сумму</b></td>
+                            <td class="col_2">8 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Прочие результаты</b></td>
+                            <td class="col_2">получены рекомендации и гарантии от налоговых юристов</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Коэффициент эффективности</b></td>
+                            <td class="col_2"><span class="color_red">4 400%</span></td>
+                          </tr>
+                        </table><a href="#" class="gl_link link_red effect_link"><span>Как была достигнута такая эффективность</span></a>
+                      </div>
+                    </div>
+                    <p><a href="reviews.html" class="gl_link link_red"><span>Отзывы клиентов</span></a> подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.</p>
+                  </div>
+                  <div id="price_tab_3">
+                    <div class="service_effect_info">
+                      <div class="price_ranges">
+                        <table class="price_range_table">
+                          <tr> 
+                            <td class="col_1"><b>Диапазон цен:</b></td>
+                            <td class="col_2">150-650 тыс. руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Средняя цена по 2015 году:</b></td>
+                            <td class="col_2">320 тыс. руб.</td>
+                          </tr>
+                        </table>
+                        <div class="price_caption"><b>Ваши бонусы: 3</b></div>
+                        <ul class="bonus_list">
+                          <li class="bonus_item bonus_audit_1c">
+                            <div class="mb">Аудит 1С</div>
+                          </li>
+                          <li class="bonus_item bonus_round_table">
+                            <div class="mb">Участие в нескольких круглых столах</div>
+                          </li>
+                          <li class="bonus_item bonus_consult">
+                            <div class="mb">Бонусные консультации</div>
+                          </li>
+                        </ul><a href="#" class="btn_v2 btn_red price_order_btn">ЗАКАЗАТЬ со скидкой 10% </a>
+                      </div>
+                      <div class="service_effect">
+                        <div class="effect_caption">Эффективность аудита</div>
+                        <table class="effect_table">
+                          <tr>
+                            <td class="col_1"><b>Стоимость аудита</b></td>
+                            <td class="col_2">250 000  руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Выявлены налоговые резервы на сумму</b></td>
+                            <td class="col_2">2 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Обнаружены налоговые риски на сумму</b></td>
+                            <td class="col_2">8 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Прочие результаты</b></td>
+                            <td class="col_2">получены рекомендации и гарантии от налоговых юристов</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Коэффициент эффективности</b></td>
+                            <td class="col_2"><span class="color_red">4 400%</span></td>
+                          </tr>
+                        </table><a href="#" class="gl_link link_red effect_link"><span>Как была достигнута такая эффективность</span></a>
+                      </div>
+                    </div>
+                    <p><a href="reviews.html" class="gl_link link_red"><span>Отзывы клиентов</span></a> подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.</p>
+                  </div>
+                  <div id="price_tab_4">
+                    <div class="service_effect_info">
+                      <div class="price_ranges">
+                        <table class="price_range_table">
+                          <tr> 
+                            <td class="col_1"><b>Диапазон цен:</b></td>
+                            <td class="col_2">150-650 тыс. руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Средняя цена по 2015 году:</b></td>
+                            <td class="col_2">320 тыс. руб.</td>
+                          </tr>
+                        </table>
+                        <div class="price_caption"><b>Ваши бонусы: 4</b></div>
+                        <ul class="bonus_list">
+                          <li class="bonus_item bonus_audit_1c">
+                            <div class="mb">Аудит 1С</div>
+                          </li>
+                          <li class="bonus_item bonus_round_table">
+                            <div class="mb">Участие в нескольких круглых столах</div>
+                          </li>
+                          <li class="bonus_item bonus_consult">
+                            <div class="mb">Бонусные консультации</div>
+                          </li>
+                        </ul><a href="#" class="btn_v2 btn_red price_order_btn">ЗАКАЗАТЬ со скидкой 10% </a>
+                      </div>
+                      <div class="service_effect">
+                        <div class="effect_caption">Эффективность аудита</div>
+                        <table class="effect_table">
+                          <tr>
+                            <td class="col_1"><b>Стоимость аудита</b></td>
+                            <td class="col_2">250 000  руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Выявлены налоговые резервы на сумму</b></td>
+                            <td class="col_2">2 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Обнаружены налоговые риски на сумму</b></td>
+                            <td class="col_2">8 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Прочие результаты</b></td>
+                            <td class="col_2">получены рекомендации и гарантии от налоговых юристов</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Коэффициент эффективности</b></td>
+                            <td class="col_2"><span class="color_red">4 400%</span></td>
+                          </tr>
+                        </table><a href="#" class="gl_link link_red effect_link"><span>Как была достигнута такая эффективность</span></a>
+                      </div>
+                    </div>
+                    <p><a href="reviews.html" class="gl_link link_red"><span>Отзывы клиентов</span></a> подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.</p>
+                  </div>
+                  <div id="price_tab_5">
+                    <div class="service_effect_info">
+                      <div class="price_ranges">
+                        <table class="price_range_table">
+                          <tr> 
+                            <td class="col_1"><b>Диапазон цен:</b></td>
+                            <td class="col_2">150-650 тыс. руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Средняя цена по 2015 году:</b></td>
+                            <td class="col_2">320 тыс. руб.</td>
+                          </tr>
+                        </table>
+                        <div class="price_caption"><b>Ваши бонусы: 5</b></div>
+                        <ul class="bonus_list">
+                          <li class="bonus_item bonus_audit_1c">
+                            <div class="mb">Аудит 1С</div>
+                          </li>
+                          <li class="bonus_item bonus_round_table">
+                            <div class="mb">Участие в нескольких круглых столах</div>
+                          </li>
+                          <li class="bonus_item bonus_consult">
+                            <div class="mb">Бонусные консультации</div>
+                          </li>
+                        </ul><a href="#" class="btn_v2 btn_red price_order_btn">ЗАКАЗАТЬ со скидкой 10% </a>
+                      </div>
+                      <div class="service_effect">
+                        <div class="effect_caption">Эффективность аудита</div>
+                        <table class="effect_table">
+                          <tr>
+                            <td class="col_1"><b>Стоимость аудита</b></td>
+                            <td class="col_2">250 000  руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Выявлены налоговые резервы на сумму</b></td>
+                            <td class="col_2">2 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Обнаружены налоговые риски на сумму</b></td>
+                            <td class="col_2">8 500 000 руб.</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Прочие результаты</b></td>
+                            <td class="col_2">получены рекомендации и гарантии от налоговых юристов</td>
+                          </tr>
+                          <tr>
+                            <td class="col_1"><b>Коэффициент эффективности</b></td>
+                            <td class="col_2"><span class="color_red">4 400%</span></td>
+                          </tr>
+                        </table><a href="#" class="gl_link link_red effect_link"><span>Как была достигнута такая эффективность</span></a>
+                      </div>
+                    </div>
+                    <p><a href="reviews.html" class="gl_link link_red"><span>Отзывы клиентов</span></a> подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.</p>
                   </div>
                 </div>
-                <p><a href="#" class="gl_link link_red"><span>Отзывы клиентов</span></a> подтверждают,  что стоимость наших услуг всегда справедлива и обоснована.</p>
               </div>
             </div>
           </div>
@@ -189,7 +401,7 @@
                   <p>Мы ответим вам быстро. <span class="dt_only"><br> </span> Проверьте нашу оперативность!</p>
                   <div class="text_center">
                     <div class="price_order_controls"><a href="#" class="callback_phone black_mod"><span class="callback_icon"> <span class="svg-svg-contacts--contacts-phone-icon"></span></span><span>+7 495 134-32-23</span></a></div>
-                    <div class="price_order_controls"><a href="#" class="callback_btn btn_v1 btn_red_black">Заказать звонок</a></div>
+                    <div class="price_order_controls"><a href="#" class="callback_btn btn_v1 btn_red_black callbackOpenBtn">Заказать звонок</a></div>
                   </div>
                 </div>
                 <div class="price_order_form">
@@ -221,6 +433,7 @@
                       <div class="input_w select_v1">
                         <div class="toddler_v1">
                           <div id="annual_revenu" class="toddler"></div>
+                          <input id="annual_revenu_val" class="hidden_input">
                         </div>
                       </div>
                     </div>
