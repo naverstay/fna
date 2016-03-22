@@ -63,7 +63,7 @@ mixin order_form(id_mod)
             span.mb.svg-svg-history--send-dims.svg-svg-history--send.send_icon
             span.mb Отправить
             
-mixin service_unit(cls)
+mixin service_unit(cls, ind)
     .service_unit(class=cls)
         ul.service_list
             li.service_block
@@ -73,7 +73,7 @@ mixin service_unit(cls)
                             input.hidden_input(type='checkbox')
                             span.check_text
 
-                    .service_switch_caption Получить аудиторское заключение
+                    .service_switch_caption Получить аудиторское заключение #{ind}
                     p Исполнить тредования законов РФ: 302-ФЗ, 208-ФЗ и другие
 
                 .service_options

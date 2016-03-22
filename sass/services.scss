@@ -424,7 +424,7 @@
   .hidden_input:checked + .check_text {
     &:before {
       @extend %svg-common-price;
-      background-position: 94.5% -3px;
+      background-position: 68.5% 45%;
     }
 
     &:after {
@@ -447,7 +447,7 @@
 
     .gl_link {
       font-family: $ProximaNovaLight;
-      text-shadow: 0 -1px 1px #bbb;
+      //text-shadow: 0 -1px 1px #bbb;
     }
 
     &.active {
@@ -522,7 +522,7 @@
     line-height: 26px;
     margin-bottom: 20px;
     margin-left: -30px;
-    padding-left: 35px;
+    padding-left: 30px;
 
     &:before {
       border: none;
