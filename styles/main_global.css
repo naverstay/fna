@@ -5122,12 +5122,14 @@ textarea.input_v2 {
 .radio_emul .check_text:hover span {
   border-color: transparent;
 }
+.radio_emul.ui-tabs-active .check_text,
 .radio_emul .hidden_input:checked + .check_text {
   border-radius: 2px;
   border-color: #951a37;
   cursor: default;
   color: #000;
 }
+.radio_emul.ui-tabs-active .check_text span,
 .radio_emul .hidden_input:checked + .check_text span {
   border-bottom-color: transparent !important;
 }
@@ -5446,11 +5448,11 @@ textarea.input_v2 {
 }
 
 .service_effect_info {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 @media only screen and (min-width: 1200px) {
   .service_effect_info {
-    margin-bottom: 45px;
+    margin: 0 0 45px;
   }
 }
 

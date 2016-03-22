@@ -202,10 +202,10 @@
 
 .service_effect_info {
   @extend %clearfix;
-  margin-bottom: 20px;
+  margin: 20px 0;
 
   @include respond-to-min($desktop) {
-    margin-bottom: 45px;
+    margin: 0 0 45px;
   }
 }
 
