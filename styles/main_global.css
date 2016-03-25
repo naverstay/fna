@@ -3061,6 +3061,9 @@ b {
 .block_title.block_title_v2 {
   letter-spacing: .45px;
 }
+.block_title.about_mod {
+  padding-top: 35px;
+}
 @media only screen and (max-width: 959px) {
   .block_title {
     font-size: 32px;
@@ -5565,6 +5568,14 @@ textarea.input_v2 {
   position: relative;
   height: 50px;
 }
+.toddler_v1 .toddler .ui-slider-range {
+  position: absolute;
+  top: 25px;
+  height: 5px;
+  left: 0;
+  border-radius: 2px;
+  background: #951a37;
+}
 .toddler_v1 .toddler:before {
   content: '';
   position: absolute;
@@ -5573,7 +5584,7 @@ textarea.input_v2 {
   right: 0;
   left: 0;
   border-radius: 2px;
-  background: #951a37;
+  background: #e4e6e7;
 }
 .toddler_v1 .toddler .ui-slider-handle {
   position: absolute;

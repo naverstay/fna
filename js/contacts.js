@@ -35,13 +35,13 @@ var map,
 
 $(function ($) {
 
-    $('.priceSelect').select2({
+    $('.citySelect').select2({
         minimumResultsForSearch: Infinity,
-        dropdownParent: $('#price_menu_dropdown'),
+        dropdownParent: $('#city_menu_dropdown'),
         width: '100%'
     });
 
-    body_var.delegate('.priceSelect', 'change', function () {
+    body_var.delegate('.citySelect', 'change', function () {
         $('a[href=' + $(this).val() + ']').click();
     });
 

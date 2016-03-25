@@ -34,6 +34,7 @@ $(function ($) {
     $('#annual_revenu').slider({
         min: 1000,
         max: 10000,
+        range: "min",
         value_box: '<span class="toddler_val"></span>',
         slide: function (event, ui) {
             $(ui.handle).find('.toddler_val').text(ui.value + ' тыс. руб.');

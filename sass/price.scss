@@ -340,6 +340,15 @@
     position: relative;
     height: 50px;
 
+    .ui-slider-range {
+      position: absolute;
+      top: 25px;
+      height: 5px;
+      left: 0;
+      border-radius: 2px;
+      background: #951a37;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -348,7 +357,7 @@
       right: 0;
       left: 0;
       border-radius: 2px;
-      background: #951a37;
+      background: #e4e6e7;
     }
 
     .ui-slider-handle {

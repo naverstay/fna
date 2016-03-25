@@ -1285,7 +1285,6 @@ b {
     .block_caption {
       margin-bottom: 0;
     }
-
   }
 
   &.section_v1 {
@@ -1422,6 +1421,10 @@ b {
     letter-spacing: .45px;
   }
 
+  &.about_mod {
+    padding-top: 35px;
+  }
+  
   @include respond-to-max($tablet) {
     font-size: 32px;
   }
