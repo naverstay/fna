@@ -2,83 +2,93 @@
   background: url("svg/why-sprite.view.svg") no-repeat;
 }
 
-.svg-svg-why--why-01 {
-  @extend %svg-common-why;
-  background-position: 51.47878787878788% 50.7622045300253%;
-}
-
-.svg-svg-why--why-01-dims {
-  width: 82px;
-  height: 71.97px;
-}
-
-.svg-svg-why--why-02 {
-  @extend %svg-common-why;
-  background-position: 51.47878787878788% 0;
-}
-
-.svg-svg-why--why-02-dims {
-  width: 82px;
-  height: 82.25px;
-}
-
-.svg-svg-why--why-03 {
-  @extend %svg-common-why;
-  background-position: 0 49.32292708958709%;
-}
-
-.svg-svg-why--why-03-dims {
-  width: 82px;
-  height: 84.09px;
-}
-
-.svg-svg-why--why-04 {
+.svg-svg-why--slider-arrow {
   @extend %svg-common-why;
   background-position: 0 0;
 }
 
+.svg-svg-why--slider-arrow-dims {
+  width: 72.97px;
+  height: 98.41px;
+}
+
+.svg-svg-why--why-01 {
+  @extend %svg-common-why;
+  background-position: 33.027522935779814% 56.22464720333657%;
+}
+
+.svg-svg-why--why-01-dims {
+  width: 72px;
+  height: 61.97px;
+}
+
+.svg-svg-why--why-02 {
+  @extend %svg-common-why;
+  background-position: 0 59.7329286798179%;
+}
+
+.svg-svg-why--why-02-dims {
+  width: 72px;
+  height: 72.25px;
+}
+
+.svg-svg-why--why-03 {
+  @extend %svg-common-why;
+  background-position: 67.84862385321101% 0;
+}
+
+.svg-svg-why--why-03-dims {
+  width: 72px;
+  height: 74.09px;
+}
+
+.svg-svg-why--why-04 {
+  @extend %svg-common-why;
+  background-position: 33.930066028085186% 0;
+}
+
 .svg-svg-why--why-04-dims {
-  width: 84.94px;
-  height: 73.94px;
+  width: 74.94px;
+  height: 63.94px;
 }
 
 .svg-svg-why--why-05 {
   @extend %svg-common-why;
-  background-position: 97.62573099415205% 48.734177215189874%;
+  background-position: 98.17410714285714% 39.1812865497076%;
 }
 
 .svg-svg-why--why-05-dims {
-  width: 76px;
-  height: 76px;
+  width: 66px;
+  height: 66px;
 }
 
 .svg-svg-why--why-06 {
   @extend %svg-common-why;
-  background-position: 41.61849710982659% 98.76875%;
+  background-position: 27.43362831858407% 98.64739884393063%;
 }
 
 .svg-svg-why--why-06-dims {
-  width: 74px;
-  height: 74px;
+  width: 64px;
+  height: 64px;
 }
 
 .svg-svg-why--why-07 {
   @extend %svg-common-why;
-  background-position: 0 99.89885580630887%;
+  background-position: 0 99.69040247678019%;
 }
 
 .svg-svg-why--why-07-dims {
-  width: 72px;
-  height: 75.81px;
+  width: 62px;
+  height: 65.81px;
 }
 
 .svg-svg-why--why-08 {
   @extend %svg-common-why;
-  background-position: 99.96407185628742% 0;
+  background-position: 99.9590909090909% 0;
 }
 
 .svg-svg-why--why-08-dims {
-  width: 80px;
-  height: 77px;
+  width: 70px;
+  height: 67px;
 }
 

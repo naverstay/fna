@@ -1,6 +1,8 @@
 var map,
     city_tabs,
+    centerTimer,
     active_tab = 0,
+    office_ind = 0,
     markers = [],
     offices = [
         [ // moscow
@@ -42,7 +44,10 @@ $(function ($) {
     });
 
     body_var.delegate('.citySelect', 'change', function () {
+        console.log('citySelect change');
         $('a[href=' + $(this).val() + ']').click();
+    }).delegate('.contantPrintBtn', 'click', function () {
+        printMe();
     });
 
     var tabBlock = $('.tabBlock'),
@@ -71,10 +76,11 @@ $(window).on('load', function () {
     initialize();
 
     $('.contactOfficeBtn').on('click', function () {
-        var firedEl = $(this), office_ind = firedEl.attr('data-href').replace(/\D/ig, '') * 1 - 1,
-            map_center = new google.maps.LatLng(offices[active_tab][office_ind].lat + 0.004, offices[active_tab][office_ind].lng);
+        var firedEl = $(this),
 
         //console.log(office_ind, firedEl.attr('data-href').replace(/\D/ig, ''));
+
+            office_ind = firedEl.attr('data-href').replace(/\D/ig, '') * 1 - 1;
 
         firedEl.closest('.contactsOfficeSwitcher').find('.contacts_office_item').removeClass('active');
 
@@ -84,7 +90,7 @@ $(window).on('load', function () {
             return $(el).hasClass(firedEl.attr('data-href'));
         }).show();
 
-        map.setCenter(map_center, 1);
+        setMapCenter();
 
         return false;
     }).first().click();
@@ -132,3 +138,53 @@ function initialize() {
     }
 
 }
+
+function saveMapToDataUrl(callback) {
+
+    var element = $("#g_map");
+
+    $('#g_map_clone').remove();
+
+    html2canvas(element, {
+        useCORS: true,
+        onrendered: function (canvas) {
+            var dataUrl = canvas.toDataURL("image/png");
+
+            element.append($('<img class="g_map_clone"  id="g_map_clone" src="' + dataUrl + '"/>'));
+
+            callback();
+        }
+    });
+}
+
+function printMe() {
+    var gMap = $('#g_map .gm-style');
+
+    gMap.css('display', 'none !important');
+
+    saveMapToDataUrl(function () {
+        setTimeout(function () {
+            window.print();
+
+            $('#g_map_clone').remove();
+
+            gMap.css('display', 'block');
+
+        }, 5);
+    });
+}
+
+function setMapCenter() {
+    clearTimeout(centerTimer);
+
+    centerTimer = setTimeout(function () {
+
+        var map_center = new google.maps.LatLng(offices[active_tab][office_ind].lat + 0.004, offices[active_tab][office_ind].lng);
+
+        map.setCenter(map_center);
+    }, 30);
+}
+
+google.maps.event.addDomListener(window, 'resize', function () {
+    setMapCenter();
+});

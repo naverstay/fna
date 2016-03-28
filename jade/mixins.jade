@@ -1,4 +1,4 @@
-mixin dev_head(page_title)
+mixin dev_head(page_title, print)
     head
         title=page_title
         | <!-- saved from url=(0014)about:internet -->
@@ -8,6 +8,9 @@ mixin dev_head(page_title)
         meta(name="format-detection", content="telephone=no")
         meta(name='viewport', content="width=device-width, initial-scale=1.0")
         link(rel='stylesheet', href='styles/main_global.css?no_cache', media='all')
+        - if (print)
+            link(rel='stylesheet', href='styles/print.css?no_cache', media='print')
+        | 
         | <!--[if IE]>
         | <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         | <![endif]-->
@@ -295,6 +298,7 @@ mixin scripts(index, history, reviews, company, services, contacts, prices)
         script(src='js/services.js?no_cache')
     - if (contacts)
         script(src='http://maps.google.com/maps/api/js?sensor=true')
+        script(src='js/html2canvas.js?no_cache')
         script(src='js/contacts.js?no_cache')
     - if (prices)
         script(src='js/prices.js?no_cache')

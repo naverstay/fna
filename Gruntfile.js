@@ -23,7 +23,8 @@ module.exports = function (grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'styles/main_global.css': 'sass/main_global.scss'
+                    'styles/main_global.css': 'sass/main_global.scss',
+                    'styles/print.css': 'sass/print.scss'
                 }
             }
         },
@@ -47,15 +48,15 @@ module.exports = function (grunt) {
 
                 // Target basics 
                 expand: true,
-                src: ['svg-price/*.svg'],
+                src: ['svg-why/*.svg'],
                 dest: 'styles/',
 
                 // Target options 
                 options: {
                     shape: {
                         dimension: {			// Set maximum dimensions 
-                            maxWidth: 32,
-                            maxHeight: 32
+                            maxWidth: 100,
+                            maxHeight: 100
                         },
                         spacing: {			// Add padding 
                             padding: 5

@@ -1050,7 +1050,6 @@ b {
       visibility: visible;
       pointer-events: all;
     }
-
   }
 
   .slick-prev,
@@ -1082,7 +1081,7 @@ b {
     cursor: pointer;
     color: #fff;
     width: 80px;
-    height: 80px;
+    height: 95px;
 
     &::before {
       position: absolute;
@@ -1413,7 +1412,7 @@ b {
 .block_title {
   font: 48px/1 $ProximaNovaExtrabold;
   text-transform: uppercase;
-  //margin-bottom: 30px;
+  //margin-bottom: 30px; 
   margin-bottom: 2.1%;
   letter-spacing: .65px;
 
@@ -1424,7 +1423,7 @@ b {
   &.about_mod {
     padding-top: 35px;
   }
-  
+
   @include respond-to-max($tablet) {
     font-size: 32px;
   }
@@ -1547,14 +1546,6 @@ b {
     left: -11px;
     content: '';
     @include transform_scale(.85);
-    //font-size: 12px;
-    //line-height: 16px;
-    //border-radius: 100%;
-    //width: 20px;
-    //height: 20px;
-    //color: #91969c;
-    //border: 2px solid #91969c;
-    //text-align: center;
     @extend .svg-svg-servicefull--servicefull-check-gray;
     @extend .svg-svg-servicefull--servicefull-check-gray-dims;
   }
